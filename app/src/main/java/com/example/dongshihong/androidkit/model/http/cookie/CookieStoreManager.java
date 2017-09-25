@@ -19,9 +19,9 @@ import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:52.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 
 public class CookieStoreManager {

@@ -1,9 +1,9 @@
 package com.example.dongshihong.androidkit.model.http.exception;
 
 /**
- * @author keal
- *         Created  on 2017/05/04 15:48.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 public class ApiException extends Exception {
     public ApiException(String msg)

@@ -10,11 +10,11 @@ import com.example.dongshihong.androidkit.di.module.FragmentModule;
 import javax.inject.Inject;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
-public abstract class BaseFragment<T extends BasePresenter> extends SimpleFragment {
+public abstract class BaseFragment<T extends BasePresenter> extends RxFragment {
 
   @Inject protected T mPresenter;
 

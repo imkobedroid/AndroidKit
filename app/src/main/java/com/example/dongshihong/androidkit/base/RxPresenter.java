@@ -5,9 +5,9 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
 

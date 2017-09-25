@@ -12,12 +12,12 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 
-public abstract class SimpleFragment extends Fragment {
+public abstract class RxFragment extends Fragment {
 
   protected View mView;
   protected Activity mActivity;

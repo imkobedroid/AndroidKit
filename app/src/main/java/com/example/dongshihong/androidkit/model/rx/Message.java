@@ -1,9 +1,9 @@
 package com.example.dongshihong.androidkit.model.rx;
 
 /**
- * @author keal
- *         Created  on 2017/05/18 16:06.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 public class Message {
 

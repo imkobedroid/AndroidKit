@@ -11,11 +11,11 @@ import butterknife.Unbinder;
 import com.example.dongshihong.androidkit.R;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
-public abstract class SimpleActivity extends AppCompatActivity {
+public abstract class RxActivity extends AppCompatActivity {
 
   protected Activity mContext;
   private Unbinder mUnBinder;
@@ -38,7 +38,6 @@ public abstract class SimpleActivity extends AppCompatActivity {
     toolbar.setNavigationOnClickListener(view -> finish());
   }
 
-
   protected void onViewCreated() {
 
   }
@@ -49,5 +48,4 @@ public abstract class SimpleActivity extends AppCompatActivity {
   }
 
   protected abstract int getLayout();
-
 }

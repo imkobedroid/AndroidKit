@@ -5,7 +5,7 @@ package com.example.dongshihong.androidkit.base;
  * Use:
  */
 
-public abstract class LazLoadFragment extends SimpleFragment {
+public abstract class RxLazLoadFragment extends RxFragment {
     protected boolean isVisble;
     public boolean isPrepared = false;
 

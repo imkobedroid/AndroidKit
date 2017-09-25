@@ -7,11 +7,10 @@ import java.io.Serializable;
 import okhttp3.Cookie;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:52.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
-
 public class SerializableHttpCookie implements Serializable {
   private transient final Cookie cookie;
   private transient Cookie clientCookie;

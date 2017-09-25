@@ -7,11 +7,12 @@ import com.example.dongshihong.androidkit.di.module.ActivityModule;
 import javax.inject.Inject;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
-public abstract class BaseActivity<T extends BasePresenter> extends SimpleActivity implements BaseView{
+public abstract class BaseActivity<T extends BasePresenter> extends RxActivity
+    implements BaseView {
 
   @Inject protected T mPresenter;
 

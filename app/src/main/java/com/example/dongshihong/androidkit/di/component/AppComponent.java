@@ -7,9 +7,9 @@ import dagger.Component;
 import javax.inject.Singleton;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 
 @Singleton @Component(modules = { AppModule.class, HttpModule.class })

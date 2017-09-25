@@ -1,9 +1,9 @@
 package com.example.dongshihong.androidkit.app;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 11:56.
- *         Summary:
+ * Author:SHIHONG DONG
+ * Date:2017/9/25 11:37
+ * Email:imkobedroid@gmail.com
  */
 public class Constants {
   public static final String HOST = "http://120.77.43.178:8088";
