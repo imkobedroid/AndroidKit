@@ -31,11 +31,11 @@ public class DefaultHeaderInterceptor implements HeaderInterceptor {
 
     final String token = AccountManager.getInstance(context).getToken();
     if (!Strings.isNullOrEmpty(token)) {
-      // TODO: 2017/9/26 添加公共的参数 例如token
-      builder.set("Content-Encoding", "gzip")
-          .set("X-Client-Type", "android")
-          .set("Accept", Constants.API_ACCEPT)
-          .set("Authorization", "Bearer" + token);
+      // TODO: 2017/9/26 添加后台约定的请求头信息
+      builder.add("Content-Encoding", "gzip")
+          .add("X-Client-Type", "android")
+          .add("Accept", Constants.API_ACCEPT)
+          .add("Authorization", "Bearer" + token);
     }
 
     Request compressedRequest = originalRequest.newBuilder().headers(builder.build()).build();

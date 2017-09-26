@@ -3,13 +3,13 @@ package com.example.dongshihong.androidkit.di.module;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.compat.BuildConfig;
-import com.example.dongshihong.androidkit.app.Constants;
-import com.example.dongshihong.androidkit.di.interceptor.DefaultHeaderInterceptor;
 import com.example.dongshihong.androidkit.di.cookie.CookieManager;
+import com.example.dongshihong.androidkit.di.interceptor.DefaultHeaderInterceptor;
 import com.orhanobut.logger.Logger;
 import java.util.concurrent.TimeUnit;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
@@ -67,5 +67,15 @@ public class HttpManager {
     builder.cookieJar(CookieManager.getInstance(mContext));
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
+
+    // TODO: 2017/9/26 也可以通过这样的方式来添加请求头信息
+    /*mOkHttpClient.interceptors().add(chain -> {
+      Request original = chain.request();
+      Request.Builder requestBuilder = original.newBuilder()
+          .addHeader("header-key", "value1")
+          .addHeader("header-key", "value2");
+      Request request = requestBuilder.build();
+      return chain.proceed(request);
+    });*/
   }
 }
