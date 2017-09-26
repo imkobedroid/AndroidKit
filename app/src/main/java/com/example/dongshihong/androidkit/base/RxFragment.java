@@ -1,58 +1,45 @@
 package com.example.dongshihong.androidkit.base;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
+import com.example.dongshihong.androidkit.app.App;
+import com.example.dongshihong.androidkit.base.root.BaseFragment;
+import com.example.dongshihong.androidkit.base.root.BasePresenter;
+import com.example.dongshihong.androidkit.di.component.DaggerFragmentComponent;
+import com.example.dongshihong.androidkit.di.component.FragmentComponent;
+import com.example.dongshihong.androidkit.di.module.FragmentModule;
+import javax.inject.Inject;
 
 /**
  * Author:SHIHONG DONG
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
+public abstract class RxFragment<T extends BasePresenter> extends BaseFragment {
 
-public abstract class RxFragment extends Fragment {
+  @Inject protected T mPresenter;
 
-  protected View mView;
-  protected Activity mActivity;
-  protected Context mContext;
-  private Unbinder mUnBinder;
-  //暂时不考虑内存重启的情况
-  //protected boolean isInited = false;
-
-  @Override public void onAttach(Context context) {
-    mActivity = (Activity) context;
-    mContext = context;
-    super.onAttach(context);
+  protected FragmentComponent getFragmentComponent() {
+    return DaggerFragmentComponent.builder()
+        .appComponent(App.getAppComponent())
+        .fragmentModule(getFragmentModule())
+        .build();
   }
 
-  @Nullable @Override
-  public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-      @Nullable Bundle savedInstanceState) {
-    mView = inflater.inflate(getLayoutId(), null);
-    mUnBinder = ButterKnife.bind(this, mView);
-    return mView;
+  protected FragmentModule getFragmentModule() {
+    return new FragmentModule(this);
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    initInject();
     super.onViewCreated(view, savedInstanceState);
   }
 
-  @Override public void onHiddenChanged(boolean hidden) {
-    super.onHiddenChanged(hidden);
-  }
-
   @Override public void onDestroyView() {
+    if (mPresenter != null) mPresenter.detachView();
     super.onDestroyView();
-    mUnBinder.unbind();
   }
 
-  protected abstract int getLayoutId();
-
+  protected abstract void initInject();
 }

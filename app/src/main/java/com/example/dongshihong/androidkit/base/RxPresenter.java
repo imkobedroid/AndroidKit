@@ -1,8 +1,9 @@
 package com.example.dongshihong.androidkit.base;
 
+import com.example.dongshihong.androidkit.base.root.BasePresenter;
+import com.example.dongshihong.androidkit.base.root.BaseView;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 
 /**
  * Author:SHIHONG DONG

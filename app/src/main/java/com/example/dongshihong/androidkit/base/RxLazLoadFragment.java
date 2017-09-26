@@ -1,11 +1,13 @@
 package com.example.dongshihong.androidkit.base;
 
+import com.example.dongshihong.androidkit.base.root.BaseFragment;
+
 /**
  * Created by Dsh on 2017/5/16.
  * Use:
  */
 
-public abstract class RxLazLoadFragment extends RxFragment {
+public abstract class RxLazLoadFragment extends BaseFragment {
     protected boolean isVisble;
     public boolean isPrepared = false;
 

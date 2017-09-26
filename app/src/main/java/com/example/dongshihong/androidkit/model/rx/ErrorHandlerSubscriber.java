@@ -31,9 +31,9 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
       e.printStackTrace();
     } else {
       if (mContext != null && (baseException.getCode() == 401 || baseException.getCode() == 402)) {
-        /*if (mContext instanceof BaseActivity) {
+        /*if (mContext instanceof RxActivity) {
           AccountManager.getInstance(mContext).loginOut();
-          ((BaseActivity) mContext).showOfflineDialog();
+          ((RxActivity) mContext).showOfflineDialog();
         } else {
           AccountManager.getInstance(mContext).loginOut();
           Intent intent = new Intent(mContext, LoginActivity.class);
