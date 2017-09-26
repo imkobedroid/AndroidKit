@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.model.http.cookie;
+package com.example.dongshihong.androidkit.di.cookie;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
