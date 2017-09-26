@@ -44,12 +44,8 @@ public class HttpManager {
     return mOkHttpClient;
   }
 
-  // TODO: 2017/9/26 添加请求头 
   private Headers.Builder defaultHeader() {
     Headers.Builder builder = new Headers.Builder();
-    builder.add("Content-Encoding", "gzip")
-        .add("X-Client-Type", "android")
-        .add("Accept", Constants.API_ACCEPT);
     return builder;
   }
 
