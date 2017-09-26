@@ -5,7 +5,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import com.example.dongshihong.androidkit.app.App;
 import com.example.dongshihong.androidkit.base.root.BaseFragment;
-import com.example.dongshihong.androidkit.base.root.BasePresenter;
+import com.example.dongshihong.androidkit.base.root.BaseFragmentPresenter;
+import com.example.dongshihong.androidkit.base.root.BaseFragmentView;
 import com.example.dongshihong.androidkit.di.component.DaggerFragmentComponent;
 import com.example.dongshihong.androidkit.di.component.FragmentComponent;
 import com.example.dongshihong.androidkit.di.module.FragmentModule;
@@ -16,29 +17,31 @@ import javax.inject.Inject;
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
-public abstract class RxFragment<T extends BasePresenter> extends BaseFragment {
+public abstract class RxFragment<T extends BaseFragmentPresenter> extends BaseFragment
+    implements BaseFragmentView {
 
   @Inject protected T mPresenter;
 
-  protected FragmentComponent getFragmentComponent() {
+  @Override public FragmentComponent getFragmentComponent() {
     return DaggerFragmentComponent.builder()
         .appComponent(App.getAppComponent())
-        .fragmentModule(getFragmentModule())
+        .fragmentModule(new FragmentModule(this))
         .build();
   }
 
-  protected FragmentModule getFragmentModule() {
-    return new FragmentModule(this);
+  @Override public void InjectFragment() {
+    initInject();
+    if (mPresenter != null) mPresenter.attachView(this);
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-    initInject();
     super.onViewCreated(view, savedInstanceState);
+    InjectFragment();
   }
 
   @Override public void onDestroyView() {
-    if (mPresenter != null) mPresenter.detachView();
     super.onDestroyView();
+    if (mPresenter != null) mPresenter.detachView();
   }
 
   protected abstract void initInject();

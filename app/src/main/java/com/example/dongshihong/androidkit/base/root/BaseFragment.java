@@ -20,17 +20,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment extends Fragment {
 
   protected View mView;
-  protected Activity mActivity;
-  protected Context mContext;
   private Unbinder mUnBinder;
-  //暂时不考虑内存重启的情况
-  //protected boolean isInited = false;
-
-  @Override public void onAttach(Context context) {
-    mActivity = (Activity) context;
-    mContext = context;
-    super.onAttach(context);
-  }
 
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -40,19 +30,10 @@ public abstract class BaseFragment extends Fragment {
     return mView;
   }
 
-  @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-    super.onViewCreated(view, savedInstanceState);
-  }
-
-  @Override public void onHiddenChanged(boolean hidden) {
-    super.onHiddenChanged(hidden);
-  }
-
   @Override public void onDestroyView() {
     super.onDestroyView();
     mUnBinder.unbind();
   }
 
   protected abstract int getLayoutId();
-
 }

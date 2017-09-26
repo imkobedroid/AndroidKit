@@ -5,7 +5,7 @@ package com.example.dongshihong.androidkit.base.root;
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
-public interface BasePresenter<T extends BaseView>{
+public interface BaseFragmentPresenter<T extends BaseFragmentView>{
 
     void attachView(T view);
 

@@ -1,7 +1,7 @@
 package com.example.dongshihong.androidkit.base;
 
-import com.example.dongshihong.androidkit.base.root.BasePresenter;
-import com.example.dongshihong.androidkit.base.root.BaseView;
+import com.example.dongshihong.androidkit.base.root.BaseActivityPresenter;
+import com.example.dongshihong.androidkit.base.root.BaseActivityView;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
@@ -10,7 +10,7 @@ import io.reactivex.disposables.Disposable;
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
-public class RxPresenter<T extends BaseView> implements BasePresenter<T> {
+public class RxActivityPresenter<T extends BaseActivityView> implements BaseActivityPresenter<T> {
 
   protected T mView;
   protected CompositeDisposable mCompositeDisposable;
