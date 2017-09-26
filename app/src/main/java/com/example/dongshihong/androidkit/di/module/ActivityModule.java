@@ -1,7 +1,7 @@
 package com.example.dongshihong.androidkit.di.module;
 
 import android.app.Activity;
-import com.example.dongshihong.androidkit.di.scope.ActivityScope;
+import com.example.dongshihong.androidkit.di.assist.ActivityScope;
 import dagger.Module;
 import dagger.Provides;
 

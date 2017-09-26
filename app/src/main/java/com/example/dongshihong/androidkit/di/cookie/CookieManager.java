@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.model.http.cookie;
+package com.example.dongshihong.androidkit.di.cookie;
 
 import android.content.Context;
 import java.util.List;

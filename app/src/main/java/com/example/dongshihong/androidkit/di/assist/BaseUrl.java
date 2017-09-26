@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.di.qualifier;
+package com.example.dongshihong.androidkit.di.assist;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

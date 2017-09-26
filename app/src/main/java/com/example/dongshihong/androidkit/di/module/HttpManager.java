@@ -4,8 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.compat.BuildConfig;
 import com.example.dongshihong.androidkit.app.Constants;
-import com.example.dongshihong.androidkit.model.http.api.DefaultHeaderInterceptor;
-import com.example.dongshihong.androidkit.model.http.cookie.CookieManager;
+import com.example.dongshihong.androidkit.di.interceptor.DefaultHeaderInterceptor;
+import com.example.dongshihong.androidkit.di.cookie.CookieManager;
 import com.orhanobut.logger.Logger;
 import java.util.concurrent.TimeUnit;
 import okhttp3.Headers;
@@ -44,19 +44,12 @@ public class HttpManager {
     return mOkHttpClient;
   }
 
+  // TODO: 2017/9/26 添加请求头 
   private Headers.Builder defaultHeader() {
-    // final AppInfo appInfo = SupportApp.appInfo();
     Headers.Builder builder = new Headers.Builder();
     builder.add("Content-Encoding", "gzip")
-        /*.add("X-Client-Build", String.valueOf(appInfo.versionCode))
-        .add("X-Client-Version", appInfo.version)
-        .add("X-Client", appInfo.deviceId)
-        .add("X-Language-Code", appInfo.languageCode)*/.add("X-Client-Type", "android");
-
-    /*final String channel = appInfo.channel;
-    if (!TextUtils.isEmpty(channel)) {
-      builder.add("X-Client-Channel", channel);
-    }*/
+        .add("X-Client-Type", "android")
+        .add("Accept", Constants.API_ACCEPT);
     return builder;
   }
 
@@ -71,16 +64,7 @@ public class HttpManager {
       builder.addInterceptor(loggingInterceptor);
     }
     Headers.Builder defaultHeaderBuilder = defaultHeader();
-    defaultHeaderBuilder.add("Accept", Constants.API_ACCEPT);
     builder.addInterceptor(new DefaultHeaderInterceptor(defaultHeaderBuilder, mContext));
-    /*try {
-      SSLContext sc = SSLContext.getInstance("SSL");
-      TdTrustManager trustManager = getTdTrustManager();
-      sc.init(null, new TrustManager[] { trustManager }, new java.security.SecureRandom());
-      builder.sslSocketFactory(sc.getSocketFactory(), trustManager);
-    } catch (Exception e) {
-      Log.e(TAG, "初始化证书出错:" + e.getMessage());
-    }*/
     builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.writeTimeout(TIME_OUT, TimeUnit.SECONDS);
@@ -88,15 +72,4 @@ public class HttpManager {
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
   }
-
-  /*private TdTrustManager getTdTrustManager() throws Exception {
-    KeyStore localTrustStore = KeyStore.getInstance("BKS");
-    InputStream input = SupportApp.getInstance().getResources().openRawResource(R.raw.projecttdtruststore);
-    try {
-      localTrustStore.load(input, BuildConfig.TRUST_SERVER_CERT_PASS.toCharArray());
-    } finally {
-      input.close();
-    }
-    return new TdTrustManager(localTrustStore);
-  }*/
 }

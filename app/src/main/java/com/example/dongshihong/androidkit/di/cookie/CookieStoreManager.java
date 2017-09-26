@@ -1,9 +1,10 @@
-package com.example.dongshihong.androidkit.model.http.cookie;
+package com.example.dongshihong.androidkit.di.cookie;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
+import com.example.dongshihong.androidkit.model.http.cookie.SerializableHttpCookie;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -77,7 +78,7 @@ public class CookieStoreManager {
 
     //Save cookie into local store, or remove if expired
     if (!mCookies.containsKey(cookie.domain())) {
-      mCookies.put(cookie.domain(), new ConcurrentHashMap<String, Cookie>());
+      mCookies.put(cookie.domain(), new ConcurrentHashMap<>());
     }
 
     if (cookie.expiresAt() > System.currentTimeMillis()) {

@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.component;
+package com.example.dongshihong.androidkit.di.assist;
 
 import android.app.IntentService;
 import android.content.Context;

@@ -13,9 +13,6 @@ public class App extends Application {
   private static App instance;
   public static AppComponent appComponent;
 
-  public static synchronized App getInstance() {
-    return instance;
-  }
 
   static {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -26,9 +23,6 @@ public class App extends Application {
     instance = this;
     Logger.init(getPackageName()).hideThreadInfo();
   }
-
-
-
 
 
   public static AppComponent getAppComponent() {

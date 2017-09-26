@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.di.scope;
+package com.example.dongshihong.androidkit.di.assist;
 
 import java.lang.annotation.Retention;
 import javax.inject.Scope;

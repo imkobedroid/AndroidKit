@@ -2,7 +2,7 @@ package com.example.dongshihong.androidkit.di.module;
 
 import android.app.Activity;
 import android.support.v4.app.Fragment;
-import com.example.dongshihong.androidkit.di.scope.FragmentScope;
+import com.example.dongshihong.androidkit.di.assist.FragmentScope;
 import dagger.Module;
 import dagger.Provides;
 

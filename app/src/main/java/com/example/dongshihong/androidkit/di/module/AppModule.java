@@ -12,28 +12,24 @@ import javax.inject.Singleton;
  * Email:imkobedroid@gmail.com
  */
 
-@Module
-public class AppModule {
-    private final App application;
+@Module public class AppModule {
+  private final App application;
 
-    public AppModule(App application) {
-        this.application = application;
-    }
+  public AppModule(App application) {
+    this.application = application;
+  }
 
-    @Provides
-    @Singleton
-    App provideApplicationContext() {
-        return application;
-    }
+  @Provides @Singleton App provideApplicationContext() {
+    return application;
+  }
 
-    @Provides
-    @Singleton Context getContext(App app) {
-        return app.getApplicationContext();
-    }
+  @Provides @Singleton Context getContext(App app) {
+    return app.getApplicationContext();
+  }
 
-    /**
-     * 下面是提供模块的retrofit的帮助类
-     */
+  /**
+   * 下面是提供模块的retrofit的帮助类
+   */
 
    /* @Provides
     @Singleton
@@ -41,5 +37,4 @@ public class AppModule {
                                      SiteApi mSiteApi, WithdrawApi withdrawApi,DataStatisticsApi dataStatisticsApi) {
         return new RetrofitHelper(zhihuApis, loginApi, mSiteApi,withdrawApi,dataStatisticsApi);
     }*/
-
 }

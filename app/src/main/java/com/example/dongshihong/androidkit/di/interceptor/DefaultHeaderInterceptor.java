@@ -1,4 +1,4 @@
-package com.example.dongshihong.androidkit.model.http.api;
+package com.example.dongshihong.androidkit.di.interceptor;
 
 import android.content.Context;
 import com.example.dongshihong.androidkit.model.account.AccountManager;
@@ -29,6 +29,7 @@ public class DefaultHeaderInterceptor implements HeaderInterceptor {
 
     final String token = AccountManager.getInstance(context).getToken();
     if (!Strings.isNullOrEmpty(token)) {
+      // TODO: 2017/9/26 添加公共的参数 例如token
       builder.set("Authorization", "Bearer" + token);
     }
 
