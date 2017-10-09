@@ -1,7 +1,7 @@
 package com.example.dongshihong.androidkit.app;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */

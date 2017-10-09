@@ -1,7 +1,6 @@
 package com.example.dongshihong.androidkit.model.account;
 
 import android.content.Context;
-import com.example.dongshihong.androidkit.model.bean.LoginOkBean;
 import com.example.dongshihong.androidkit.utils.ACache;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
