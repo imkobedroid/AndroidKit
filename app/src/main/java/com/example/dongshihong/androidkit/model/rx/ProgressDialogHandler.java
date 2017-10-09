@@ -36,20 +36,19 @@ public class ProgressDialogHandler extends Handler {
   }
 
   private void initProgressDialog() {
-
     if (mProgressDialog == null) {
       mProgressDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
       mProgressDialog.getProgressHelper().setBarColor(Color.parseColor("#ffc957"));
       mProgressDialog.setTitleText(context.getResources().getString(R.string.loading));
-      /*if (cancelable) {
-        mProgressDialog.setCancelText(context.getResources().getString(R.string.close));
+      if (cancelable) {
+        mProgressDialog.setCancelText(context.getString(R.string.dialog_cancel));
         mProgressDialog.setCancelClickListener(sweetAlertDialog -> {
           sweetAlertDialog.cancel();
           if (mProgressCancelListener != null) {
             mProgressCancelListener.onCancelProgress();
           }
         });
-      }*/
+      }
     }
   }
 
