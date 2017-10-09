@@ -8,25 +8,25 @@ import com.example.dongshihong.androidkit.base.root.BaseFragment;
  */
 
 public abstract class RxLazLoadFragment extends BaseFragment {
-    protected boolean isVisble;
+    protected boolean isVisible;
     public boolean isPrepared = false;
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if (getUserVisibleHint()) {
-            isVisble = true;
+            isVisible = true;
             onVisible();
         } else {
-            isVisble = false;
+            isVisible = false;
             onInVisible();
         }
     }
 
-    protected void onInVisible() {
+    private void onInVisible() {
     }
 
-    protected void onVisible() {
+    private void onVisible() {
         loadData();
     }
 

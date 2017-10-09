@@ -29,9 +29,9 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
     }
     if (baseException == null) {
       e.printStackTrace();
-    } else {
+    } /*else {
       if (mContext != null && (baseException.getCode() == 401 || baseException.getCode() == 402)) {
-        /*if (mContext instanceof RxActivity) {
+        *//*if (mContext instanceof RxActivity) {
           AccountManager.getInstance(mContext).loginOut();
           ((RxActivity) mContext).showOfflineDialog();
         } else {
@@ -39,9 +39,9 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
           Intent intent = new Intent(mContext, LoginActivity.class);
           intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
           mContext.startActivity(intent);
-        }*/
+        }*//*
       }
       mErrorHandler.showErrorMessage(baseException);
-    }
+    }*/
   }
 }

@@ -9,7 +9,6 @@ import com.orhanobut.logger.Logger;
 import java.util.concurrent.TimeUnit;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
@@ -21,11 +20,11 @@ public class HttpManager {
 
   private OkHttpClient mOkHttpClient;
   @SuppressLint("StaticFieldLeak") private static HttpManager sHttpManager;
-  private Context mContext;
+  private Context context;
   private final static int TIME_OUT = 30;
-
+  private Headers.Builder builder;
   private HttpManager(Context context) {
-    mContext = context;
+    this.context = context;
     initOkHttpClient();
   }
 
@@ -45,7 +44,7 @@ public class HttpManager {
   }
 
   private Headers.Builder defaultHeader() {
-    Headers.Builder builder = new Headers.Builder();
+    builder = new Headers.Builder();
     return builder;
   }
 
@@ -60,11 +59,11 @@ public class HttpManager {
       builder.addInterceptor(loggingInterceptor);
     }
     Headers.Builder defaultHeaderBuilder = defaultHeader();
-    builder.addInterceptor(new DefaultHeaderInterceptor(defaultHeaderBuilder, mContext));
+    builder.addInterceptor(new DefaultHeaderInterceptor(defaultHeaderBuilder, context));
     builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.writeTimeout(TIME_OUT, TimeUnit.SECONDS);
-    builder.cookieJar(CookieManager.getInstance(mContext));
+    builder.cookieJar(CookieManager.getInstance(context));
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
 

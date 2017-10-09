@@ -1,7 +1,5 @@
 package com.example.dongshihong.androidkit.base.root;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,7 +10,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */

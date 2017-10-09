@@ -6,16 +6,16 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
 public class RxActivityPresenter<T extends BaseActivityView> implements BaseActivityPresenter<T> {
 
-  protected T mView;
-  protected CompositeDisposable mCompositeDisposable;
+  private T mView;
+  private CompositeDisposable mCompositeDisposable;
 
-  protected void unSubscribe() {
+  private void unSubscribe() {
     if (mCompositeDisposable != null) {
       mCompositeDisposable.dispose();
     }

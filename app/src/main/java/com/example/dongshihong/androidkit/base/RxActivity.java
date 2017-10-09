@@ -15,7 +15,7 @@ import com.example.dongshihong.androidkit.di.module.ActivityModule;
 import javax.inject.Inject;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -35,7 +35,7 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
         .activityModule(new ActivityModule(this))
         .build();
   }
-
+  @SuppressWarnings("unchecked")
   @Override public void InjectActivity() {
     initInject();
     if (mPresenter != null) mPresenter.attachView(this);
@@ -45,7 +45,9 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
     toolbar.setTitle("");
     mTvToolbar.setText(title);
     setSupportActionBar(toolbar);
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    if (getSupportActionBar()!=null){
+      getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
     getSupportActionBar().setDisplayShowHomeEnabled(true);
     toolbar.setNavigationIcon(R.mipmap.ic_arrow_back_white_24dp);
     toolbar.setNavigationOnClickListener(view -> finish());

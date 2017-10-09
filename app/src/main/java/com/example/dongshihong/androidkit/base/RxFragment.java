@@ -13,7 +13,7 @@ import com.example.dongshihong.androidkit.di.module.FragmentModule;
 import javax.inject.Inject;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -28,7 +28,7 @@ public abstract class RxFragment<T extends BaseFragmentPresenter> extends BaseFr
         .fragmentModule(new FragmentModule(this))
         .build();
   }
-
+  @SuppressWarnings("unchecked")
   @Override public void InjectFragment() {
     initInject();
     if (mPresenter != null) mPresenter.attachView(this);

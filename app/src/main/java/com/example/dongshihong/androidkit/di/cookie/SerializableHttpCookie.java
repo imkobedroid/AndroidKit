@@ -7,7 +7,7 @@ import java.io.Serializable;
 import okhttp3.Cookie;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -48,7 +48,7 @@ public class SerializableHttpCookie implements Serializable {
     boolean secure = in.readBoolean();
     boolean httpOnly = in.readBoolean();
     boolean hostOnly = in.readBoolean();
-    boolean persistent = in.readBoolean();
+    //boolean persistent = in.readBoolean();
     Cookie.Builder builder = new Cookie.Builder();
     builder = builder.name(name);
     builder = builder.value(value);

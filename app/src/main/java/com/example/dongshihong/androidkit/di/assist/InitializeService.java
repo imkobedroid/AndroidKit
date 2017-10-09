@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -25,9 +25,9 @@ public class InitializeService extends IntentService {
   }
 
   @Override protected void onHandleIntent(Intent intent) {
-    if (intent != null) {
+   /* if (intent != null) {
       final String action = intent.getAction();
       if (ACTION_INIT.equals(action)) {
       }
-    }
+    }*/
   }}

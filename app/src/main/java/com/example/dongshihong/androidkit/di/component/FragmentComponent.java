@@ -6,7 +6,7 @@ import com.example.dongshihong.androidkit.di.assist.FragmentScope;
 import dagger.Component;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */

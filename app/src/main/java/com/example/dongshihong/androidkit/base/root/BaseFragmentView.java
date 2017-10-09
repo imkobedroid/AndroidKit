@@ -3,7 +3,7 @@ package com.example.dongshihong.androidkit.base.root;
 import com.example.dongshihong.androidkit.di.component.FragmentComponent;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/26 10:16
  * Email:imkobedroid@gmail.com
  */

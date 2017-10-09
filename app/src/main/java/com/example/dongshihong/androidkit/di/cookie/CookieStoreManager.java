@@ -19,7 +19,7 @@ import okhttp3.Cookie;
 import okhttp3.HttpUrl;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -41,23 +41,25 @@ public class CookieStoreManager {
     mCookies = new HashMap<>();//Load any previously stored cookies into the store
 
     Map<String, ?> prefsMap = mCookiePrefs.getAll();
-    for (Map.Entry<String, ?> entry : prefsMap.entrySet()) {
-      if (null != entry.getValue() && !((String) entry.getValue()).startsWith(COOKIE_NAME_PREFIX)) {
-        String[] cookieNames = TextUtils.split((String) entry.getValue(), ",");
-        for (String name : cookieNames) {
-          String encodedCookie = mCookiePrefs.getString(COOKIE_NAME_PREFIX + name, null);
-          if (encodedCookie != null) {
-            Cookie decodedCookie = decodeCookie(encodedCookie);
-            if (decodedCookie != null) {
-              if (!mCookies.containsKey(entry.getKey())) {
-                mCookies.put(entry.getKey(), new ConcurrentHashMap<String, Cookie>());
+    prefsMap.entrySet()
+        .stream()
+        .filter(entry -> null != entry.getValue() && !((String) entry.getValue()).startsWith(
+            COOKIE_NAME_PREFIX))
+        .forEach(entry -> {
+          String[] cookieNames = TextUtils.split((String) entry.getValue(), ",");
+          for (String name : cookieNames) {
+            String encodedCookie = mCookiePrefs.getString(COOKIE_NAME_PREFIX + name, null);
+            if (encodedCookie != null) {
+              Cookie decodedCookie = decodeCookie(encodedCookie);
+              if (decodedCookie != null) {
+                if (!mCookies.containsKey(entry.getKey())) {
+                  mCookies.put(entry.getKey(), new ConcurrentHashMap<>());
+                }
+                mCookies.get(entry.getKey()).put(name, decodedCookie);
               }
-              mCookies.get(entry.getKey()).put(name, decodedCookie);
             }
           }
-        }
-      }
-    }
+        });
   }
 
   protected String getCookieToken(Cookie cookie) {
@@ -66,9 +68,7 @@ public class CookieStoreManager {
 
   public void add(HttpUrl httpUrl, List<Cookie> cookies) {
     if (null != cookies && cookies.size() > 0) {
-      for (Cookie item : cookies) {
-        add(item);
-      }
+      cookies.forEach(this::add);
     }
   }
 
@@ -98,11 +98,7 @@ public class CookieStoreManager {
 
   public List<Cookie> get(HttpUrl uri) {
     ArrayList<Cookie> ret = new ArrayList<>();
-    for (String key : mCookies.keySet()) {
-      if (uri.host().contains(key)) {
-        ret.addAll(mCookies.get(key).values());
-      }
-    }
+    mCookies.keySet().stream().filter(key -> uri.host().contains(key)).forEach(key -> ret.addAll(mCookies.get(key).values()));
     return ret;
   }
 
@@ -125,7 +121,6 @@ public class CookieStoreManager {
 
   /**
    * Returns cookie decoded from cookie string * * @param cookieString string of cookie as returned
-   * from http request * @return decoded cookie or null if exception occured
    */
   protected Cookie decodeCookie(String cookieString) {
     byte[] bytes = hexStringToByteArray(cookieString);
@@ -159,10 +154,7 @@ public class CookieStoreManager {
     return sb.toString().toUpperCase(Locale.US);
   }
 
-  /**
-   * Converts hex values from strings to byte arra * * @param hexString string of hex-encoded values
-   * * @return decoded byte array
-   */
+
   protected byte[] hexStringToByteArray(String hexString) {
     int len = hexString.length();
     byte[] data = new byte[len / 2];
