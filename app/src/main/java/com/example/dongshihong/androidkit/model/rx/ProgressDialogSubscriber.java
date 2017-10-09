@@ -13,7 +13,7 @@ public abstract class ProgressDialogSubscriber<T> extends ErrorHandlerSubscriber
 
   public ProgressDialogSubscriber(Context context) {
     super(context);
-    mProgressDialogHandler = new ProgressDialogHandler(mContext, true, this);
+    mProgressDialogHandler = new ProgressDialogHandler(context, true, this);
   }
 
   public boolean isShowProgressDialog() {

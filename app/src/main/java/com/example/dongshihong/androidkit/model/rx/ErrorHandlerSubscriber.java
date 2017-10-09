@@ -1,6 +1,7 @@
 package com.example.dongshihong.androidkit.model.rx;
 
 import android.content.Context;
+import com.google.common.base.Strings;
 import java.io.IOException;
 
 /**
@@ -8,27 +9,25 @@ import java.io.IOException;
  * Use:
  */
 public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
-
-  protected RxErrorHandler mErrorHandler = null;
-
-  protected Context mContext;
+  private BaseException baseException;
+  private RxErrorHandler errorHandler;
 
   public ErrorHandlerSubscriber(Context context) {
-
-    this.mContext = context;
-
-    mErrorHandler = new RxErrorHandler(mContext);
+    Context Context = context;
+    errorHandler = new RxErrorHandler(Context);
   }
 
   @Override public void onError(Throwable e) {
-    BaseException baseException = null;
     try {
-      baseException = mErrorHandler.handleError(e);
+      baseException = errorHandler.handleError(e);
     } catch (IOException e1) {
       e1.printStackTrace();
     }
-    if (baseException == null) {
-      e.printStackTrace();
+
+    if (baseException != null) {
+      if (!Strings.isNullOrEmpty(baseException.getDisplayMessage())){//捕获到自定义的异常就显示，如果没有就在presenter中自己定义
+        errorHandler.showErrorMessage(baseException);
+      }
     } /*else {
       if (mContext != null && (baseException.getCode() == 401 || baseException.getCode() == 402)) {
         *//*if (mContext instanceof RxActivity) {
@@ -41,7 +40,7 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
           mContext.startActivity(intent);
         }*//*
       }
-      mErrorHandler.showErrorMessage(baseException);
+      errorHandler.showErrorMessage(baseException);
     }*/
   }
 }

@@ -12,7 +12,7 @@ public class ErrorMessageFactory {
 
   public static String create(Context context, int code) {
 
-    String errorMsg = null;
+    String errorMsg;
 
     switch (code) {
 
@@ -21,10 +21,30 @@ public class ErrorMessageFactory {
         errorMsg = context.getResources().getString(R.string.error_http);
 
         break;
+      case BaseException.API_ERROR:
+
+        errorMsg = context.getResources().getString(R.string.error_api);
+
+        break;
+      case BaseException.UNKOWNHOST_ERROR:
+
+        errorMsg = context.getResources().getString(R.string.error_api);
+
+        break;
 
       case BaseException.SOCKET_TIMEOUT_ERROR:
 
         errorMsg = context.getResources().getString(R.string.error_socket_timeout);
+
+        break;
+      case BaseException.JSON_ERROR:
+
+        errorMsg = context.getResources().getString(R.string.error_change);
+
+        break;
+      case BaseException.UNKNOWN_ERROR:
+
+        errorMsg = context.getResources().getString(R.string.error_know);
 
         break;
       case BaseException.SOCKET_ERROR:
@@ -50,6 +70,11 @@ public class ErrorMessageFactory {
         errorMsg = context.getResources().getString(R.string.error_http_500);
 
         break;
+      case BaseException.ERROR_HTTP_405:
+
+        errorMsg = context.getResources().getString(R.string.error_http_402);
+
+        break;
 
       case ApiException.ERROR_API_SYSTEM:
         errorMsg = context.getResources().getString(R.string.error_system);
@@ -68,7 +93,7 @@ public class ErrorMessageFactory {
         break;
 
       default:
-        errorMsg = context.getResources().getString(R.string.error_unkown);
+        errorMsg = context.getResources().getString(R.string.error_know);
         break;
     }
 
