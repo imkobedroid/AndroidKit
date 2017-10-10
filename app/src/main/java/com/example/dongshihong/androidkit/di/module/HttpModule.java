@@ -39,9 +39,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
         .build();
   }
 
-  /**
-   * 这里要提供相应的retrofit  本项目的baseUrl相同所以使用了相同的@BaseUrl
-   */
+  // TODO: 2017/10/10 这里要提供相应的retrofit  本项目的baseUrl相同所以使用了相同的@BaseUrl
 
   @Singleton @Provides @BaseUrl Retrofit LoginRetrofit(Retrofit.Builder builder,
       OkHttpClient client) {
@@ -49,24 +47,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
   }
 
 
-
- /*   @Singleton
-    @Provides
-    @ZhihuUrl
-    Retrofit provideZhihuRetrofit(Retrofit.Builder builder,
-                                  OkHttpClient client) {
-        return createRetrofit(builder, client, ZhihuApis.HOST);
-    }*/
-
-
-
-  /**
-   * 下面是提供一切接口的地方
-   */
-
-   /* @Singleton
-    @Provides
-    ZhihuApis provideZhihuService(@ZhihuUrl Retrofit retrofit) {
-        return retrofit.create(ZhihuApis.class);
-    }*/
+  // TODO: 2017/10/10 下面是提供一切接口的地方
+  @Singleton @Provides LoginApi provideLoginApi(@BaseUrl Retrofit retrofit) {
+    return retrofit.create(LoginApi.class);
+  }
 }

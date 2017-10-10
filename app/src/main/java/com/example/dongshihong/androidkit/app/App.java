@@ -10,9 +10,8 @@ import com.orhanobut.logger.Logger;
 
 public class App extends Application {
 
-  private static App instance;
+  public static App instance;
   public static AppComponent appComponent;
-
 
   static {
     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -23,7 +22,6 @@ public class App extends Application {
     instance = this;
     Logger.init(getPackageName()).hideThreadInfo();
   }
-
 
   public static AppComponent getAppComponent() {
     if (appComponent == null) {

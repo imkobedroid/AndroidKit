@@ -12,7 +12,7 @@ import io.reactivex.disposables.Disposable;
  */
 public class RxActivityPresenter<T extends BaseActivityView> implements BaseActivityPresenter<T> {
 
-  private T mView;
+  public T mView;
   private CompositeDisposable mCompositeDisposable;
 
   private void unSubscribe() {

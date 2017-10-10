@@ -19,13 +19,14 @@ import javax.inject.Inject;
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
-public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseActivity implements
-    BaseActivityView {
+public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseActivity
+    implements BaseActivityView {
 
   @Inject protected T mPresenter;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+
     InjectActivity();
   }
 
@@ -35,8 +36,8 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
         .activityModule(new ActivityModule(this))
         .build();
   }
-  @SuppressWarnings("unchecked")
-  @Override public void InjectActivity() {
+
+  @SuppressWarnings("unchecked") @Override public void InjectActivity() {
     initInject();
     if (mPresenter != null) mPresenter.attachView(this);
   }
@@ -45,7 +46,7 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
     toolbar.setTitle("");
     mTvToolbar.setText(title);
     setSupportActionBar(toolbar);
-    if (getSupportActionBar()!=null){
+    if (getSupportActionBar() != null) {
       getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
     getSupportActionBar().setDisplayShowHomeEnabled(true);

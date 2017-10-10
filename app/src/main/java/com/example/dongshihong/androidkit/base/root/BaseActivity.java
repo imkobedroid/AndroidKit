@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import com.example.dongshihong.androidkit.app.App;
 
 /**
  * Author:Dsh

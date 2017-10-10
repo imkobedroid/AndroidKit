@@ -2,12 +2,13 @@ package com.example.dongshihong.androidkit.di.module;
 
 import android.content.Context;
 import com.example.dongshihong.androidkit.app.App;
+import com.example.dongshihong.androidkit.di.helper.LoginHelper;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
  */
@@ -27,14 +28,11 @@ import javax.inject.Singleton;
     return app.getApplicationContext();
   }
 
-  /**
-   * 下面是提供模块的retrofit的帮助类
-   */
 
-   /* @Provides
-    @Singleton
-    RetrofitHelper provideHttpHelper(LoginApi loginApi, ZhihuApis zhihuApis,
-                                     SiteApi mSiteApi, WithdrawApi withdrawApi,DataStatisticsApi dataStatisticsApi) {
-        return new RetrofitHelper(zhihuApis, loginApi, mSiteApi,withdrawApi,dataStatisticsApi);
-    }*/
+  // TODO: 2017/10/10 下面是提供模块的retrofit的帮助类
+
+    @Provides
+    @Singleton LoginHelper provideLoginHelper(LoginApi loginApi) {
+        return new LoginHelper(loginApi);
+    }
 }

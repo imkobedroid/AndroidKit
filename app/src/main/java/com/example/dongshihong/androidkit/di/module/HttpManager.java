@@ -63,7 +63,8 @@ public class HttpManager {
     builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.writeTimeout(TIME_OUT, TimeUnit.SECONDS);
-    builder.cookieJar(CookieManager.getInstance(context));
+    // TODO: 2017/10/10 要加cookie 
+    //builder.cookieJar(CookieManager.getInstance(context));
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
 
