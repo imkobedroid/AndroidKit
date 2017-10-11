@@ -28,10 +28,8 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
     login();
   }
 
-
   private void login() {
-    login.setOnClickListener(
-        view -> mPresenter.login(new RequestBean()));
+    login.setOnClickListener(view -> mPresenter.login(new RequestBean()));
   }
 
   @Override protected int getLayout() {
