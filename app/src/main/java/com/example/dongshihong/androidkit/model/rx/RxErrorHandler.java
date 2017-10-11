@@ -52,7 +52,7 @@ public class RxErrorHandler {
       exception.setDisplayMessage(ErrorMessageFactory.create(mContext, BaseException.SOCKET_ERROR));
     } else if (e instanceof HttpException) {
       exception.setCode(((HttpException) e).code());
-     /* HttpException httpException = (HttpException) e;
+      HttpException httpException = (HttpException) e;
       Gson gson = new Gson();
       Message messages = gson.fromJson(httpException.response().errorBody().string(),
           Message.class);//后台服务器返回的错误json
@@ -60,7 +60,7 @@ public class RxErrorHandler {
         exception.setDisplayMessage(messages.getMessage());
       } else {
         exception.setDisplayMessage(ErrorMessageFactory.create(mContext, exception.getCode()));
-      }*/
+      }
     } /*else {
       exception.setCode(BaseException.UNKNOWN_ERROR);
       exception.setDisplayMessage(

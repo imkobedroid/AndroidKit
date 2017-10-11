@@ -85,7 +85,7 @@ public class ErrorMessageFactory {
         break;
 
       case ApiException.ERROR_API_NO_PERMISSION:
-        errorMsg = context.getResources().getString(R.string.error_api_no_perission);
+        errorMsg = context.getResources().getString(R.string.error_api_no_permission);
         break;
 
       case ApiException.ERROR_API_LOGIN:

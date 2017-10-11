@@ -1,0 +1,53 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+  <dimen name="content_padding">8dp</dimen>
+  <dimen name="fab_margin">16dp</dimen>
+  <dimen name="comment_face_size">42dp</dimen>
+  <dimen name="list_image_size">80dp</dimen>
+  <dimen name="top_viewpager_height">200dp</dimen>
+  <dimen name="drawer_image_height">180dp</dimen>
+  <dimen name="detail_image_height">260dp</dimen>
+  <dimen name="detail_bottom_height">56dp</dimen>
+  <dimen name="tech_image_height">300dp</dimen>
+  <dimen name="tech_icon_size">32dp</dimen>
+  <dimen name="theme_image_height">120dp</dimen>
+  <dimen name="section_image_height">140dp</dimen>
+  <dimen name="gold_image_size">60dp</dimen>
+  <dimen name="gold_icon_size">16dp</dimen>
+  <dimen name="image_size">36dp</dimen>
+  <dimen name="author_image_size">20dp</dimen>
+  <dimen name="node_image_size">60dp</dimen>
+
+  <!--UI-->
+  <dimen name="dp_1">1dp</dimen>
+  <dimen name="dp_2">2dp</dimen>
+  <dimen name="dp_45">45dp</dimen>
+  <dimen name="dp_10">10dp</dimen>
+  <dimen name="dp_40">40dp</dimen>
+  <dimen name="dp_25">25dp</dimen>
+  <dimen name="dp_16">16dp</dimen>
+  <dimen name="dp_8">8dp</dimen>
+  <dimen name="dp_4">4dp</dimen>
+  <dimen name="dp_6">6dp</dimen>
+  <dimen name="dp_68">68dp</dimen>
+  <dimen name="dp_20">20dp</dimen>
+  <dimen name="dp_18">18dp</dimen>
+  <dimen name="dp_30">30dp</dimen>
+  <dimen name="dp_52">52dp</dimen>
+  <dimen name="dp_50">50dp</dimen>
+  <dimen name="dp_12">12dp</dimen>
+  <dimen name="dp_14">14dp</dimen>
+
+
+
+  <!--Font-->
+  <dimen name="sp_12">12sp</dimen>
+  <dimen name="sp_14">14sp</dimen>
+  <dimen name="sp_30">30sp</dimen>
+  <dimen name="sp_16">16sp</dimen>
+  <dimen name="sp_18">18sp</dimen>
+  <dimen name="sp_10">10sp</dimen>
+  <dimen name="sp_20">20sp</dimen>
+</resources>

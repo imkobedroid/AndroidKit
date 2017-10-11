@@ -3,12 +3,12 @@
 
 
   <!--网络错误相应-->
-  <string name="error_unkown">服务器开了点小差</string>
+  <string name="error_un_know">服务器开了点小差</string>
   <string name="error_http">网络连接错误</string>
   <string name="error_api">访问地址出错</string>
   <string name="error_system">服务器出错</string>
   <string name="error_account_freeze">账户被冻结，请联系管理员</string>
-  <string name="error_api_no_perission">调用了无权限的API接口</string>
+  <string name="error_api_no_permission">调用了无权限的API接口</string>
   <string name="error_login">用户名或者密码错误</string>
   <string name="error_http_400">bad request</string>
   <string name="error_http_404">服务器资源找不到</string>
@@ -18,7 +18,7 @@
   <string name="error_change">资源解析出错</string>
   <string name="error_know">未知错误</string>
   <string name="error_socket_unreachable">网络错误</string>
-  <string name="loading">loading...</string>
+  <string name="loading">loading…</string>
   <string name="support_ui_empty_title_placeholder">暂时没有数据</string>
   <string name="support_ui_empty_subtitle_placeholder">点击屏幕刷新数据</string>
   <string name="support_ui_error_title_placeholder">无网络连接</string>
