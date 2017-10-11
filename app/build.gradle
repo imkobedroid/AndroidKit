@@ -5,15 +5,26 @@ apply plugin: 'AndResGuard'
 
 
 android {
-  compileSdkVersion 26
-  buildToolsVersion "26.0.1"
+  compileSdkVersion rootProject.ext.android.compileSdkVersion
+  buildToolsVersion rootProject.ext.android.buildToolsVersion
   defaultConfig {
-    applicationId "com.imkobe.rx.androidkit"
-    minSdkVersion 19
-    targetSdkVersion 26
-    versionCode 1
-    versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    multiDexEnabled true
+    applicationId rootProject.ext.android.applicationId
+    minSdkVersion rootProject.ext.android.minSdkVersion
+    targetSdkVersion rootProject.ext.android.targetSdkVersion
+    versionCode rootProject.ext.android.versionCode
+    versionName rootProject.ext.android.versionName
+    testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+
+    //全局变量的存放位置
+    buildConfigField("String", "WEIXIN_ID", "\"wx2c85c2818c2b9f95\"")
+    manifestPlaceholders = [JIGUANG_APPKEY: "210e9abc8742709b3aafc0d8",
+                            UMENG_APPKEY  : "594b23beae1bf8796c000c13",
+                            UMENG_CHANNEL : "Wandoujia"]
+  }
+  dexOptions {
+    incremental true
+    javaMaxHeapSize rootProject.ext.android.javaMaxHeapSize
   }
 
   buildTypes {
@@ -22,7 +33,6 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_1_8
@@ -42,20 +52,18 @@ dependencies {
   compile rootProject.ext.dependencies["design"]
   compile rootProject.ext.dependencies["recyclerview-v7"]
   compile rootProject.ext.dependencies["cardview-v7"]
-  //ui
   compile rootProject.ext.dependencies["material-calendarview"]
   compile rootProject.ext.dependencies["materialsearchview"]
   compile rootProject.ext.dependencies["multiline-collapsingtoolbar"]
   compile rootProject.ext.dependencies["glide-transformations"]
   compile rootProject.ext.dependencies["html-textview"]
   compile rootProject.ext.dependencies["materialDialogs"]
-  //rx
   compile rootProject.ext.dependencies["rxjava"]
   compile rootProject.ext.dependencies["rxandroid"]
   compile rootProject.ext.dependencies["rxpermissions"]
-  //network
   compile rootProject.ext.dependencies["gson"]
   compile rootProject.ext.dependencies["retrofit"]
+  compile rootProject.ext.dependencies["rxBus"]
   compile rootProject.ext.dependencies["retrofit-converter-gson"]
   compile rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
   compile rootProject.ext.dependencies["okhttp"]
@@ -63,23 +71,19 @@ dependencies {
   compile rootProject.ext.dependencies["glide"]
   compile rootProject.ext.dependencies["glide-okhttp3-integration"]
   compile rootProject.ext.dependencies["jsoup"]
-  //di
+  compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
   compile rootProject.ext.dependencies["dagger"]
   compile rootProject.ext.dependencies["dagger-compiler"]
+  compile rootProject.ext.dependencies["circleimageview"]
   compile rootProject.ext.dependencies["butterknife"]
   apt rootProject.ext.dependencies["butterknife-compiler"]
   provided rootProject.ext.dependencies["annotation"]
-  //other
   compile rootProject.ext.dependencies["multidex"]
   compile rootProject.ext.dependencies["logger"]
   compile rootProject.ext.dependencies["fragmentation"]
-  //canary
+  compile rootProject.ext.dependencies["sweetalert"]
   debugCompile rootProject.ext.dependencies["blockcanary-android"]
   releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
   debugCompile rootProject.ext.dependencies["leakcanary-android"]
   releaseCompile rootProject.ext.dependencies["leakcanary-android-no-op"]
-
-
-
-  compile 'cn.pedant.sweetalert:library:1.3'
 }
