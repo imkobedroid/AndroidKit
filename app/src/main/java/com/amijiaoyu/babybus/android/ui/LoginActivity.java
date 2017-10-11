@@ -12,7 +12,7 @@ import com.amijiaoyu.babybus.android.utils.SnackbarUtil;
 import work.wanghao.rxbus2.Subscribe;
 
 /**
- * Author:SHIHONG DONG
+ * Author:Dsh
  * Date:2017/10/10 10:00
  * Email:imkobedroid@gmail.com
  */
