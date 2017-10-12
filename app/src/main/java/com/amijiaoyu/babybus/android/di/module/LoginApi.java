@@ -14,6 +14,6 @@ import retrofit2.http.POST;
  */
 
 public interface LoginApi {
-  @Headers({"Content-Type: application/json","Accept: application/json"})//需要添加头
+  //@Headers({"Content-Type: application/json","Accept: application/json"})//需要添加头
    @POST("/oauth/token") Flowable<LoginBean> getPayData(@Body RequestBean body);
 }

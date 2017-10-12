@@ -7,6 +7,6 @@ package com.amijiaoyu.babybus.android.app;
  */
 public class Constants {
   public static final String HOST = "http://192.168.1.5:8080";
-  public static final String API_ACCEPT = "application/vnd.fakerapi.v1.0+json";
+  public static final String API_ACCEPT = "application/json";
 
 }

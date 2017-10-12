@@ -32,10 +32,9 @@ public class DefaultHeaderInterceptor implements HeaderInterceptor {
     final String token = AccountManager.getInstance(context).getToken();
     if (!Strings.isNullOrEmpty(token)) {
       // TODO: 2017/9/26 添加后台约定的请求头信息
-      builder.add("Content-Encoding", "gzip")
-          .add("X-Client-Type", "android")
-          .add("Accept", Constants.API_ACCEPT)
-          .add("Authorization", "Bearer" + token);
+      builder.add("Accept", Constants.API_ACCEPT)
+          .add("Authorization", "Bearer " + token)
+          .add("Content-Type", "application/json");
     }
 
     Request compressedRequest = originalRequest.newBuilder().headers(builder.build()).build();
