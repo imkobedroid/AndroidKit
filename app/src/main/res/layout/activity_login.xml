@@ -16,12 +16,12 @@
       android:textSize="14sp"
       />
   <EditText
-      android:inputType="number"
       android:id="@+id/password"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
       android:hint="请输入账号"
+      android:inputType="number"
       android:textColor="@color/colorLogo"
       android:textSize="14sp"
       />
@@ -33,6 +33,14 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="10dp"
       android:text="登    录"
+      android:textColor="@color/colorLogo"
+      />
+  <Button
+      android:id="@+id/user"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:text="获取用户信息"
       android:textColor="@color/colorLogo"
       />
 

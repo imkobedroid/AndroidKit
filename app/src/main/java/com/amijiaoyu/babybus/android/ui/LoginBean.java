@@ -1,12 +1,15 @@
 package com.amijiaoyu.babybus.android.ui;
 
+import com.amijiaoyu.babybus.android.model.account.BaseAccount;
+import com.google.common.base.Strings;
+
 /**
  * Author:SHIHONG DONG
  * Date:2017/10/10 10:40
  * Email:imkobedroid@gmail.com
  */
 
-public class LoginBean {
+public class LoginBean implements BaseAccount {
   private String access_token;
   private String refresh_token;
   private String expires_in;
@@ -42,5 +45,20 @@ public class LoginBean {
 
   public void setData(Object data) {
     this.data = data;
+  }
+
+  @Override public String name() {
+    return null;
+  }
+
+  @Override public String token() {
+    if (!Strings.isNullOrEmpty(access_token)) {
+      return access_token;
+    }
+    return "";
+  }
+
+  @Override public String toJson() {
+    return null;
   }
 }

@@ -3,11 +3,14 @@ package com.amijiaoyu.babybus.android.di.module;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.compat.BuildConfig;
+import com.amijiaoyu.babybus.android.app.Constants;
 import com.amijiaoyu.babybus.android.di.interceptor.DefaultHeaderInterceptor;
+import com.amijiaoyu.babybus.android.model.account.AccountManager;
 import com.orhanobut.logger.Logger;
 import java.util.concurrent.TimeUnit;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
@@ -44,6 +47,7 @@ public class HttpManager {
 
   private Headers.Builder defaultHeader() {
     builder = new Headers.Builder();
+    builder.add("Accept:", "application/json");
     return builder;
   }
 
@@ -58,21 +62,24 @@ public class HttpManager {
       builder.addInterceptor(loggingInterceptor);
     }
     Headers.Builder defaultHeaderBuilder = defaultHeader();
+    defaultHeaderBuilder.add("Accept", Constants.API_ACCEPT);
     builder.addInterceptor(new DefaultHeaderInterceptor(defaultHeaderBuilder, context));
     builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.writeTimeout(TIME_OUT, TimeUnit.SECONDS);
+
     // TODO: 2017/10/10 要加cookie 
     //builder.cookieJar(CookieManager.getInstance(context));
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
 
     // TODO: 2017/9/26 也可以通过这样的方式来添加请求头信息
-    /*mOkHttpClient.interceptors().add(chain -> {
+   /* final String token = AccountManager.getInstance(context).getToken();
+    mOkHttpClient.interceptors().add(chain -> {
       Request original = chain.request();
       Request.Builder requestBuilder = original.newBuilder()
-          .addHeader("header-key", "value1")
-          .addHeader("header-key", "value2");
+          .addHeader("Authorization", "Bearer" + token)
+          .addHeader("Accept", "application/json");
       Request request = requestBuilder.build();
       return chain.proceed(request);
     });*/

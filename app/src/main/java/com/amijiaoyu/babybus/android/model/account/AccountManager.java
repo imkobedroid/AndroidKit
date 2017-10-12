@@ -1,6 +1,7 @@
 package com.amijiaoyu.babybus.android.model.account;
 
 import android.content.Context;
+import com.amijiaoyu.babybus.android.ui.UserInfoBean;
 import com.amijiaoyu.babybus.android.utils.ACache;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
@@ -12,12 +13,13 @@ import com.google.gson.Gson;
 
 public class AccountManager {
 
-  private final static String TOKEN = "token";
+  private final static String TOKEN = "baby_token";
   private final static String NAME = "name";
   private final static String JSON = "json";
   private final static String USER = "account";
   private final static String ISLOGIN = "login";
   public final static String SCORE = "score";
+
   private BaseAccount mCurrentAccount;
   private Context mContext;
   private static AccountManager accountManager;
@@ -69,6 +71,8 @@ public class AccountManager {
     }
   }
 
+
+
   public String getToken() {
     return aCache.getAsString(AccountManager.TOKEN);
   }
@@ -78,7 +82,7 @@ public class AccountManager {
   }
 
   public BaseAccount getCurrentUser() {
-    //mCurrentAccount = gson.fromJson(aCache.getAsString(AccountManager.USER), LoginOkBean.class);
+    //mCurrentAccount = gson.fromJson(aCache.getAsString(AccountManager.USER), UserInfoBean.class);
     return mCurrentAccount;
   }
 

@@ -2,6 +2,7 @@ package com.amijiaoyu.babybus.android.ui;
 
 import com.amijiaoyu.babybus.android.base.root.BaseActivityPresenter;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityView;
+import com.amijiaoyu.babybus.android.di.module.UserBean;
 
 /**
  * Author:SHIHONG DONG
@@ -16,10 +17,14 @@ public interface LoginConstance {
     void loginSucceed(String message);
 
     void LoginField(String message);
+
+    void getUserInfoSucceed(UserBean userBean);
   }
 
   interface Presenter extends BaseActivityPresenter<View> {
 
     void login(RequestBean requestBean);
+
+    void getUserInfo();
   }
 }

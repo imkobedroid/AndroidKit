@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 import butterknife.BindView;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.R;
+import com.amijiaoyu.babybus.android.di.module.UserBean;
 import com.amijiaoyu.babybus.android.utils.SnackbarUtil;
 import work.wanghao.rxbus2.Subscribe;
 
@@ -22,6 +23,7 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   @BindView(R.id.password) EditText password;
   @BindView(R.id.login) Button login;
   @BindView(R.id.view_main) LinearLayout view_main;
+  @BindView(R.id.user)Button user;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
 
   private void login() {
     login.setOnClickListener(view -> mPresenter.login(new RequestBean()));
+    user.setOnClickListener(view -> mPresenter.getUserInfo());
   }
 
   @Override protected int getLayout() {
@@ -45,6 +48,11 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   }
 
   @Override public void LoginField(String message) {
+
+  }
+
+  @Override public void getUserInfoSucceed(UserBean userBean) {
+    SnackbarUtil.show(view_main, "获取成功");
 
   }
 }

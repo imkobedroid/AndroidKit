@@ -2,9 +2,10 @@ package com.amijiaoyu.babybus.android.di.module;
 
 import com.amijiaoyu.babybus.android.ui.LoginBean;
 import com.amijiaoyu.babybus.android.ui.RequestBean;
+import com.amijiaoyu.babybus.android.ui.UserInfoBean;
 import io.reactivex.Flowable;
 import retrofit2.http.Body;
-import retrofit2.http.Headers;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 /**
@@ -14,6 +15,9 @@ import retrofit2.http.POST;
  */
 
 public interface LoginApi {
-  //@Headers({"Content-Type: application/json","Accept: application/json"})//需要添加头
-   @POST("/oauth/token") Flowable<LoginBean> getPayData(@Body RequestBean body);
+ // @Headers({"Content-Type: application/json","Accept: application/json"})//需要添加头
+  @POST("/oauth/token") Flowable<LoginBean> getPayData(@Body RequestBean body);
+
+
+  @GET("/api/user") Flowable<UserInfoBean> getUser();
 }
