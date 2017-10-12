@@ -72,16 +72,5 @@ public class HttpManager {
     //builder.cookieJar(CookieManager.getInstance(context));
     builder.retryOnConnectionFailure(true);
     mOkHttpClient = builder.build();
-
-    // TODO: 2017/9/26 也可以通过这样的方式来添加请求头信息
-   /* final String token = AccountManager.getInstance(context).getToken();
-    mOkHttpClient.interceptors().add(chain -> {
-      Request original = chain.request();
-      Request.Builder requestBuilder = original.newBuilder()
-          .addHeader("Authorization", "Bearer" + token)
-          .addHeader("Accept", "application/json");
-      Request request = requestBuilder.build();
-      return chain.proceed(request);
-    });*/
   }
 }
