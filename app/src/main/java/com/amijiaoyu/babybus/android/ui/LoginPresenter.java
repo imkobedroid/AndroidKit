@@ -37,16 +37,12 @@ public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
   }
 
   @Override public void getUserInfo() {
-    addSubscribe(loginHelper.loginApi.getUser()
+    addSubscribe(loginHelper.loginApi.getUser(1)
         .compose(RxUtil.rxSchedulerHelper())
         .subscribeWith(new ProgressDialogSubscriber<UserInfoBean>((Activity) mView) {
           @Override public void onNext(UserInfoBean loginBean) {
-            if (loginBean != null && !Strings.isNullOrEmpty(loginBean.getMessage())) {
-              mView.loginSucceed(loginBean.getMessage());
-            } else {
-              if (loginBean != null &&!Strings.isNullOrEmpty(loginBean.getMessage())) {
-                mView.loginSucceed(loginBean.getMessage());
-              }
+            if (loginBean != null) {
+              mView.loginSucceed("获取成功");
             }
           }
         }));
