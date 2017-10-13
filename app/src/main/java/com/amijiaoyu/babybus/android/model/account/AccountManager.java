@@ -1,7 +1,6 @@
 package com.amijiaoyu.babybus.android.model.account;
 
 import android.content.Context;
-import com.amijiaoyu.babybus.android.ui.UserInfoBean;
 import com.amijiaoyu.babybus.android.utils.ACache;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
@@ -17,13 +16,11 @@ public class AccountManager {
   private final static String NAME = "name";
   private final static String JSON = "json";
   private final static String USER = "account";
-  private final static String ISLOGIN = "login";
-  public final static String SCORE = "score";
+  private final static String IS_LOGIN = "login";
 
   private BaseAccount mCurrentAccount;
-  private Context mContext;
   private static AccountManager accountManager;
-  public static ACache aCache;
+  private static ACache aCache;
   private static Gson gson;
 
   public static AccountManager getInstance(Context context) {
@@ -47,31 +44,26 @@ public class AccountManager {
         }
       }
     }
-    mContext = context;
   }
 
   public boolean isLogin() {
-    return AccountManager.ISLOGIN.equals(aCache.getAsString(AccountManager.ISLOGIN)) ? true : false;
+    return AccountManager.IS_LOGIN.equals(aCache.getAsString(AccountManager.IS_LOGIN));
   }
 
   public void storeAccount(BaseAccount account) {
     mCurrentAccount = account;
-    aCache.put(AccountManager.ISLOGIN, AccountManager.ISLOGIN);
+    aCache.put(AccountManager.IS_LOGIN, AccountManager.IS_LOGIN);
     if (!Strings.isNullOrEmpty(account.token())) {
       aCache.put(AccountManager.TOKEN, account.token());
     }
     if (!Strings.isNullOrEmpty(account.name())) {
       aCache.put(AccountManager.NAME, account.name());
     }
-    if (account != null) {
-      aCache.put(AccountManager.USER, gson.toJson(account));
-    }
+    aCache.put(AccountManager.USER, gson.toJson(account));
     if (!Strings.isNullOrEmpty(account.toJson())) {
       aCache.put(AccountManager.JSON, account.toJson());
     }
   }
-
-
 
   public String getToken() {
     return aCache.getAsString(AccountManager.TOKEN);

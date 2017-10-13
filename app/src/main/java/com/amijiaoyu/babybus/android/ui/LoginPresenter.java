@@ -6,6 +6,7 @@ import com.amijiaoyu.babybus.android.di.helper.LoginHelper;
 import com.amijiaoyu.babybus.android.model.account.AccountManager;
 import com.amijiaoyu.babybus.android.model.rx.ProgressDialogSubscriber;
 import com.amijiaoyu.babybus.android.utils.RxUtil;
+import com.google.common.base.Strings;
 import javax.inject.Inject;
 
 /**
@@ -16,7 +17,7 @@ import javax.inject.Inject;
 
 public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
     implements LoginConstance.Presenter {
-  public LoginHelper loginHelper;
+  private LoginHelper loginHelper;
 
   @Inject public LoginPresenter(LoginHelper loginHelper) {
     this.loginHelper = loginHelper;
@@ -40,10 +41,12 @@ public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
         .compose(RxUtil.rxSchedulerHelper())
         .subscribeWith(new ProgressDialogSubscriber<UserInfoBean>((Activity) mView) {
           @Override public void onNext(UserInfoBean loginBean) {
-            if (loginBean != null) {
+            if (loginBean != null && !Strings.isNullOrEmpty(loginBean.getMessage())) {
               mView.loginSucceed(loginBean.getMessage());
-            }else {
-              mView.loginSucceed(loginBean.getMessage());
+            } else {
+              if (loginBean != null &&!Strings.isNullOrEmpty(loginBean.getMessage())) {
+                mView.loginSucceed(loginBean.getMessage());
+              }
             }
           }
         }));

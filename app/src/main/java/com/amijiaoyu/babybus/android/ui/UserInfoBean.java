@@ -1,8 +1,5 @@
 package com.amijiaoyu.babybus.android.ui;
 
-import com.amijiaoyu.babybus.android.di.module.UserBean;
-import com.amijiaoyu.babybus.android.model.rx.Message;
-
 /**
  * Author:SHIHONG DONG
  * Date:2017/10/12 14:14
