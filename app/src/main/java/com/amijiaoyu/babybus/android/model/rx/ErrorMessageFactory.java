@@ -26,6 +26,11 @@ public class ErrorMessageFactory {
         errorMsg = context.getResources().getString(R.string.error_api);
 
         break;
+      case BaseException.ERROR_TRANSFORMER:
+
+        errorMsg = context.getResources().getString(R.string.error_transformer);
+
+        break;
       case BaseException.UNKOWNHOST_ERROR:
 
         errorMsg = context.getResources().getString(R.string.error_api);
@@ -78,18 +83,6 @@ public class ErrorMessageFactory {
 
       case ApiException.ERROR_API_SYSTEM:
         errorMsg = context.getResources().getString(R.string.error_system);
-        break;
-
-      case ApiException.ERROR_API_ACCOUNT_FREEZE:
-        errorMsg = context.getResources().getString(R.string.error_account_freeze);
-        break;
-
-      case ApiException.ERROR_API_NO_PERMISSION:
-        errorMsg = context.getResources().getString(R.string.error_api_no_permission);
-        break;
-
-      case ApiException.ERROR_API_LOGIN:
-        errorMsg = context.getResources().getString(R.string.error_login);
         break;
 
       default:

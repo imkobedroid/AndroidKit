@@ -7,8 +7,10 @@ public class BaseException extends Exception {
 
   /*http_错误*/
   public static final int HTTP_ERROR = 0x2;
+
   /*json错误*/
   public static final int JSON_ERROR = 0x3;
+
   /*未知错误*/
   public static final int UNKNOWN_ERROR = 0x4;
 
@@ -24,17 +26,10 @@ public class BaseException extends Exception {
   // 服务器错误
   public static final int ERROR_API_SYSTEM = 10000;
 
-  // 登录错误，用户名密码错误
-  public static final int ERROR_API_LOGIN = 10001;
-
-  //调用无权限的API
-  public static final int ERROR_API_NO_PERMISSION = 10002;
-
-  //账户被冻结
-  public static final int ERROR_API_ACCOUNT_FREEZE = 10003;
+  // 解析错误
+  public static final int ERROR_TRANSFORMER = 10001;
 
   // http
-
   public static final int ERROR_HTTP_400 = 400;
 
   public static final int ERROR_HTTP_404 = 404;

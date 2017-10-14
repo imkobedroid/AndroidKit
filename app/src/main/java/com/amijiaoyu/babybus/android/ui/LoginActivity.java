@@ -10,7 +10,9 @@ import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.di.module.UserBean;
 import com.amijiaoyu.babybus.android.utils.SnackbarUtil;
+import work.wanghao.rxbus2.RxBus;
 import work.wanghao.rxbus2.Subscribe;
+import work.wanghao.rxbus2.ThreadMode;
 
 /**
  * Author:Dsh
@@ -23,11 +25,21 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   @BindView(R.id.password) EditText password;
   @BindView(R.id.login) Button login;
   @BindView(R.id.view_main) LinearLayout view_main;
-  @BindView(R.id.user)Button user;
+  @BindView(R.id.user) Button user;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    RxBus.Companion.get().register(this);
     login();
+  }
+
+  @Subscribe(threadMode = ThreadMode.MAIN) public void NoUser(NoUser noUser) {
+    SnackbarUtil.show(view_main, "没有找到用户信息");
+  }
+
+  @Override protected void onDestroy() {
+    super.onDestroy();
+    RxBus.Companion.get().unRegister(this);
   }
 
   private void login() {
@@ -53,6 +65,5 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
 
   @Override public void getUserInfoSucceed(UserBean userBean) {
     SnackbarUtil.show(view_main, "获取成功");
-
   }
 }

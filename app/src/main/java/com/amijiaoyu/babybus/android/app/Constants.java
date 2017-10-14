@@ -6,7 +6,7 @@ package com.amijiaoyu.babybus.android.app;
  * Email:imkobedroid@gmail.com
  */
 public class Constants {
-  public static final String HOST = "http://192.168.1.5:8080";
+  public static final String HOST = "http://192.168.0.121:8080";
   public static final String API_ACCEPT = "application/json";
 
 }

@@ -6,6 +6,7 @@
   <string name="error_un_know">服务器开了点小差</string>
   <string name="error_http">网络连接错误</string>
   <string name="error_api">访问地址出错</string>
+  <string name="error_transformer">解析结果错误</string>
   <string name="error_system">服务器出错</string>
   <string name="error_account_freeze">账户被冻结，请联系管理员</string>
   <string name="error_api_no_permission">调用了无权限的API接口</string>
