@@ -39,8 +39,7 @@ public class RxUtil {
     };
   }
 
-
-  /**™
+  /**
    * 统一返回结果处理
    * @param <T>
    * @return
@@ -48,8 +47,8 @@ public class RxUtil {
     public static <T> FlowableTransformer<BaseBean<T>, T> handleResult() {
         return new FlowableTransformer<BaseBean<T>, T>() {
             @Override
-            public Flowable<T> apply(Flowable<BaseBean<T>> httpResponseFlowable) {
-                return httpResponseFlowable.flatMap(new Function<BaseBean<T>, Flowable<T>>() {
+            public Flowable<T> apply(Flowable<BaseBean<T>> httpResponse) {
+                return httpResponse.flatMap(new Function<BaseBean<T>, Flowable<T>>() {
                     @Override
                     public Flowable<T> apply(BaseBean<T> tMyHttpResponse) {
                         if(tMyHttpResponse.getCode() == 0) {
@@ -64,7 +63,7 @@ public class RxUtil {
     }
 
   /**
-   * 生成Flowable
+   * 重新生成Flowable数据
    */
   public static <T> Flowable<T> createData(final T t) {
     return Flowable.create(emitter -> {
