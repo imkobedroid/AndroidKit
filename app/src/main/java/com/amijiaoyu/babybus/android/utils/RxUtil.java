@@ -12,9 +12,7 @@ import io.reactivex.schedulers.Schedulers;
 import java.util.Locale;
 
 /**
- * @author keal
- *         Created  on 2017/05/03 15:40.
- *         Summary:
+ * @author Dsh
  */
 public class RxUtil {
 
