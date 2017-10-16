@@ -27,6 +27,7 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   @BindView(R.id.login) Button login;
   @BindView(R.id.view_main) LinearLayout viewMain;
   @BindView(R.id.user) Button user;
+  @BindView(R.id.user) Button u;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
