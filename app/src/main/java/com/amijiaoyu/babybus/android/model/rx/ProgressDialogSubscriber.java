@@ -3,9 +3,10 @@ package com.amijiaoyu.babybus.android.model.rx;
 import android.content.Context;
 
 /**
- * Created by Dsh on 2017/5/8.
- * Use:
+ * @author dongshihong
+ * @date 2017/5/8
  */
+
 public abstract class ProgressDialogSubscriber<T> extends ErrorHandlerSubscriber<T>
     implements ProgressDialogHandler.OnProgressCancelListener {
 
@@ -16,8 +17,11 @@ public abstract class ProgressDialogSubscriber<T> extends ErrorHandlerSubscriber
     mProgressDialogHandler = new ProgressDialogHandler(context, true, this);
   }
 
+  /**
+   * 取消对话框断开观察者与被观察者的连接
+   */
   @Override public void onCancelProgress() {
-    dispose();//点击取消对话框后断开订阅关系
+    dispose();
   }
 
   @Override public void onStart() {

@@ -107,7 +107,9 @@ public class CookieStoreManager {
    * @return cookie encoded as String
    */
   protected String encodeCookie(SerializableHttpCookie cookie) {
-    if (cookie == null) return null;
+    if (cookie == null) {
+      return null;
+    }
     ByteArrayOutputStream os = new ByteArrayOutputStream();
     try {
       ObjectOutputStream outputStream = new ObjectOutputStream(os);

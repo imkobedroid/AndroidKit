@@ -58,7 +58,7 @@ public class DefaultEmptyView extends FrameLayout implements EmptyView, View.OnC
     return buildEmptyTitle(getContext().getString(stringRes));
   }
 
-  public DefaultEmptyView buildEmptyTitle(String title) {
+  @Override public DefaultEmptyView buildEmptyTitle(String title) {
     if (titleTextView() != null) {
       titleTextView().setText(title);
     }

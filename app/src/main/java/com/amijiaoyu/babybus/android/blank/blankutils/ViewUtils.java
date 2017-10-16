@@ -28,14 +28,18 @@ public class ViewUtils {
    * @return view View
    */
   public static <V extends View> V setGone(final V view, final boolean gone) {
-    if (view != null)
+    if (view != null) {
       if (gone) {
-        if (GONE != view.getVisibility())
+        if (GONE != view.getVisibility()) {
           view.setVisibility(GONE);
+        }
       } else {
-        if (VISIBLE != view.getVisibility())
+        if (VISIBLE != view.getVisibility()) {
           view.setVisibility(VISIBLE);
+        }
       }
+    }
+
     return view;
   }
 
@@ -50,14 +54,18 @@ public class ViewUtils {
    */
   public static <V extends View> V setInvisible(final V view,
       final boolean invisible) {
-    if (view != null)
+    if (view != null) {
       if (invisible) {
-        if (INVISIBLE != view.getVisibility())
+        if (INVISIBLE != view.getVisibility()) {
           view.setVisibility(INVISIBLE);
+        }
       } else {
-        if (VISIBLE != view.getVisibility())
+        if (VISIBLE != view.getVisibility()) {
           view.setVisibility(VISIBLE);
+        }
       }
+    }
+
     return view;
   }
 

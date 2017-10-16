@@ -28,8 +28,8 @@ public class AccountManager {
     if (accountManager == null) {
       synchronized (AccountManager.class) {
         if (accountManager == null) {
-          accountManager =
-              new AccountManager(context.getApplicationContext());//使用getApplicationContext防止内存泄漏
+          //使用getApplicationContext防止内存泄漏
+          accountManager = new AccountManager(context.getApplicationContext());
         }
       }
     }

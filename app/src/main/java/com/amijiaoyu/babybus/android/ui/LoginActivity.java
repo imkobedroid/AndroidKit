@@ -6,8 +6,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import butterknife.BindView;
-import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.R;
+import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.di.module.UserBean;
 import com.amijiaoyu.babybus.android.utils.SnackbarUtil;
 import work.wanghao.rxbus2.RxBus;
@@ -15,16 +15,17 @@ import work.wanghao.rxbus2.Subscribe;
 import work.wanghao.rxbus2.ThreadMode;
 
 /**
- * Author:Dsh
  * Date:2017/10/10 10:00
  * Email:imkobedroid@gmail.com
+ *
+ * @author dongshihong
  */
 
 public class LoginActivity extends RxActivity<LoginPresenter> implements LoginConstance.View {
   @BindView(R.id.account) EditText account;
   @BindView(R.id.password) EditText password;
   @BindView(R.id.login) Button login;
-  @BindView(R.id.view_main) LinearLayout view_main;
+  @BindView(R.id.view_main) LinearLayout viewMain;
   @BindView(R.id.user) Button user;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,8 +34,8 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
     login();
   }
 
-  @Subscribe(threadMode = ThreadMode.MAIN) public void NoUser(NoUser noUser) {
-    SnackbarUtil.show(view_main, "没有找到用户信息");
+  @Subscribe(threadMode = ThreadMode.MAIN) public void noUser(NoUser noUser) {
+    SnackbarUtil.show(viewMain, "没有找到用户信息");
   }
 
   @Override protected void onDestroy() {
@@ -56,14 +57,14 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   }
 
   @Override public void loginSucceed(String message) {
-    SnackbarUtil.show(view_main, message);
+    SnackbarUtil.show(viewMain, message);
   }
 
-  @Override public void LoginField(String message) {
+  @Override public void loginField(String message) {
 
   }
 
   @Override public void getUserInfoSucceed(UserBean userBean) {
-    SnackbarUtil.show(view_main, "获取成功");
+    SnackbarUtil.show(viewMain, "获取成功");
   }
 }

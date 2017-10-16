@@ -16,7 +16,7 @@ public interface LoginConstance {
 
     void loginSucceed(String message);
 
-    void LoginField(String message);
+    void loginField(String message);
 
     void getUserInfoSucceed(UserBean userBean);
   }

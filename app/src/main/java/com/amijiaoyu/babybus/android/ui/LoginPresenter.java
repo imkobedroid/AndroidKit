@@ -8,9 +8,9 @@ import com.amijiaoyu.babybus.android.utils.RxUtil;
 import javax.inject.Inject;
 
 /**
- * Author:Dsh
  * Date:2017/10/10 10:07
  * Email:imkobedroid@gmail.com
+ * @author dongshihong
  */
 
 public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>

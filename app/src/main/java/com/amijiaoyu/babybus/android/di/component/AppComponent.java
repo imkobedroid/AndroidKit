@@ -17,7 +17,14 @@ import javax.inject.Singleton;
 public interface AppComponent {
 
   // TODO: 2017/10/10 把帮助类提供出来
+
+  /**
+   * 把上下文提供出来
+   */
   App getContext();
 
+  /**
+   * 把帮助类提供出来
+   */
   LoginHelper provideLoginHelper();
 }

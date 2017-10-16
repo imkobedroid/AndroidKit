@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-import com.amijiaoyu.babybus.android.app.App;
 import com.amijiaoyu.babybus.android.R;
+import com.amijiaoyu.babybus.android.app.App;
 import com.amijiaoyu.babybus.android.base.root.BaseActivity;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityPresenter;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityView;
@@ -15,9 +15,9 @@ import com.amijiaoyu.babybus.android.di.module.ActivityModule;
 import javax.inject.Inject;
 
 /**
- * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
+ * @author dongshihong
  */
 public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseActivity
     implements BaseActivityView {
@@ -39,7 +39,9 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
 
   @SuppressWarnings("unchecked") @Override public void InjectActivity() {
     initInject();
-    if (mPresenter != null) mPresenter.attachView(this);
+    if (mPresenter != null) {
+      mPresenter.attachView(this);
+    }
   }
 
   @Override public void initToolBar(Toolbar toolbar, TextView mTvToolbar, String title) {
@@ -55,9 +57,14 @@ public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseAc
   }
 
   @Override protected void onDestroy() {
-    if (mPresenter != null) mPresenter.detachView();
+    if (mPresenter != null) {
+      mPresenter.detachView();
+    }
     super.onDestroy();
   }
 
+  /**
+   * 提供注册界面的方法
+   */
   protected abstract void initInject();
 }

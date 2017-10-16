@@ -33,5 +33,8 @@ public abstract class BaseFragment extends Fragment {
     mUnBinder.unbind();
   }
 
+  /**
+   * 得到布局文件
+   */
   protected abstract int getLayoutId();
 }

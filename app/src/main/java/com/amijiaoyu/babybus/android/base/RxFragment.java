@@ -13,9 +13,9 @@ import com.amijiaoyu.babybus.android.di.module.FragmentModule;
 import javax.inject.Inject;
 
 /**
- * Author:Dsh
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
+ * @author dongshihong
  */
 public abstract class RxFragment<T extends BaseFragmentPresenter> extends BaseFragment
     implements BaseFragmentView {
@@ -28,10 +28,12 @@ public abstract class RxFragment<T extends BaseFragmentPresenter> extends BaseFr
         .fragmentModule(new FragmentModule(this))
         .build();
   }
-  @SuppressWarnings("unchecked")
-  @Override public void InjectFragment() {
+
+  @SuppressWarnings("unchecked") @Override public void InjectFragment() {
     initInject();
-    if (mPresenter != null) mPresenter.attachView(this);
+    if (mPresenter != null) {
+      mPresenter.attachView(this);
+    }
   }
 
   @Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -41,7 +43,9 @@ public abstract class RxFragment<T extends BaseFragmentPresenter> extends BaseFr
 
   @Override public void onDestroyView() {
     super.onDestroyView();
-    if (mPresenter != null) mPresenter.detachView();
+    if (mPresenter != null) {
+      mPresenter.detachView();
+    }
   }
 
   protected abstract void initInject();

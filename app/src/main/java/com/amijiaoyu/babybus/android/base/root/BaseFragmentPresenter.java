@@ -7,7 +7,13 @@ package com.amijiaoyu.babybus.android.base.root;
  */
 public interface BaseFragmentPresenter<T extends BaseFragmentView>{
 
+  /**
+   * 得到fragment与presenter的连接
+   */
     void attachView(T view);
 
+  /**
+   * 删除fragment与presenter的连接
+   */
     void detachView();
 }

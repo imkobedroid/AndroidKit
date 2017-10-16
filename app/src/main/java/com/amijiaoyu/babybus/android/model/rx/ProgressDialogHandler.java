@@ -8,7 +8,9 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import com.amijiaoyu.babybus.android.R;
 
 /**
- * Created by Dsh on 2017/5/8.
+ *
+ * @author Dsh
+ * @date 2017/5/8
  * Use:
  */
 public class ProgressDialogHandler extends Handler {
@@ -66,17 +68,18 @@ public class ProgressDialogHandler extends Handler {
   }
 
   @Override public void handleMessage(Message msg) {
-    switch (msg.what) {
-      case SHOW_PROGRESS_DIALOG:
-        showProgressDialog();
-        break;
-      case DISMISS_PROGRESS_DIALOG:
-        dismissProgressDialog();
-        break;
+    if (msg.what == SHOW_PROGRESS_DIALOG) {
+      showProgressDialog();
+    } else if (msg.what == DISMISS_PROGRESS_DIALOG) {
+      dismissProgressDialog();
     }
   }
 
+
   public interface OnProgressCancelListener {
+    /**
+     * 自定义的对话框取消的监听
+     */
     void onCancelProgress();
   }
 }

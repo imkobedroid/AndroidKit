@@ -1,8 +1,8 @@
 package com.amijiaoyu.babybus.android.di.component;
 
 import android.app.Activity;
-import com.amijiaoyu.babybus.android.di.module.FragmentModule;
 import com.amijiaoyu.babybus.android.di.assist.FragmentScope;
+import com.amijiaoyu.babybus.android.di.module.FragmentModule;
 import dagger.Component;
 
 /**
@@ -13,6 +13,9 @@ import dagger.Component;
 
 @FragmentScope @Component(dependencies = AppComponent.class, modules = FragmentModule.class)
 public interface FragmentComponent {
+  /**
+   * 获得内上下文对象
+   */
   Activity getActivity();
 
 }

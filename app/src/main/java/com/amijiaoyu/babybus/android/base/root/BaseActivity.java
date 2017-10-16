@@ -26,5 +26,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     mUnBinder.unbind();
   }
 
+  /**
+   * 得到加载的布局文件
+   */
   protected abstract int getLayout();
 }

@@ -16,10 +16,14 @@ import retrofit2.HttpException;
 import work.wanghao.rxbus2.RxBus;
 
 /**
- * Created by Dsh on 2017/5/8.
+ *
+ * @author Dsh
+ * @date 2017/5/8
  * Use:
  */
 public class RxErrorHandler {
+
+  private static final int NO_FIND = 1000;
 
   private Context mContext;
 
@@ -62,7 +66,7 @@ public class RxErrorHandler {
       Gson gson = new Gson();
       Message messages = gson.fromJson(httpException.response().errorBody().string(),
           Message.class);//后台服务器返回的错误json
-      if (messages.getCode() == 1000) {
+      if (messages.getCode() == NO_FIND) {
         RxBus.Companion.get().post(new NoUser());
       }
       if (messages != null && !Strings.isNullOrEmpty(messages.getMessage())) {
