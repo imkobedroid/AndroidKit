@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import butterknife.BindView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
+import com.amijiaoyu.babybus.android.utils.BottomNavigationViewHelper;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,6 +55,7 @@ public class HomeActivity extends RxActivity
   @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     switch (item.getItemId()) {
 
+      default:
     }
     return true;
   }
