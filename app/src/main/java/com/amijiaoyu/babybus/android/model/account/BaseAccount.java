@@ -12,18 +12,20 @@ import java.io.Serializable;
 public interface BaseAccount extends Serializable {
   /**
    * 用户名
+   * @return 返回用户名字
    */
   String name();
 
   /**
    * 登录的token
+   * @return 返回登录的token
    */
 
   String token();
 
   /**
    * json转换器
-   * @return
+   * @return json转换器
    */
   String toJson();
 
