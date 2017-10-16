@@ -15,7 +15,7 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name="com.amijiaoyu.babybus.android.ui.LoginActivity">
+    <activity android:name="com.amijiaoyu.babybus.android.ui.HomeActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
