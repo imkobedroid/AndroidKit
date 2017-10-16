@@ -1,13 +1,15 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.MenuItem;
 import butterknife.BindView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
-import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +20,10 @@ import java.util.List;
  * @author dongshihong
  */
 
-public class HomeActivity extends RxActivity {
+public class HomeActivity extends RxActivity
+    implements BottomNavigationView.OnNavigationItemSelectedListener {
   @BindView(R.id.view_pager) ViewPager viewPager;
-  @BindView(R.id.navigation) BottomNavigationViewEx navigationView;
+  @BindView(R.id.navigation) BottomNavigationView navigationView;
   private HomeFragmentAdapter pagerAdapter;
   private List<Fragment> fragmentList;
 
@@ -30,17 +33,15 @@ public class HomeActivity extends RxActivity {
   }
 
   private void initView() {
+    navigationView.setOnNavigationItemSelectedListener(this);
     fragmentList = new ArrayList<>();
     fragmentList.add(new HomeFragment());
     fragmentList.add(new HomeTestFragment());
     fragmentList.add(new HomeFragment());
     fragmentList.add(new HomeTestFragment());
-    navigationView.enableAnimation(false);
-    navigationView.enableShiftingMode(false);
-    navigationView.enableItemShiftingMode(false);
+    BottomNavigationViewHelper.disableShiftMode(navigationView);
     pagerAdapter = new HomeFragmentAdapter(getSupportFragmentManager(), fragmentList);
     viewPager.setAdapter(pagerAdapter);
-    navigationView.setupWithViewPager(viewPager);
   }
 
   @Override protected int getLayout() {
@@ -48,5 +49,12 @@ public class HomeActivity extends RxActivity {
   }
 
   @Override protected void initInject() {
+  }
+
+  @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    switch (item.getItemId()) {
+
+    }
+    return true;
   }
 }

@@ -19,5 +19,6 @@
     <item>@color/support_ui_blue</item>
     <item>@color/support_ui_yellow</item>
   </integer-array>
+  <color name="colorGray">#ccc</color>
 
 </resources>

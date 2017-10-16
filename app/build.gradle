@@ -81,7 +81,6 @@ dependencies {
   compile rootProject.ext.dependencies["multidex"]
   compile rootProject.ext.dependencies["logger"]
   compile rootProject.ext.dependencies["fragmentation"]
-  compile rootProject.ext.dependencies["BottomNavigationViewEx"]
   compile rootProject.ext.dependencies["sweetalert"]
   debugCompile rootProject.ext.dependencies["blockcanary-android"]
   releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
