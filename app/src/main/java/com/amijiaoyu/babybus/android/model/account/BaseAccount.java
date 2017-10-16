@@ -25,7 +25,7 @@ public interface BaseAccount extends Serializable {
 
   /**
    * json转换器
-   * @return json转换器
+   * @return json转换器LPK
    */
   String toJson();
 
