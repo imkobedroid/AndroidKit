@@ -2,10 +2,11 @@ package com.amijiaoyu.babybus.android.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import butterknife.BindView;
+import com.airbnb.lottie.LottieAnimationView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.di.module.UserBean;
@@ -25,23 +26,31 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   @BindView(R.id.account) EditText account;
   @BindView(R.id.password) EditText password;
   @BindView(R.id.login) Button login;
-  @BindView(R.id.view_main) LinearLayout viewMain;
+  @BindView(R.id.view_main) ConstraintLayout viewMain;
   @BindView(R.id.user) Button user;
+  @BindView(R.id.animation_view) LottieAnimationView animationView;
+
+
+
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     RxBus.Companion.get().register(this);
+    animationView.setAnimation("load.json");
+    animationView.loop(true);
+    animationView.playAnimation();
     login();
-  }
-
-  @Subscribe(threadMode = ThreadMode.MAIN) public void noUser(NoUser noUser) {
-    SnackbarUtil.show(viewMain, "没有找到用户信息");
   }
 
   @Override protected void onDestroy() {
     super.onDestroy();
     RxBus.Companion.get().unRegister(this);
   }
+
+  @Subscribe(threadMode = ThreadMode.MAIN) public void noUser(NoUser noUser) {
+    SnackbarUtil.show(viewMain, "没有找到用户信息");
+  }
+
 
   private void login() {
     login.setOnClickListener(view -> mPresenter.login(new RequestBean()));

@@ -1,7 +1,6 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import com.amijiaoyu.babybus.android.model.account.BaseAccount;
-import com.amijiaoyu.babybus.android.model.bean.BaseBean;
 import com.google.common.base.Strings;
 
 /**
@@ -10,7 +9,7 @@ import com.google.common.base.Strings;
  * Email:imkobedroid@gmail.com
  */
 
-public class LoginBean   implements BaseAccount {
+public class LoginBean implements BaseAccount {
   private String access_token;
   private String refresh_token;
   private String expires_in;

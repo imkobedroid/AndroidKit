@@ -53,13 +53,13 @@ ext {
                   //di
                   "dagger"                     : "com.google.dagger:dagger:${dependVersion.dagger2}",
                   "dagger-compiler"            : "com.google.dagger:dagger-compiler:${dependVersion.dagger2}",
-                  "butterknife"                : "com.jakewharton:butterknife:${dependVersion.butterknife}",
-                  "butterknife-compiler"       : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}",
-                  "annotation"                 : "org.glassfish:javax.annotation:10.0-b28",
+                  "butterknife"             : "com.jakewharton:butterknife:${dependVersion.butterknife}",
+                  "butterknife-compiler"    : "com.jakewharton:butterknife-compiler:${dependVersion.butterknife}",
+                  "annotation"              : "org.glassfish:javax.annotation:10.0-b28",
 
                   //other
-                  "multidex"                   : "com.android.support:multidex:1.0.1",
-                  "logger"                     : "com.orhanobut:logger:1.15",
+                  "multidex"                : "com.android.support:multidex:1.0.1",
+                  "logger"                  : "com.orhanobut:logger:1.15",
                   "fragmentation"           : "me.yokeyword:fragmentation:0.7.9",
                   "jsoup"                   : "org.jsoup:jsoup:1.10.1",
                   "BaseRecyclerViewAdapter" : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30",
@@ -67,6 +67,8 @@ ext {
                   "circleimageview"         : "de.hdodenhof:circleimageview:2.2.0",
                   "sweetalert"              : "cn.pedant.sweetalert:library:1.3",
                   "BottomNavigationViewEx"  : "com.github.ittianyu:BottomNavigationViewEx:1.2.1",
+                  "extensions"              : "org.jetbrains.kotlin:kotlin-android-extensions:1.0.3",
+                  "lottie"                  : "com.airbnb.android:lottie:2.2.5",
 
 
                   //canary
