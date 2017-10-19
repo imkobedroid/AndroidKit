@@ -4,6 +4,7 @@ ext {
              buildToolsVersion        : '26.0.1',
              applicationId            : "com.amijiaoyu.babybus.android",
              minSdkVersion            : 19,
+             kotlin_version            : '1.1.51',
              targetSdkVersion         : 26,
              versionCode              : 1,
              versionName              : "1.0",
@@ -69,6 +70,8 @@ ext {
                   "BottomNavigationViewEx"  : "com.github.ittianyu:BottomNavigationViewEx:1.2.1",
                   "extensions"              : "org.jetbrains.kotlin:kotlin-android-extensions:1.0.3",
                   "lottie"                  : "com.airbnb.android:lottie:2.2.5",
+                  "alerter"                  : "com.tapadoo.android:alerter:2.0.1",
+                  "kotlin"                  : "org.jetbrains.kotlin:kotlin-stdlib:1.1.51",
 
 
                   //canary

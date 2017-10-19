@@ -10,6 +10,7 @@ import com.airbnb.lottie.LottieAnimationView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.di.module.UserBean;
+import com.amijiaoyu.babybus.android.utils.RxUtil;
 import com.amijiaoyu.babybus.android.utils.SnackbarUtil;
 import work.wanghao.rxbus2.RxBus;
 import work.wanghao.rxbus2.Subscribe;
@@ -28,17 +29,15 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
   @BindView(R.id.login) Button login;
   @BindView(R.id.view_main) ConstraintLayout viewMain;
   @BindView(R.id.user) Button user;
-  @BindView(R.id.animation_view) LottieAnimationView animationView;
-
-
+  //@BindView(R.id.animation_view) LottieAnimationView animationView;
 
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     RxBus.Companion.get().register(this);
-    animationView.setAnimation("load.json");
+   /* animationView.setAnimation("load.json");
     animationView.loop(true);
-    animationView.playAnimation();
+    animationView.playAnimation();*/
     login();
   }
 
@@ -53,7 +52,8 @@ public class LoginActivity extends RxActivity<LoginPresenter> implements LoginCo
 
 
   private void login() {
-    login.setOnClickListener(view -> mPresenter.login(new RequestBean()));
+    login.setOnClickListener(v -> RxUtil.showAlerterDialog(this,"错误","网络超时"));
+    //login.setOnClickListener(view -> mPresenter.login(new RequestBean()));
     user.setOnClickListener(view -> mPresenter.getUserInfo());
   }
 

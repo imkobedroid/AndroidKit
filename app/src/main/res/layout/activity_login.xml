@@ -76,7 +76,7 @@
       />
 
 
-  <com.airbnb.lottie.LottieAnimationView
+  <!--<com.airbnb.lottie.LottieAnimationView
       android:id="@+id/animation_view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -92,5 +92,5 @@
       app:lottie_fileName="load.json"
       app:lottie_loop="true"
       />
-
+-->
 </android.support.constraint.ConstraintLayout>

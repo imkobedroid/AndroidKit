@@ -15,7 +15,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme"
       tools:replace="android:icon">
-    <activity android:name=".ui.LoginActivity">
+    <activity android:name=".ui.KotlinHomeActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
