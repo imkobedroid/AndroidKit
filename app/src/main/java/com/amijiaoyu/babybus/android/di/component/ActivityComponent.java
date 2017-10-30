@@ -5,11 +5,13 @@ import com.amijiaoyu.babybus.android.di.assist.ActivityScope;
 import com.amijiaoyu.babybus.android.di.module.ActivityModule;
 import com.amijiaoyu.babybus.android.ui.KotlinHomeActivity;
 import com.amijiaoyu.babybus.android.ui.LoginActivity;
+import com.amijiaoyu.babybus.android.ui.MyActivity;
 import dagger.Component;
 
 /**
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
+ *
  * @author dongshihong
  */
 
@@ -27,5 +29,8 @@ public interface ActivityComponent {
    * 注册的登录界面接口
    */
   void inject(LoginActivity loginActivity);
+
   void inject(KotlinHomeActivity loginActivity);
+
+  void inject(MyActivity loginActivity);
 }

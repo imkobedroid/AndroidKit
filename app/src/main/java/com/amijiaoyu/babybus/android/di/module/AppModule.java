@@ -2,6 +2,7 @@ package com.amijiaoyu.babybus.android.di.module;
 
 import android.content.Context;
 import com.amijiaoyu.babybus.android.app.App;
+import com.amijiaoyu.babybus.android.base.root.BaseLifecycleListener;
 import com.amijiaoyu.babybus.android.di.helper.LoginHelper;
 import dagger.Module;
 import dagger.Provides;
@@ -28,11 +29,10 @@ import javax.inject.Singleton;
     return app.getApplicationContext();
   }
 
-
   // TODO: 2017/10/10 下面是提供模块的retrofit的帮助类
 
-    @Provides
-    @Singleton LoginHelper provideLoginHelper(LoginApi loginApi) {
-        return new LoginHelper(loginApi);
-    }
+  @Provides @Singleton LoginHelper provideLoginHelper(LoginApi loginApi) {
+    return new LoginHelper(loginApi);
+  }
+
 }

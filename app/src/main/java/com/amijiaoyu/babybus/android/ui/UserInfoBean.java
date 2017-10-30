@@ -1,7 +1,5 @@
 package com.amijiaoyu.babybus.android.ui;
 
-import com.amijiaoyu.babybus.android.model.bean.BaseBean;
-
 /**
  * Author:SHIHONG DONG
  * Date:2017/10/12 14:14

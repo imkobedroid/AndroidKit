@@ -12,7 +12,7 @@ import javax.inject.Inject;
 public class LoginHelper {
   public LoginApi loginApi;
 
-  @Inject public LoginHelper(LoginApi loginApi) {
+   public LoginHelper(LoginApi loginApi) {
     this.loginApi = loginApi;
   }
 }

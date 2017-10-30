@@ -9,6 +9,7 @@ import com.amijiaoyu.babybus.android.app.App;
 import com.amijiaoyu.babybus.android.base.root.BaseActivity;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityPresenter;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityView;
+import com.amijiaoyu.babybus.android.base.root.BaseLifecycleListener;
 import com.amijiaoyu.babybus.android.di.component.ActivityComponent;
 import com.amijiaoyu.babybus.android.di.component.DaggerActivityComponent;
 import com.amijiaoyu.babybus.android.di.module.ActivityModule;
@@ -17,17 +18,19 @@ import javax.inject.Inject;
 /**
  * Date:2017/9/25 11:37
  * Email:imkobedroid@gmail.com
+ *
  * @author dongshihong
  */
-public abstract class RxActivity<T extends BaseActivityPresenter> extends BaseActivity
-    implements BaseActivityView {
+public abstract class RxActivity<T extends BaseActivityPresenter, K extends BaseLifecycleListener>
+    extends BaseActivity implements BaseActivityView {
 
   @Inject protected T mPresenter;
+  @Inject protected K baseLifecycleListener;
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
     InjectActivity();
+    //getLifecycle().addObserver(baseLifecycleListener);  绑定生命周期
   }
 
   @Override public ActivityComponent getActivityComponent() {

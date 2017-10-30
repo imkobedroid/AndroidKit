@@ -3,6 +3,7 @@ apply plugin: 'android-apt'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'AndResGuard'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 
 android {
@@ -84,8 +85,19 @@ dependencies {
   compile rootProject.ext.dependencies["fragmentation"]
   compile rootProject.ext.dependencies["sweetalert"]
   compile rootProject.ext.dependencies["alerter"]
+
+  //compile rootProject.ext.dependencies["lifecycle"]
+  //compile rootProject.ext.dependencies["lifecycle_extensions"]
+ // annotationProcessor rootProject.ext.dependencies["lifecycle_compiler"]
+
   compile rootProject.ext.dependencies["lottie"]
   compile rootProject.ext.dependencies["kotlin"]
+
+  compile "android.arch.lifecycle:runtime:1.0.0-alpha5"
+  compile "android.arch.lifecycle:extensions:1.0.0-alpha5"
+  annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha5"
+
+
   debugCompile rootProject.ext.dependencies["blockcanary-android"]
   releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
   debugCompile rootProject.ext.dependencies["leakcanary-android"]
