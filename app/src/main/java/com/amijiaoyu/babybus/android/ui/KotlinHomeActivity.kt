@@ -17,6 +17,9 @@ import com.amijiaoyu.babybus.android.utils.BottomNavigationViewHelper
  *  Email:imkobedroid@gmail.com
  */
 class KotlinHomeActivity : RxActivity<LoginPresenter, LifecycleTest>(), BottomNavigationView.OnNavigationItemSelectedListener {
+  override fun addLifeActivity() {
+  }
+
   private lateinit var viewpager: ViewPager
   private lateinit var navigation: BottomNavigationView
   private lateinit var fragmentList: List<Fragment>

@@ -23,6 +23,9 @@ import work.wanghao.rxbus2.ThreadMode
  */
 
 class LoginActivity : RxActivity<LoginPresenter, LifecycleTest>(), LoginConstance.View {
+  override fun addLifeActivity() {
+  }
+
   @BindView(R.id.account) internal var account: EditText? = null
   @BindView(R.id.password) internal var password: EditText? = null
   @BindView(R.id.login) internal var login: Button? = null

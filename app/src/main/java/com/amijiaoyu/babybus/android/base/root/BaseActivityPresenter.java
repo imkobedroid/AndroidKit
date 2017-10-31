@@ -8,6 +8,7 @@ package com.amijiaoyu.babybus.android.base.root;
 public interface BaseActivityPresenter<T extends BaseActivityView>{
   /**
    * 界面与presenter的连接
+   * @param view
    */
     void attachView(T view);
 

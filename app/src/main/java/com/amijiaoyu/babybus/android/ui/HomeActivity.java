@@ -52,6 +52,10 @@ public class HomeActivity extends RxActivity
   @Override protected void initInject() {
   }
 
+  @Override protected void addLifeActivity() {
+
+  }
+
   @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     switch (item.getItemId()) {
 

@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.mylayout.*
 
 
 class MyActivity : RxActivity<LoginPresenter, LifecycleTest>() {
+  override fun addLifeActivity() {
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
