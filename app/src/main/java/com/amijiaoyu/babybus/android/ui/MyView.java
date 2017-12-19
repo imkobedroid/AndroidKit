@@ -14,11 +14,14 @@ import android.view.View;
 
 import com.amijiaoyu.babybus.android.R;
 
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
+
 /**
  * @author moerlong
  */
 public class MyView extends View {
-
     private String mTitleText;
     private int mTitleTextColor;
     private int mTitleTextSize;
@@ -68,6 +71,11 @@ public class MyView extends View {
             }
         }
         typedArray.recycle();
+
+        this.setOnClickListener(v -> {
+            mTitleText = randomText();
+            postInvalidate();
+        });
     }
 
 
@@ -138,4 +146,24 @@ public class MyView extends View {
 
         setMeasuredDimension(width, height);
     }
+
+    private String randomText()
+    {
+        Random random = new Random();
+        Set<Integer> set = new HashSet<>();
+        int anInt = 4;
+        while (set.size() < anInt)
+        {
+            int randomInt = random.nextInt(10);
+            set.add(randomInt);
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Integer i : set)
+        {
+            sb.append("").append(i);
+        }
+
+        return sb.toString();
+    }
+
 }
