@@ -19,6 +19,7 @@
       android:hint="请输入账号"
       android:textColor="@color/colorLogo"
       android:textSize="14sp"
+      android:visibility="gone"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toTopOf="parent"
@@ -37,6 +38,7 @@
       android:inputType="number"
       android:textColor="@color/colorLogo"
       android:textSize="14sp"
+      android:visibility="gone"
       app:layout_constraintLeft_toLeftOf="parent"
       app:layout_constraintRight_toRightOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/account"
@@ -53,13 +55,14 @@
       android:layout_marginTop="7dp"
       android:text="登    录"
       android:textColor="@color/colorLogo"
+      android:visibility="gone"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintLeft_toLeftOf="@+id/password"
       app:layout_constraintRight_toRightOf="@+id/password"
       app:layout_constraintTop_toBottomOf="@+id/password"
       tools:layout_constraintLeft_creator="1"
       tools:layout_constraintRight_creator="1"
       tools:layout_constraintTop_creator="1"
-      app:layout_constraintHorizontal_bias="0.0"
       />
   <Button
       android:id="@+id/user"
@@ -68,6 +71,7 @@
       android:layout_marginTop="10dp"
       android:text="获取用户信息"
       android:textColor="@color/colorLogo"
+      android:visibility="gone"
       app:layout_constraintLeft_toLeftOf="@+id/login"
       app:layout_constraintRight_toRightOf="@+id/login"
       app:layout_constraintTop_toBottomOf="@+id/login"
@@ -94,4 +98,16 @@
       app:lottie_loop="true"
       />
 -->
+
+
+  <com.amijiaoyu.babybus.android.ui.MyView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="@dimen/dp_10"
+      android:layout_margin="@dimen/dp_50"
+      app:title="android"
+      app:color="#ff0000"
+      app:size="40sp"
+      />
+
 </android.support.constraint.ConstraintLayout>

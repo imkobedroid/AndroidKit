@@ -19,7 +19,7 @@ import work.wanghao.rxbus2.ThreadMode
  * Date:2017/10/10 10:00
  * Email:imkobedroid@gmail.com
  *
- * @author dongshihong
+ * @author donging
  */
 
 class LoginActivity : RxActivity<LoginPresenter, LifecycleTest>(), LoginConstance.View {
@@ -51,9 +51,9 @@ class LoginActivity : RxActivity<LoginPresenter, LifecycleTest>(), LoginConstanc
 
 
   private fun login() {
-    login!!.setOnClickListener { v -> RxUtil.showAlerterDialog(this, "错误", "网络超时") }
+    login!!.setOnClickListener { RxUtil.showAlerterDialog(this, "错误", "网络超时") }
     //login.setOnClickListener(view -> mPresenter.login(new RequestBean()));
-    user!!.setOnClickListener { view -> mPresenter.getUserInfo() }
+    user!!.setOnClickListener { mPresenter.getUserInfo() }
   }
 
   override fun getLayout(): Int {
