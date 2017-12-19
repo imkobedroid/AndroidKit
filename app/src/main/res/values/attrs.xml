@@ -4,10 +4,17 @@
   <attr format="string" name="title"/>
   <attr format="color" name="color"/>
   <attr format="dimension" name="size"/>
+  <attr name="image" format="reference"/>
+  <attr name="imageScaleType">
+    <enum name="fillXY" value="0" />
+    <enum name="center" value="1" />
+  </attr>>
 
   <declare-styleable name="CustomTitleView">
     <attr name="title"/>
     <attr name="color"/>
     <attr name="size"/>
+    <attr name="image"/>
+    <attr name="imageScaleType"/>
   </declare-styleable>
 </resources>
