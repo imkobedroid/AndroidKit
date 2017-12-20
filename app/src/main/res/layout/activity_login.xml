@@ -100,14 +100,15 @@
 -->
 
 
-  <com.amijiaoyu.babybus.android.ui.MyView
+  <com.amijiaoyu.babybus.android.ui.MyImageView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:padding="@dimen/dp_10"
-      android:layout_margin="@dimen/dp_50"
+      android:layout_margin="10dp"
+      android:padding="10dp"
+      app:image="@drawable/ic_arrow_right"
+      app:imageScaleType="center"
       app:title="android"
       app:color="#ff0000"
-      app:size="40sp"
-      />
+      app:size="12sp" />
 
 </android.support.constraint.ConstraintLayout>
