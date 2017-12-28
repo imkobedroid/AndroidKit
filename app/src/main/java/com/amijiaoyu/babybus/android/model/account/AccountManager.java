@@ -36,7 +36,7 @@ public class AccountManager {
     return accountManager;
   }
 
-  AccountManager(Context context) {
+  private AccountManager(Context context) {
     if (aCache == null) {
       synchronized (AccountManager.class) {
         if (aCache == null) {

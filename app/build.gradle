@@ -6,39 +6,39 @@ apply plugin: 'kotlin-android-extensions'
 
 
 android {
-  compileSdkVersion 26
-  buildToolsVersion rootProject.ext.android.buildToolsVersion
-  defaultConfig {
-    multiDexEnabled true
-    applicationId rootProject.ext.android.applicationId
-    minSdkVersion rootProject.ext.android.minSdkVersion
-    targetSdkVersion rootProject.ext.android.targetSdkVersion
-    versionCode rootProject.ext.android.versionCode
-    versionName rootProject.ext.android.versionName
-    testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
+    compileSdkVersion 26
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    defaultConfig {
+        multiDexEnabled true
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner rootProject.ext.android.testInstrumentationRunner
 
-    //全局变量的存放位置
-    buildConfigField("String", "WEIXIN_ID", "\"wx2c85c2818c2b9f95\"")
-    manifestPlaceholders = [JIGUANG_APPKEY: "210e9abc8742709b3aafc0d8",
-                            UMENG_APPKEY  : "594b23beae1bf8796c000c13",
-                            UMENG_CHANNEL : "Wandoujia"]
-  }
-  dexOptions {
-    incremental true
-    javaMaxHeapSize rootProject.ext.android.javaMaxHeapSize
-  }
-
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        //全局变量的存放位置
+        buildConfigField("String", "WEIXIN_ID", "\"wx2c85c2818c2b9f95\"")
+        manifestPlaceholders = [JIGUANG_APPKEY: "210e9abc8742709b3aafc0d8",
+                                UMENG_APPKEY  : "594b23beae1bf8796c000c13",
+                                UMENG_CHANNEL : "Wandoujia"]
     }
-  }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize rootProject.ext.android.javaMaxHeapSize
+    }
 
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -76,7 +76,7 @@ dependencies {
     compile rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
-    annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     provided rootProject.ext.dependencies["annotation"]
     compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["logger"]

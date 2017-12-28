@@ -25,7 +25,8 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
     }
 
     if (baseException != null) {
-      if (!Strings.isNullOrEmpty(baseException.getDisplayMessage())){//捕获到自定义的异常就显示，如果没有就在presenter中自己定义
+
+      if (!Strings.isNullOrEmpty(baseException.getDisplayMessage())){
         errorHandler.showErrorMessage(baseException);
       }
     } /*else {

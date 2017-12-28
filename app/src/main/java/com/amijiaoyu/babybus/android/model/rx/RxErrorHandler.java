@@ -60,16 +60,16 @@ public class RxErrorHandler {
       exception.setCode(BaseException.SOCKET_ERROR);
       exception.setDisplayMessage(ErrorMessageFactory.create(mContext, BaseException.SOCKET_ERROR));
     } else if (e instanceof HttpException) {
-
       exception.setCode(((HttpException) e).code());
       HttpException httpException = (HttpException) e;
       Gson gson = new Gson();
+      //后台服务器返回的错误json
       Message messages = gson.fromJson(httpException.response().errorBody().string(),
-          Message.class);//后台服务器返回的错误json
+          Message.class);
       if (messages.getCode() == NO_FIND) {
         RxBus.Companion.get().post(new NoUser());
       }
-      if (messages != null && !Strings.isNullOrEmpty(messages.getMessage())) {
+      if (!Strings.isNullOrEmpty(messages.getMessage())) {
         exception.setDisplayMessage(messages.getMessage());
       } else {
         exception.setDisplayMessage(ErrorMessageFactory.create(mContext, exception.getCode()));

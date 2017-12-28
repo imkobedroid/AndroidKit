@@ -21,4 +21,6 @@ class LifecyActivityTest : RxActivity<LoginPresenter, MyListener>() {
     activityComponent.inject(this)
   }
 
+
+
 }

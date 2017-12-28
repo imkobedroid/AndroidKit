@@ -11,6 +11,8 @@ import butterknife.BindView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.utils.BottomNavigationViewHelper;
+
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
