@@ -2,7 +2,6 @@ package com.amijiaoyu.babybus.android.di.module;
 
 import android.content.Context;
 import com.amijiaoyu.babybus.android.app.App;
-import com.amijiaoyu.babybus.android.base.root.BaseLifecycleListener;
 import com.amijiaoyu.babybus.android.di.helper.LoginHelper;
 import dagger.Module;
 import dagger.Provides;

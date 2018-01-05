@@ -9,7 +9,6 @@ import com.amijiaoyu.babybus.android.app.App;
 import com.amijiaoyu.babybus.android.base.root.BaseActivity;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityPresenter;
 import com.amijiaoyu.babybus.android.base.root.BaseActivityView;
-import com.amijiaoyu.babybus.android.base.root.BaseLifecycleListener;
 import com.amijiaoyu.babybus.android.di.component.ActivityComponent;
 import com.amijiaoyu.babybus.android.di.component.DaggerActivityComponent;
 import com.amijiaoyu.babybus.android.di.module.ActivityModule;
