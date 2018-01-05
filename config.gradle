@@ -10,7 +10,7 @@ ext {
              versionName              : "1.0",
              testInstrumentationRunner: "android.support.test.runner.AndroidJUnitRunner"]
 
-  def dependVersion = [support               : "26.+",
+  def dependVersion = [support               : "26.0.2",
                        retrofit              : "2.3.0",
                        okhttp                : "3.9.1",
                        dagger2               : "2.0.2",
@@ -18,7 +18,7 @@ ext {
                        blockcanary           : "1.2.1",
                        leakcanary            : "1.5.4",
                        materialDialogsVersion: "0.8.5.6@aar",
-                       glide                 : "3.7.0",
+                       glide                 : "4.3.0",
                        BaseRecyclerViewAdapterHelper:"2.9.34",
                        gson                  :"2.7",
                        rxjava                :"2.0.1",
