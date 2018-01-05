@@ -75,7 +75,7 @@ dependencies {
     compile rootProject.ext.dependencies["fragmentation"]
     compile rootProject.ext.dependencies["sweetalert"]
     compile rootProject.ext.dependencies["alerter"]
-   // annotationProcessor   rootProject.ext.dependencies["glideCompiler"]
+    //annotationProcessor   rootProject.ext.dependencies["glideCompiler"]
     compile rootProject.ext.dependencies["kotlin"]
     debugCompile rootProject.ext.dependencies["blockcanary-android"]
     releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
