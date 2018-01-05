@@ -21,11 +21,11 @@ import javax.inject.Inject;
  *
  * @author dongshihong
  */
-public abstract class RxActivity<T extends BaseActivityPresenter, K extends BaseLifecycleListener>
+public abstract class RxActivity<T extends BaseActivityPresenter>
     extends BaseActivity implements BaseActivityView {
 
   @Inject protected T mPresenter;
-  @Inject protected K baseLifecycleListener;
+
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -41,7 +41,6 @@ public abstract class RxActivity<T extends BaseActivityPresenter, K extends Base
 
   @SuppressWarnings("unchecked") @Override public void InjectActivity() {
     initInject();
-    addLifeActivity();
     if (mPresenter != null) {
       mPresenter.attachView(this);
     }
@@ -70,9 +69,4 @@ public abstract class RxActivity<T extends BaseActivityPresenter, K extends Base
    * 提供注册界面的方法
    */
   protected abstract void initInject();
-
-  /**
-   * 添加生命周期的绑定
-   */
-  protected abstract void addLifeActivity();
 }

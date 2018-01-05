@@ -11,6 +11,8 @@ import butterknife.BindView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.utils.BottomNavigationViewHelper;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -54,9 +56,6 @@ public class HomeActivity extends RxActivity
   @Override protected void initInject() {
   }
 
-  @Override protected void addLifeActivity() {
-
-  }
 
   @Override public boolean onNavigationItemSelected(@NonNull MenuItem item) {
     switch (item.getItemId()) {

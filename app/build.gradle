@@ -4,7 +4,6 @@ apply plugin: 'AndResGuard'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-
 android {
     compileSdkVersion 26
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -23,10 +22,7 @@ android {
                                 UMENG_APPKEY  : "594b23beae1bf8796c000c13",
                                 UMENG_CHANNEL : "Wandoujia"]
     }
-    dexOptions {
-        incremental true
-        javaMaxHeapSize rootProject.ext.android.javaMaxHeapSize
-    }
+
 
     buildTypes {
         release {
@@ -52,11 +48,8 @@ dependencies {
     compile rootProject.ext.dependencies["design"]
     compile rootProject.ext.dependencies["recyclerview-v7"]
     compile rootProject.ext.dependencies["cardview-v7"]
-    compile rootProject.ext.dependencies["material-calendarview"]
     compile rootProject.ext.dependencies["materialsearchview"]
-    compile rootProject.ext.dependencies["multiline-collapsingtoolbar"]
     compile rootProject.ext.dependencies["glide-transformations"]
-    compile rootProject.ext.dependencies["html-textview"]
     compile rootProject.ext.dependencies["materialDialogs"]
     compile rootProject.ext.dependencies["rxjava"]
     compile rootProject.ext.dependencies["rxandroid"]
@@ -70,27 +63,20 @@ dependencies {
     compile rootProject.ext.dependencies["okhttp-logging-interceptor"]
     compile rootProject.ext.dependencies["glide"]
     compile rootProject.ext.dependencies["glide-okhttp3-integration"]
-    compile rootProject.ext.dependencies["jsoup"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
     compile rootProject.ext.dependencies["dagger"]
     compile rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
     provided rootProject.ext.dependencies["annotation"]
     compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["logger"]
     compile rootProject.ext.dependencies["fragmentation"]
     compile rootProject.ext.dependencies["sweetalert"]
     compile rootProject.ext.dependencies["alerter"]
-    //compile rootProject.ext.dependencies["lifecycle"]
-    //compile rootProject.ext.dependencies["lifecycle_extensions"]
-    // annotationProcessor rootProject.ext.dependencies["lifecycle_compiler"]
-    compile rootProject.ext.dependencies["lottie"]
+   // annotationProcessor   rootProject.ext.dependencies["glideCompiler"]
     compile rootProject.ext.dependencies["kotlin"]
-    compile 'android.arch.lifecycle:runtime:1.0.0-alpha5'
-    compile 'android.arch.lifecycle:extensions:1.0.0-alpha5'
-    annotationProcessor "android.arch.lifecycle:compiler:1.0.0-alpha5"
     debugCompile rootProject.ext.dependencies["blockcanary-android"]
     releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
     debugCompile rootProject.ext.dependencies["leakcanary-android"]

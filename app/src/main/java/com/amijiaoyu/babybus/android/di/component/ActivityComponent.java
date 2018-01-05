@@ -3,10 +3,7 @@ package com.amijiaoyu.babybus.android.di.component;
 import android.app.Activity;
 import com.amijiaoyu.babybus.android.di.assist.ActivityScope;
 import com.amijiaoyu.babybus.android.di.module.ActivityModule;
-import com.amijiaoyu.babybus.android.ui.KotlinHomeActivity;
-import com.amijiaoyu.babybus.android.ui.LifecyActivityTest;
-import com.amijiaoyu.babybus.android.ui.LoginActivity;
-import com.amijiaoyu.babybus.android.ui.MyActivity;
+
 import dagger.Component;
 
 /**
@@ -29,10 +26,5 @@ public interface ActivityComponent {
   /**
    * 注册的登录界面接口
    */
-  void inject(LoginActivity loginActivity);
 
-  void inject(KotlinHomeActivity loginActivity);
-
-  void inject(MyActivity loginActivity);
-  void inject(LifecyActivityTest loginActivity);
 }
