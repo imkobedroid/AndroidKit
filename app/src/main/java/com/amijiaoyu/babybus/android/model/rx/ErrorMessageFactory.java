@@ -4,7 +4,9 @@ import android.content.Context;
 import com.amijiaoyu.babybus.android.R;
 
 /**
- * Created by Dsh on 2017/5/8.
+ *
+ * @author Dsh
+ * @date 2017/5/8
  * Use:
  */
 
@@ -92,4 +94,5 @@ public class ErrorMessageFactory {
 
     return errorMsg;
   }
+
 }

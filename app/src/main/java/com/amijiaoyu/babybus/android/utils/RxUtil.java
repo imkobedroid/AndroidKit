@@ -1,19 +1,21 @@
 package com.amijiaoyu.babybus.android.utils;
 
 import android.app.Activity;
-import android.content.Context;
+
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.model.bean.BaseBean;
 import com.amijiaoyu.babybus.android.model.rx.BaseException;
 import com.amijiaoyu.babybus.android.model.rx.RxTransformerException;
 import com.tapadoo.alerter.Alerter;
+
+import java.util.Locale;
+
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableTransformer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
-import java.util.Locale;
 
 /**
  * @author Dsh
@@ -34,38 +36,26 @@ public class RxUtil {
    * 统一线程处理
    */
   public static <T> FlowableTransformer<T, T> rxSchedulerHelper() {    //compose简化线程
-    return new FlowableTransformer<T, T>() {
-      @Override public Flowable<T> apply(Flowable<T> observable) {
-        return observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
-      }
-    };
+    return observable -> observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread());
   }
 
   /**
    * 统一返回结果处理
-   * @param <T>
-   * @return
+   * @param <T>  类型未知
+   * @return 返回一个被观察者
    */
     public static <T> FlowableTransformer<BaseBean<T>, T> handleResult() {
-        return new FlowableTransformer<BaseBean<T>, T>() {
-            @Override
-            public Flowable<T> apply(Flowable<BaseBean<T>> httpResponse) {
-                return httpResponse.flatMap(new Function<BaseBean<T>, Flowable<T>>() {
-                    @Override
-                    public Flowable<T> apply(BaseBean<T> tMyHttpResponse) {
-                        if(tMyHttpResponse.getCode() == 0) {
-                            return createData(tMyHttpResponse.getData());
-                        } else {
-                            return Flowable.error(new RxTransformerException(BaseException.ERROR_TRANSFORMER,""));
-                        }
-                    }
-                });
+        return httpResponse -> httpResponse.flatMap((Function<BaseBean<T>, Flowable<T>>) tMyHttpResponse -> {
+            if(tMyHttpResponse.getCode() == 0) {
+                return createData(tMyHttpResponse.getData());
+            } else {
+                return Flowable.error(new RxTransformerException(tMyHttpResponse.getCode(),tMyHttpResponse.getMessage()));
             }
-        };
+        });
     }
 
   /**
-   * 重新生成Flowable数据
+   * 重新生成被观察者
    */
   public static <T> Flowable<T> createData(final T t) {
     return Flowable.create(emitter -> {

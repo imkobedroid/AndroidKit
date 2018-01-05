@@ -42,8 +42,8 @@ public class RxErrorHandler {
       exception.setCode(BaseException.JSON_ERROR);
       exception.setDisplayMessage(ErrorMessageFactory.create(mContext, BaseException.JSON_ERROR));
     } else if (e instanceof RxTransformerException) {
-      exception.setCode(BaseException.ERROR_TRANSFORMER);
-      exception.setDisplayMessage(ErrorMessageFactory.create(mContext, BaseException.ERROR_TRANSFORMER));
+      exception.setCode(((BaseException)e).getCode());
+      exception.setDisplayMessage(((BaseException)e).getDisplayMessage());
     } else if (e instanceof SocketTimeoutException) {
       exception.setCode(BaseException.SOCKET_TIMEOUT_ERROR);
       exception.setDisplayMessage(
@@ -66,9 +66,6 @@ public class RxErrorHandler {
       //后台服务器返回的错误json
       Message messages = gson.fromJson(httpException.response().errorBody().string(),
           Message.class);
-      if (messages.getCode() == NO_FIND) {
-        RxBus.Companion.get().post(new NoUser());
-      }
       if (!Strings.isNullOrEmpty(messages.getMessage())) {
         exception.setDisplayMessage(messages.getMessage());
       } else {

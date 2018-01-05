@@ -38,9 +38,9 @@ public class BaseException extends Exception {
 
   public static final int ERROR_HTTP_500 = 500;
 
-  private int code;
+  public int code;
 
-  private String displayMessage;
+  public String displayMessage;
 
   public BaseException() {
   }
