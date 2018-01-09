@@ -56,8 +56,9 @@
 
     <RelativeLayout
         android:id="@+id/root_center"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/root_top"
         android:padding="@dimen/dp_10">
 
@@ -65,14 +66,15 @@
             android:id="@+id/image_graphical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             tools:ignore="UselessParent">
 
             <com.amijiaoyu.babybus.android.weight.CircularStatisticsView
-                android:id="@+id/cs_view"
-                android:layout_centerInParent="true"
+                android:id="@+id/myChatView"
+                android:layout_centerVertical="true"
                 android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100" />
-
+                android:layout_height="@dimen/dp_100"
+                />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,15 +99,14 @@
                     android:textColor="@color/default_gray"
                     android:textSize="@dimen/sp_10" />
             </LinearLayout>
-
-
         </RelativeLayout>
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/image_graphical"
+            android:layout_marginTop="@dimen/dp_4"
+            android:gravity="center"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/image_graphical"
             android:text="@string/money"
@@ -114,6 +115,7 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/time"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -127,6 +129,7 @@
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/repayment"
             android:layout_width="wrap_content"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/image_graphical"
             android:layout_marginStart="@dimen/dp_10"
@@ -138,12 +141,12 @@
 
 
         <RelativeLayout
-            android:background="@drawable/fillet_rect"
             android:layout_width="@dimen/dp_80"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/money"
             android:layout_marginStart="@dimen/dp_10"
-            android:layout_toEndOf="@+id/money">
+            android:layout_toEndOf="@+id/money"
+            android:background="@drawable/fillet_rect">
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/text_money"
@@ -151,6 +154,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:textColor="@color/default_blue"
                 android:textSize="@dimen/sp_14"
@@ -161,6 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:text="@string/thousand"
                 android:textColor="@color/default_black"
@@ -171,22 +176,23 @@
 
         <RelativeLayout
             android:layout_width="@dimen/dp_80"
-            android:background="@drawable/fillet_rect"
-
             android:layout_height="wrap_content"
+
             android:layout_alignBaseline="@+id/time"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/money"
+            android:background="@drawable/fillet_rect"
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
-                android:id="@+id/text_time"
                 android:textColor="@color/default_blue"
                 android:textSize="@dimen/sp_14"
                 tools:ignore="RelativeOverlap"
@@ -197,6 +203,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:src="@mipmap/arrow_bottom"
                 tools:ignore="RelativeOverlap" />
@@ -204,13 +211,13 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:background="@drawable/fillet_rect"
-
             android:layout_width="@dimen/dp_80"
+
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/repayment"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/money"
+            android:background="@drawable/fillet_rect"
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatTextView
@@ -219,6 +226,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:textColor="@color/default_blue"
                 android:textSize="@dimen/sp_14"
@@ -230,6 +238,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:src="@mipmap/arrow_bottom"
                 tools:ignore="RelativeOverlap" />
@@ -293,8 +302,8 @@
         android:background="@color/default_blue" />
 
     <android.support.v7.widget.AppCompatTextView
-        android:layout_width="wrap_content"
         android:id="@+id/content_two"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/blue_one"
         android:layout_below="@+id/root_center"
@@ -304,8 +313,8 @@
         tools:text="地方随风倒随风倒" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="@dimen/dp_8"
         android:id="@+id/blue_two"
+        android:layout_width="@dimen/dp_8"
         android:layout_height="@dimen/dp_8"
         android:layout_below="@+id/root_center"
         android:layout_marginStart="@dimen/dp_10"
@@ -323,5 +332,7 @@
         android:layout_toEndOf="@+id/blue_two"
         android:textSize="@dimen/sp_10"
         tools:text="地方随风倒随风倒" />
+
+
 
 </RelativeLayout>
