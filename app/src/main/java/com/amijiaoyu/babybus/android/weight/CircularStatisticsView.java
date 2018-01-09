@@ -35,8 +35,8 @@ public class CircularStatisticsView extends View {
     private Context mContext;
     private Paint mPaint;
     private int mPaintWidth = 0;
-    private int topMargin = 30;
-    private int leftMargin = 80;
+    private int topMargin = 10;
+    private int leftMargin = 0;
     private Resources mRes;
     private DisplayMetrics dm;
     private int circleCenterX = RIDS;
@@ -93,7 +93,7 @@ public class CircularStatisticsView extends View {
         WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
         wm.getDefaultDisplay().getMetrics(dm);
         int screenWidth = wm.getDefaultDisplay().getWidth();
-        leftMargin = (px2dip(screenWidth) - (2 * circleCenterX)) / 2;
+        leftMargin=8;
 
         mPaint.setColor(getResources().getColor(R.color.red_btn_bg_color));
         mPaint.setStrokeWidth(dip2px(mPaintWidth));

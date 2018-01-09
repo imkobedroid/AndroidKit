@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorBackground">#EEEEEE</color>
-  <color name="colorCard">#FFFFFF</color>
-  <color name="colorText">#2C2C2C</color>
-  <color name="colorLogo">#fed530</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorBackground">#EEEEEE</color>
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorText">#2C2C2C</color>
+    <color name="colorLogo">#fed530</color>
 
-  <color name="support_ui_red">#F00</color>
-  <color name="support_ui_green">#0F0</color>
-  <color name="support_ui_blue">#00F</color>
-  <color name="support_ui_yellow">#FF0</color>
-  <color name="colorAccent">#FF4081</color>
+    <color name="support_ui_red">#F00</color>
+    <color name="support_ui_green">#0F0</color>
+    <color name="support_ui_blue">#00F</color>
+    <color name="support_ui_yellow">#FF0</color>
+    <color name="colorAccent">#FF4081</color>
 
-  <integer-array name="support_ui_color_array">
-    <item>@color/support_ui_red</item>
-    <item>@color/support_ui_green</item>
-    <item>@color/support_ui_blue</item>
-    <item>@color/support_ui_yellow</item>
-  </integer-array>
-  <color name="colorGray">#ccc</color>
-
+    <integer-array name="support_ui_color_array">
+        <item>@color/support_ui_red</item>
+        <item>@color/support_ui_green</item>
+        <item>@color/support_ui_blue</item>
+        <item>@color/support_ui_yellow</item>
+    </integer-array>
+    <color name="colorGray">#ccc</color>
+    <color name="default_black">#000000</color>
+    <color name="default_blue">#5677fc</color>
+    <color name="default_gray">#9e9e9e</color>
+    <color name="default_gray_light">#eeeeee</color>
 </resources>

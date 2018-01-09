@@ -32,4 +32,17 @@
   <string name="home">主页</string>
   <string name="find">发现</string>
   <string name="fond">推荐</string>
+
+
+  <!--默认的布局提示信息-->
+  <string name="image_content" >图片信息</string>
+  <string name="text_content">文本信息</string>
+  <string name="month_fate">月利率</string>
+  <string name="money">金额</string>
+  <string name="repayment">还款</string>
+  <string name="time">期限</string>
+  <string name="thousand">万</string>
+  <string name="CAR">购物车</string>
+  <string name="black_name">黑名单</string>
+
 </resources>

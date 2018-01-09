@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/root_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/image_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/image_content"
+            android:src="@mipmap/item_select" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_head"
+            android:layout_width="@dimen/dp_52"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_toEndOf="@+id/image_select"
+            android:src="@mipmap/default_head" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_head"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/image_head"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_16"
+            tools:text="福建省肯" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/name_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_head"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/image_head"
+            android:textColor="@color/default_gray"
+            android:textSize="@dimen/sp_14"
+            tools:text="进度款了商家发多少得分手机" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/root_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/root_top"
+        android:padding="@dimen/dp_10">
+
+        <RelativeLayout
+            android:id="@+id/image_graphical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <com.amijiaoyu.babybus.android.weight.CircularStatisticsView
+                android:id="@+id/cs_view"
+                android:layout_centerInParent="true"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="80%" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:text="@string/month_fate"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_10" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_graphical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/image_graphical"
+            android:text="@string/money"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_14" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/image_graphical"
+            android:text="@string/time"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/repayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_graphical"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/image_graphical"
+            android:text="@string/repayment"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RelativeOverlap" />
+
+
+        <RelativeLayout
+            android:background="@drawable/fillet_rect"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/money"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/money">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_4"
+                android:textColor="@color/default_blue"
+                android:textSize="@dimen/sp_14"
+                tools:text="18" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_4"
+                android:text="@string/thousand"
+                android:textColor="@color/default_black"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_80"
+            android:background="@drawable/fillet_rect"
+
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/time"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/money"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_4"
+                android:id="@+id/text_time"
+                android:textColor="@color/default_blue"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="RelativeOverlap"
+                tools:text="18" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_4"
+                android:src="@mipmap/arrow_bottom"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/fillet_rect"
+
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/repayment"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@+id/money"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/text_repayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="@dimen/dp_4"
+                android:textColor="@color/default_blue"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="RelativeOverlap"
+                tools:text="18" />
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_4"
+                android:src="@mipmap/arrow_bottom"
+                tools:ignore="RelativeOverlap" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_4"
+            android:drawableTop="@mipmap/car"
+            android:text="@string/CAR"
+            android:textSize="@dimen/sp_12"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_graphical"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_4"
+            android:drawableTop="@mipmap/black_name"
+            android:text="@string/black_name"
+            android:textSize="@dimen/sp_12"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/blue"
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_8"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:background="@color/default_blue" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/content_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/blue"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/sp_10"
+        android:layout_toEndOf="@+id/blue"
+        android:textSize="@dimen/sp_10"
+        tools:text="地方随风倒随风倒" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/blue_one"
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_8"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_toEndOf="@+id/content_one"
+        android:background="@color/default_blue" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:id="@+id/content_two"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/blue_one"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/sp_10"
+        android:layout_toEndOf="@+id/blue_one"
+        android:textSize="@dimen/sp_10"
+        tools:text="地方随风倒随风倒" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dp_8"
+        android:id="@+id/blue_two"
+        android:layout_height="@dimen/dp_8"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_toEndOf="@+id/content_two"
+        android:background="@color/default_blue" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/content_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/blue"
+        android:layout_below="@+id/root_center"
+        android:layout_marginStart="@dimen/sp_10"
+        android:layout_toEndOf="@+id/blue_two"
+        android:textSize="@dimen/sp_10"
+        tools:text="地方随风倒随风倒" />
+
+</RelativeLayout>
