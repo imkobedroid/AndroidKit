@@ -44,5 +44,12 @@
   <string name="thousand">万</string>
   <string name="CAR">购物车</string>
   <string name="black_name">黑名单</string>
+    <string name="default_total">合计:0万</string>
+    <string name="_0_0_0">月供0 利息0 费用0</string>
+    <string name="_0">生成贷款方案(0)</string>
+    <string name="match">产品匹配</string>
+    <string name="_0_0_0_0">0个产品符合资质要求，推荐0，已选择0个</string>
+    <string name="_0_1">月供最小</string>
+    <string name="_1">修改策略</string>
 
 </resources>

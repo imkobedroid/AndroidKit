@@ -1,13 +1,16 @@
 package com.amijiaoyu.babybus.android.utils;
 
 import android.app.Activity;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.util.DisplayMetrics;
 
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.model.bean.BaseBean;
-import com.amijiaoyu.babybus.android.model.rx.BaseException;
 import com.amijiaoyu.babybus.android.model.rx.RxTransformerException;
 import com.tapadoo.alerter.Alerter;
 
+import java.util.List;
 import java.util.Locale;
 
 import io.reactivex.BackpressureStrategy;
@@ -22,7 +25,11 @@ import io.reactivex.schedulers.Schedulers;
  */
 public class RxUtil {
 
-
+    private static DisplayMetrics mMetrics;
+    private static int mMinimumFlingVelocity = 50;
+    private static int mMaximumFlingVelocity = 8000;
+    public final static double DEG2RAD = (Math.PI / 180.0);
+    public final static float FDEG2RAD = ((float) Math.PI / 180.f);
 
   /**
    * 获取保留两位的数据
@@ -77,4 +84,49 @@ public class RxUtil {
         .setText(Content)
         .show();
   }
+
+    @SuppressWarnings("unused")
+    public final static double DOUBLE_EPSILON = Double.longBitsToDouble(1);
+
+    @SuppressWarnings("unused")
+    public final static float FLOAT_EPSILON = Float.intBitsToFloat(1);
+
+    public static float convertDpToPixel(float dp) {
+        if (mMetrics == null) {
+            return dp;
+        }
+        return dp * mMetrics.density;
+    }
+
+    public static int calcTextWidth(Paint paint, String demoText) {
+        return (int) paint.measureText(demoText);
+    }
+
+
+    public static int calcTextHeight(Paint paint, String demoText) {
+
+        Rect r = new Rect();
+        r.set(0,0,0,0);
+        paint.getTextBounds(demoText, 0, demoText.length(), r);
+        return r.height();
+    }
+
+    public static int[] convertIntegers(List<Integer> integers) {
+
+        int[] ret = new int[integers.size()];
+
+        copyIntegers(integers, ret);
+
+        return ret;
+    }
+
+    public static void copyIntegers(List<Integer> from, int[] to){
+        int count = to.length < from.size() ? to.length : from.size();
+        for(int i = 0 ; i < count ; i++){
+            to[i] = from.get(i);
+        }
+    }
+
 }
+
+

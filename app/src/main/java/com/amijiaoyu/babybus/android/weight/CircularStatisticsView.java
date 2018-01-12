@@ -19,7 +19,7 @@ public class CircularStatisticsView extends View {
     /**
      *  分配比例大小，总比例大小为100,由于经过运算后最后会是99.55左右的数值，导致圆不能够重合，会留出点空白，所以这里的总比例大小我们用101
      */
-    private int[] strPercent;
+    private Float[] strPercent;
     /**
      * 圆的直径
      */
@@ -76,7 +76,7 @@ public class CircularStatisticsView extends View {
 
     }
 
-    public void setSrc(int[] strPercent) {
+    public void setSrc(Float[] strPercent) {
         this.strPercent=strPercent;
     }
 
@@ -109,7 +109,7 @@ public class CircularStatisticsView extends View {
             cyclePaint.setColor(mColor[i]);
             startPercent = sweepPercent + startPercent;
             //这里采用比例占100的百分比乘于360的来计算出占用的角度，使用先乘再除可以算出值
-            sweepPercent = strPercent[i] * 360 / 100;
+            sweepPercent = strPercent[i] * 360 / 98;
             canvas.drawArc(new RectF(0, 0, mRadius, mRadius), startPercent, sweepPercent, false, cyclePaint);
         }
     }

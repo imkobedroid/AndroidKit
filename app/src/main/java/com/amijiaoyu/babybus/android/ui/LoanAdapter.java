@@ -1,22 +1,13 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
 import android.text.SpannableString;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.RelativeSizeSpan;
-import android.text.style.StyleSpan;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.amijiaoyu.babybus.android.R;
-import com.amijiaoyu.babybus.android.base.RxActivity;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -26,85 +17,41 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import de.hdodenhof.circleimageview.CircleImageView;
+import java.util.List;
 
 /**
- * Date:2017/10/16 14:00
- * Email:imkobedroid@gmail.com
- *
- * @author dongshihong
+ * @author moerlong
+ * @date 2018/1/12
  */
 
-public class HomeActivity extends RxActivity {
-    @BindView(R.id.image_select)
-    ImageView imageSelect;
-    @BindView(R.id.image_head)
-    CircleImageView imageHead;
-    @BindView(R.id.text_name)
-    AppCompatTextView textName;
-    @BindView(R.id.name_content)
-    AppCompatTextView nameContent;
-    @BindView(R.id.root_top)
-    RelativeLayout rootTop;
-    @BindView(R.id.money)
-    AppCompatTextView money;
-    @BindView(R.id.time)
-    AppCompatTextView time;
-    @BindView(R.id.repayment)
-    AppCompatTextView repayment;
-    @BindView(R.id.text_money)
-    AppCompatTextView textMoney;
-    @BindView(R.id.text_time)
-    AppCompatTextView textTime;
-    @BindView(R.id.text_repayment)
-    AppCompatTextView textRepayment;
-    @BindView(R.id.root_center)
-    RelativeLayout rootCenter;
-    @BindView(R.id.blue)
-    CircleImageView blue;
-    @BindView(R.id.content_one)
-    AppCompatTextView contentOne;
-    @BindView(R.id.blue_one)
-    CircleImageView blueOne;
-    @BindView(R.id.content_two)
-    AppCompatTextView contentTwo;
-    @BindView(R.id.blue_two)
-    CircleImageView blueTwo;
-    @BindView(R.id.content_three)
-    AppCompatTextView contentThree;
-    @BindView(R.id.myChatView)
-    PieChart mChart;
-    private final static Float[] defaultData={10.6F,50.4F,39F};
+public class LoanAdapter extends BaseQuickAdapter<LoginBean, BaseViewHolder> {
+    private final static Float[] DEFAULT_DATA = {10.6F, 50.4F, 39F};
+
+    LoanAdapter(List data) {
+        super(R.layout.item_money, data);
+    }
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        initView();
+    protected void convert(BaseViewHolder baseViewHolder, LoginBean loginBean) {
+        baseViewHolder.setText(R.id.text_name, "贷款一号");
+        baseViewHolder.setText(R.id.name_content, "贷款一号");
+        baseViewHolder.setText(R.id.text_money, "贷款一号");
+        baseViewHolder.setText(R.id.text_time, "18");
+        baseViewHolder.setText(R.id.text_repayment, "100");
+        baseViewHolder.setText(R.id.content_one, "贷款一号");
+        baseViewHolder.setText(R.id.content_two, "贷款一号");
+        baseViewHolder.setText(R.id.content_three, "贷款一号");
+        initChartView(baseViewHolder.getView(R.id.myChatView));
     }
 
-    private void initView() {
-        textName.setText("贷款一号");
-        nameContent.setText("就地方开始减肥看电视就");
-
-        textMoney.setText("18");
-        textTime.setText("18");
-        textRepayment.setText("18");
-
-        contentOne.setText("应该还发生的发生");
-        contentThree.setText("应该还发生的发生");
-        contentTwo.setText("应该还发生的发生");
-
-        initChartView();
-    }
-
-    private void initChartView() {
+    private void initChartView(PieChart mChart) {
         mChart.setUsePercentValues(true);
         mChart.getDescription().setEnabled(false);
         mChart.setExtraOffsets(5, 10, 5, 5);
         mChart.setDragDecelerationFrictionCoef(0.95f);
         mChart.setCenterText(new SpannableString("80%\n月利率"));
         mChart.setDrawHoleEnabled(true);
+
         mChart.setHoleColor(Color.WHITE);
         mChart.setTransparentCircleColor(Color.WHITE);
         mChart.setTransparentCircleAlpha(110);
@@ -114,28 +61,14 @@ public class HomeActivity extends RxActivity {
         mChart.setRotationAngle(0);
         mChart.setRotationEnabled(true);
         mChart.setHighlightPerTapEnabled(true);
-        setData(defaultData.length, defaultData);
+        setData(DEFAULT_DATA.length, DEFAULT_DATA, mChart);
         mChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
         mChart.getLegend().setEnabled(false);
-
     }
 
-
-    @Override
-    protected int getLayout() {
-        return R.layout.item_money;
-    }
-
-    @Override
-    protected void initInject() {
-    }
-
-
-
-    private void setData(int count,Float[] defaultData ) {
-
+    private void setData(int count, Float[] defaultData, PieChart mChart) {
         ArrayList<PieEntry> entries = new ArrayList<>();
-        for (int i = 0; i < count ; i++) {
+        for (int i = 0; i < count; i++) {
             entries.add(new PieEntry(defaultData[i]));
         }
         PieDataSet dataSet = new PieDataSet(entries, "");
@@ -171,5 +104,4 @@ public class HomeActivity extends RxActivity {
         }
         mChart.invalidate();
     }
-
 }

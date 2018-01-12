@@ -2,13 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp_10"
+    android:layout_marginTop="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@color/default_white">
 
     <RelativeLayout
         android:id="@+id/root_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/dp_10"
+        android:background="@color/default_white"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_10"
         tools:ignore="UselessParent">
 
         <ImageView
@@ -18,7 +25,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:contentDescription="@string/image_content"
-            android:src="@mipmap/item_select" />
+            android:src="@mipmap/selected_highlight" />
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -60,67 +67,31 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/root_top"
-        android:padding="@dimen/dp_10">
+        android:background="@color/default_white">
 
-        <RelativeLayout
-            android:id="@+id/image_graphical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            tools:ignore="UselessParent">
-
-            <com.amijiaoyu.babybus.android.weight.CircularStatisticsView
-                android:id="@+id/myChatView"
-                android:layout_centerVertical="true"
-                android:layout_width="@dimen/dp_100"
-                android:layout_height="@dimen/dp_100"
-                />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:orientation="vertical">
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/percentage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
-                    tools:text="80%" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/dp_4"
-                    android:text="@string/month_fate"
-                    android:textColor="@color/default_gray"
-                    android:textSize="@dimen/sp_10" />
-            </LinearLayout>
-        </RelativeLayout>
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/myChatView"
+            android:layout_width="160dp"
+            android:layout_height="160dp" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/money"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toEndOf="@+id/myChatView"
             android:gravity="center"
-            android:layout_marginStart="@dimen/dp_10"
-            android:layout_toEndOf="@+id/image_graphical"
             android:text="@string/money"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/time"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp_10"
-            android:layout_toEndOf="@+id/image_graphical"
+            android:layout_toEndOf="@+id/myChatView"
+            android:gravity="center"
             android:text="@string/time"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14"
@@ -129,11 +100,11 @@
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/repayment"
             android:layout_width="wrap_content"
-            android:gravity="center"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/image_graphical"
-            android:layout_marginStart="@dimen/dp_10"
-            android:layout_toEndOf="@+id/image_graphical"
+            android:layout_alignBottom="@+id/myChatView"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:layout_toEndOf="@+id/myChatView"
+            android:gravity="center"
             android:text="@string/repayment"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14"
@@ -141,24 +112,26 @@
 
 
         <RelativeLayout
-            android:layout_width="@dimen/dp_80"
+            android:id="@+id/root_one"
+            android:layout_width="@dimen/dp_100"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/money"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/money"
-            android:background="@drawable/fillet_rect">
+            android:background="@drawable/fillet_rect"
+            android:paddingLeft="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_4">
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/text_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/appCompatTextView"
                 android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
                 android:textColor="@color/default_blue"
                 android:textSize="@dimen/sp_14"
-                tools:text="18" />
+                tools:text="贷款一号" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -170,20 +143,22 @@
                 android:text="@string/thousand"
                 android:textColor="@color/default_black"
                 android:textSize="@dimen/sp_14"
-                tools:ignore="RelativeOverlap" />
+                tools:ignore="RelativeOverlap"
+                android:id="@+id/appCompatTextView" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="@dimen/dp_80"
+            android:layout_width="@dimen/dp_100"
             android:layout_height="wrap_content"
-
             android:layout_alignBaseline="@+id/time"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/money"
             android:background="@drawable/fillet_rect"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_4">
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/text_time"
@@ -205,20 +180,21 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
-                android:src="@mipmap/arrow_bottom"
+                android:src="@mipmap/jt_down"
                 tools:ignore="RelativeOverlap" />
 
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="@dimen/dp_80"
-
+            android:layout_width="@dimen/dp_100"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/repayment"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/money"
             android:background="@drawable/fillet_rect"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_4"
+            android:paddingRight="@dimen/dp_4">
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/text_repayment"
@@ -240,99 +216,137 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="@dimen/dp_4"
                 android:padding="@dimen/dp_4"
-                android:src="@mipmap/arrow_bottom"
+                android:src="@mipmap/jt_down"
                 tools:ignore="RelativeOverlap" />
 
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_80"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/root_one"
+            android:layout_toStartOf="@+id/car">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/dp_80"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@color/default_gray_light" />
+
+        </RelativeLayout>
+
+
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_30"
             android:drawablePadding="@dimen/dp_4"
-            android:drawableTop="@mipmap/car"
+            android:drawableTop="@mipmap/shopping_normal"
             android:text="@string/CAR"
             android:textSize="@dimen/sp_12"
+            android:textColor="@color/default_black"
             tools:ignore="RelativeOverlap" />
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/image_graphical"
+            android:layout_alignBottom="@+id/myChatView"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_20"
             android:drawablePadding="@dimen/dp_4"
-            android:drawableTop="@mipmap/black_name"
+            android:drawableTop="@mipmap/blacklist_normal"
             android:text="@string/black_name"
+            android:textColor="@color/default_black"
             android:textSize="@dimen/sp_12"
             tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/blue"
-        android:layout_width="@dimen/dp_8"
-        android:layout_height="@dimen/dp_8"
-        android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_2"
-        android:background="@color/default_blue" />
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/content_one"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/blue"
+        android:background="@color/default_white"
         android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/sp_10"
-        android:layout_toEndOf="@+id/blue"
-        android:textSize="@dimen/sp_10"
-        tools:text="地方随风倒随风倒" />
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingRight="@dimen/dp_20">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/blue_one"
-        android:layout_width="@dimen/dp_8"
-        android:layout_height="@dimen/dp_8"
-        android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_2"
-        android:layout_toEndOf="@+id/content_one"
-        android:background="@color/default_blue" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blue"
+            android:layout_width="@dimen/dp_8"
+            android:layout_height="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_2"
+            android:background="@color/default_blue" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/content_two"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/blue_one"
-        android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/sp_10"
-        android:layout_toEndOf="@+id/blue_one"
-        android:textSize="@dimen/sp_10"
-        tools:text="地方随风倒随风倒" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/content_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blue"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/sp_10"
+            android:layout_toEndOf="@+id/blue"
+            android:textSize="@dimen/sp_10"
+            tools:text="地方随风倒随风倒" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/blue_two"
-        android:layout_width="@dimen/dp_8"
-        android:layout_height="@dimen/dp_8"
-        android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_2"
-        android:layout_toEndOf="@+id/content_two"
-        android:background="@color/default_blue" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blue_one"
+            android:layout_width="@dimen/dp_8"
+            android:layout_height="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toEndOf="@+id/content_one"
+            android:background="@color/default_blue" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/content_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/blue"
-        android:layout_below="@+id/root_center"
-        android:layout_marginStart="@dimen/sp_10"
-        android:layout_toEndOf="@+id/blue_two"
-        android:textSize="@dimen/sp_10"
-        tools:text="地方随风倒随风倒" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/content_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blue_one"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/sp_10"
+            android:layout_toEndOf="@+id/blue_one"
+            android:textSize="@dimen/sp_10"
+            tools:text="地方随风倒随风倒" />
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blue_two"
+            android:layout_width="@dimen/dp_8"
+            android:layout_height="@dimen/dp_8"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toEndOf="@+id/content_two"
+            android:background="@color/default_blue" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/content_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/blue"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/sp_10"
+            android:layout_toEndOf="@+id/blue_two"
+            android:textSize="@dimen/sp_10"
+            tools:text="地方随风倒随风倒"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/zs_normal"/>
+    </RelativeLayout>
 
 
 </RelativeLayout>
