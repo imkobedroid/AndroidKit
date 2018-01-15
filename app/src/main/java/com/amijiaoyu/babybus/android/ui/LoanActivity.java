@@ -1,22 +1,23 @@
 package com.amijiaoyu.babybus.android.ui;
 
-    import android.annotation.SuppressLint;
-    import android.os.Bundle;
-    import android.support.v7.widget.AppCompatTextView;
-    import android.support.v7.widget.LinearLayoutManager;
-    import android.support.v7.widget.RecyclerView;
-    import android.support.v7.widget.Toolbar;
-    import android.view.Menu;
-    import android.view.MenuItem;
-    import android.widget.TextView;
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.TextView;
 
-    import com.amijiaoyu.babybus.android.R;
-    import com.amijiaoyu.babybus.android.base.RxActivity;
+import com.amijiaoyu.babybus.android.R;
+import com.amijiaoyu.babybus.android.base.RxActivity;
+import com.chad.library.adapter.base.BaseQuickAdapter;
 
-    import java.util.ArrayList;
-    import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
-    import butterknife.BindView;
+import butterknife.BindView;
 
 
 /**
@@ -53,6 +54,7 @@ public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickL
             loginBeans.add(new LoginBean());
         }
         LoanAdapter loanAdapter = new LoanAdapter(loginBeans);
+        loanAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         loanAdapter.addHeaderView(getLayoutInflater().inflate(R.layout.head_loan, null));
         recycleView.setAdapter(loanAdapter);
     }
