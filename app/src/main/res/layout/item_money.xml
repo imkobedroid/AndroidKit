@@ -292,7 +292,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-
                 android:layout_alignTop="@+id/root_one"
                 android:drawablePadding="@dimen/dp_4"
                 android:drawableTop="@mipmap/shopping_normal"

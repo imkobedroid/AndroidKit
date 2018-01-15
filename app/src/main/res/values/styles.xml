@@ -21,4 +21,24 @@
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <item name="overlapAnchor">false</item>
+        <item name="android:textColor">@color/default_black</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionMenuTextColor">#fff</item>
+        <item name="actionMenuTextAppearance">@style/AppTheme.actionMenuTextSize</item>
+    </style>
+
+
+    <style name="AppTheme.actionMenuTextSize" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
 </resources>

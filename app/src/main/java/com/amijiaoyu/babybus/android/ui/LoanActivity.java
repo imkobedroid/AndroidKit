@@ -1,17 +1,22 @@
 package com.amijiaoyu.babybus.android.ui;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
-import com.amijiaoyu.babybus.android.R;
-import com.amijiaoyu.babybus.android.base.RxActivity;
-import java.util.ArrayList;
-import java.util.List;
-import butterknife.BindView;
+    import android.annotation.SuppressLint;
+    import android.os.Bundle;
+    import android.support.v7.widget.AppCompatTextView;
+    import android.support.v7.widget.LinearLayoutManager;
+    import android.support.v7.widget.RecyclerView;
+    import android.support.v7.widget.Toolbar;
+    import android.view.Menu;
+    import android.view.MenuItem;
+    import android.widget.TextView;
+
+    import com.amijiaoyu.babybus.android.R;
+    import com.amijiaoyu.babybus.android.base.RxActivity;
+
+    import java.util.ArrayList;
+    import java.util.List;
+
+    import butterknife.BindView;
 
 
 /**
@@ -19,7 +24,7 @@ import butterknife.BindView;
  */
 
 @SuppressLint("Registered")
-public class LoanActivity extends RxActivity {
+public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickListener {
     @BindView(R.id.recycleView)
     RecyclerView recycleView;
     @BindView(R.id.total)
@@ -37,6 +42,7 @@ public class LoanActivity extends RxActivity {
 
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.match));
+        toolbar.setOnMenuItemClickListener(this);
         initRecycleView();
     }
 
@@ -61,4 +67,14 @@ public class LoanActivity extends RxActivity {
 
     }
 
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_loan, menu);
+        return true;
+    }
 }

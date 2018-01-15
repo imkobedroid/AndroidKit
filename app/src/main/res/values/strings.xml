@@ -52,5 +52,6 @@
     <string name="_0_1">月供最小</string>
     <string name="_1">修改策略</string>
     <string name="_0_">0%</string>
+    <string name="back_name">黑名单</string>
 
 </resources>
