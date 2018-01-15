@@ -4,19 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/include_toolbar"
-        android:id="@+id/include_toolbar"/>
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/include_toolbar" />
 
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/include_toolbar"
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/bottom_view">
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/include_toolbar">
 
     </android.support.v7.widget.RecyclerView>
 
+    <View
+        android:id="@+id/line"
+        style="@style/DividerHorizontal"
+        android:layout_above="@+id/bottom_view" />
 
     <RelativeLayout
         android:id="@+id/bottom_view"

@@ -7,13 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 
 
@@ -49,8 +46,8 @@ public class LoanActivity extends RxActivity {
         for (int a = 0; a < 10; a++) {
             loginBeans.add(new LoginBean());
         }
-        LoanAdapter loanAdapter=new LoanAdapter(loginBeans);
-        loanAdapter.addHeaderView(getLayoutInflater().inflate(R.layout.head_loan,null));
+        LoanAdapter loanAdapter = new LoanAdapter(loginBeans);
+        loanAdapter.addHeaderView(getLayoutInflater().inflate(R.layout.head_loan, null));
         recycleView.setAdapter(loanAdapter);
     }
 

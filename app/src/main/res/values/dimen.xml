@@ -43,6 +43,7 @@
   <dimen name="dp_12">12dp</dimen>
   <dimen name="dp_80">80dp</dimen>
   <dimen name="dp_100">100dp</dimen>
+  <dimen name="dp_110">110dp</dimen>
   <dimen name="dp_130">130dp</dimen>
   <dimen name="dp_14">14dp</dimen>
 

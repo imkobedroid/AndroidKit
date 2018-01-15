@@ -20,9 +20,12 @@
         <item>@color/support_ui_yellow</item>
     </integer-array>
     <color name="colorGray">#ccc</color>
-    <color name="default_black">#000000</color>
-    <color name="default_blue">#5677fc</color>
-    <color name="default_gray">#9e9e9e</color>
+    <color name="default_black">#333333</color>
+    <color name="default_blue">#007AFF</color>
+    <color name="default_gray">#999999</color>
     <color name="default_gray_light">#eeeeee</color>
     <color name="default_white">#FFFFFF</color>
+    <color name="default_yellow">#FFc600</color>
+    <color name="default_yellow_light">#FF9a00</color>
+    <color name="default_yellow_light_height">#FF5900</color>
 </resources>
