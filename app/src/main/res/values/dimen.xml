@@ -22,6 +22,7 @@
 
   <!--UI-->
   <dimen name="dp_1">1dp</dimen>
+  <dimen name="dp_0">0dp</dimen>
   <dimen name="dp_2">2dp</dimen>
   <dimen name="dp_3">3dp</dimen>
   <dimen name="dp_45">45dp</dimen>

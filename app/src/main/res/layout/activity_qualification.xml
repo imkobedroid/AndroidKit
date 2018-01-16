@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:gravity="left|center_vertical"
+                android:padding="@dimen/dp_14"
+                android:text="@string/quickly"
+                android:textColor="@color/default_black"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_14"
+                android:paddingLeft="@dimen/dp_40"
+                android:paddingRight="@dimen/dp_40"
+                android:paddingTop="@dimen/dp_14">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTop="@drawable/shopping_normal"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/string_home"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTop="@drawable/shopping_normal"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/string_home"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTop="@drawable/shopping_normal"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/string_home"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTop="@drawable/shopping_normal"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="@string/string_home"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/default_white"
+                android:gravity="left|center_vertical"
+                android:padding="@dimen/dp_14"
+                android:text="@string/quickly"
+                android:textColor="@color/default_black"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="RtlHardcoded" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="?android:attr/listDivider" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_size"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/loan_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hint="@string/loan_0"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/default_blue"
+                    android:textColorHint="@color/default_blue"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/loan_money"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_time"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/loan_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hint="@string/loan_0_month"
+                    android:padding="@dimen/dp_10"
+                    android:textColor="@color/default_blue"
+                    android:textColorHint="@color/default_blue"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/loan_time"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/good_job"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/good_job"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/jt_down"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_ok"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/good_job"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/credit"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/credit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/jt_down"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_ok"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/credit"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/repayment_month"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/repayment_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/jt_down"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_ok"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/repayment_month"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/default_white"
+                android:paddingEnd="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_40">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/handle"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RtlHardcoded" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/handle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableRight="@mipmap/jt_down"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/loan_ok"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14"
+                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@+id/handle"
+                    android:background="?android:attr/listDivider" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:background="@drawable/fillet_rect_blue"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/next"
+                android:textColor="@color/default_white"
+                android:textSize="@dimen/sp_14" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

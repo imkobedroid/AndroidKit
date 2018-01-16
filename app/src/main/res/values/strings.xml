@@ -53,5 +53,17 @@
     <string name="_1">修改策略</string>
     <string name="_0_">0%</string>
     <string name="back_name">黑名单</string>
+    <string name="string_home">全款房</string>
+    <string name="quickly">快捷匹配</string>
+    <string name="loan_size">贷款金额</string>
+    <string name="loan_time">贷款时间</string>
+    <string name="good_job">优质行业</string>
+    <string name="credit">信用卡授权额度</string>
+    <string name="repayment_month">每月按揭或抵押还款</string>
+    <string name="handle">最近办理过贷款或信用卡</string>
+    <string name="loan_0">0万</string>
+    <string name="loan_0_month">0月</string>
+    <string name="loan_ok">是</string>
+    <string name="next">进一步完善资质</string>
 
 </resources>

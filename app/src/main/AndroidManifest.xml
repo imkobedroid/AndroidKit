@@ -15,7 +15,7 @@
       android:supportsRtl="true"
       android:theme="@style/AppTheme_blue"
       tools:replace="android:icon">
-    <activity android:name=".ui.LoanActivity">
+    <activity android:name=".ui.QualificationsActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
