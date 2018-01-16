@@ -1,7 +1,9 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
@@ -22,6 +24,8 @@ public class QualificationsActivity extends RxActivity {
     TextView tvToolbar;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.property)
+    AppCompatTextView property;
 
     @Override
     protected int getLayout() {
@@ -37,5 +41,6 @@ public class QualificationsActivity extends RxActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initToolBar(toolbar, tvToolbar, getString(R.string.match));
+        property.setOnClickListener(v -> startActivity(new Intent(this, QualificationsHomeActivity.class)));
     }
 }

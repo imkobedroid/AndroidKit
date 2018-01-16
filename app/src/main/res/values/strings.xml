@@ -53,7 +53,7 @@
     <string name="_1">修改策略</string>
     <string name="_0_">0%</string>
     <string name="back_name">黑名单</string>
-    <string name="string_home">全款房</string>
+    <string name="string_home">房产</string>
     <string name="quickly">快捷匹配</string>
     <string name="loan_size">贷款金额</string>
     <string name="loan_time">贷款时间</string>
@@ -67,8 +67,17 @@
     <string name="next">进一步完善资质</string>
     <string name="wan">万</string>
     <string name="month">月</string>
-    <string name="home_no_pay">按揭房</string>
-    <string name="fill_car">全款车</string>
+    <string name="home_no_pay">汽车</string>
+    <string name="fill_car">信用</string>
     <string name="car_no_pay">按揭车</string>
+    <string name="name_home">名下房产</string>
+    <string name="quickly_matching">立即匹配贷款产品</string>
+    <string name="House">房产</string>
+    <string name="mortgage_home">按揭房</string>
+    <string name="String_home">按揭房/抵押房估值</string>
+    <string name="defatult_money">0万</string>
+    <string name="please_edit">请输入</string>
+    <string name="please_select">请选择</string>
+    <string name="full_home">全款房</string>
 
 </resources>

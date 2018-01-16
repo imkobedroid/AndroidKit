@@ -44,6 +44,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="0dp"
+                    android:id="@+id/property"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:clickable="true"
@@ -87,20 +88,7 @@
                     android:textColor="@color/default_black"
                     android:textSize="@dimen/sp_14" />
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:padding="@dimen/dp_10"
-                    android:text="@string/car_no_pay"
-                    android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14" />
+
 
 
             </LinearLayout>
