@@ -40,10 +40,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
                 android:orientation="horizontal"
-                android:paddingBottom="@dimen/dp_14"
-                android:paddingLeft="@dimen/dp_40"
-                android:paddingRight="@dimen/dp_40"
-                android:paddingTop="@dimen/dp_14">
+                >
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="0dp"
@@ -71,7 +68,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
                     android:padding="@dimen/dp_10"
-                    android:text="@string/string_home"
+                    android:text="@string/home_no_pay"
                     android:textColor="@color/default_black"
                     android:textSize="@dimen/sp_14" />
 
@@ -86,7 +83,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
                     android:padding="@dimen/dp_10"
-                    android:text="@string/string_home"
+                    android:text="@string/fill_car"
                     android:textColor="@color/default_black"
                     android:textSize="@dimen/sp_14" />
 
@@ -101,7 +98,7 @@
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
                     android:padding="@dimen/dp_10"
-                    android:text="@string/string_home"
+                    android:text="@string/car_no_pay"
                     android:textColor="@color/default_black"
                     android:textSize="@dimen/sp_14" />
 
@@ -130,6 +127,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -151,10 +150,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:paddingBottom="@dimen/dp_10"
-                    android:paddingRight="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_20"
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/wan"
-                    android:textColor="@color/default_black"
+                    android:textColor="@color/default_blue"
                     android:textSize="@dimen/sp_14"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
@@ -163,16 +162,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:focusable="true"
                     android:layout_gravity="right|center_vertical"
                     android:layout_toStartOf="@+id/right_side"
-                    android:background="@null"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/fillet_rect_edit"
                     android:hint="@string/loan_0"
+                    android:paddingRight="@dimen/dp_4"
                     android:inputType="number|numberDecimal"
                     android:paddingBottom="@dimen/dp_10"
-                    android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
                     android:paddingTop="@dimen/dp_10"
                     android:textColor="@color/default_blue"
@@ -191,6 +188,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -212,10 +211,10 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:paddingBottom="@dimen/dp_10"
-                    android:paddingRight="@dimen/dp_10"
+                    android:paddingRight="@dimen/dp_20"
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/month"
-                    android:textColor="@color/default_black"
+                    android:textColor="@color/default_blue"
                     android:textSize="@dimen/sp_14"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
@@ -226,14 +225,12 @@
                     android:layout_centerVertical="true"
                     android:layout_gravity="right|center_vertical"
                     android:layout_toLeftOf="@+id/right_side_one"
-                    android:background="@null"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    android:background="@drawable/fillet_rect_edit"
                     android:hint="@string/loan_0_month"
+                    android:focusable="true"
                     android:inputType="number"
                     android:paddingBottom="@dimen/dp_10"
-                    android:paddingEnd="@dimen/dp_20"
+                    android:paddingEnd="@dimen/dp_4"
                     android:paddingStart="@dimen/dp_20"
                     android:paddingTop="@dimen/dp_10"
                     android:textColor="@color/default_blue"
@@ -252,6 +249,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -273,11 +273,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="right|center_vertical"
-                    android:clickable="true"
+                    android:clickable="false"
                     android:drawablePadding="@dimen/dp_10"
                     android:drawableRight="@mipmap/jt_down"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:paddingBottom="@dimen/dp_10"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
@@ -298,6 +296,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -319,11 +320,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="right|center_vertical"
-                    android:clickable="true"
+                    android:clickable="false"
                     android:drawablePadding="@dimen/dp_10"
                     android:drawableRight="@mipmap/jt_down"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:paddingBottom="@dimen/dp_10"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
@@ -344,7 +343,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
-
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -366,11 +367,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="right|center_vertical"
-                    android:clickable="true"
+                    android:clickable="false"
                     android:drawablePadding="@dimen/dp_10"
                     android:drawableRight="@mipmap/jt_down"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:paddingBottom="@dimen/dp_10"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
@@ -391,6 +390,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/default_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:paddingStart="@dimen/dp_40"
                 tools:ignore="RtlSymmetry">
 
@@ -412,11 +414,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_gravity="right|center_vertical"
-                    android:clickable="true"
+                    android:clickable="false"
                     android:drawablePadding="@dimen/dp_10"
                     android:drawableRight="@mipmap/jt_down"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
                     android:paddingBottom="@dimen/dp_10"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
@@ -435,7 +435,7 @@
 
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_40"
+                android:layout_height="@dimen/dp_46"
                 android:layout_marginEnd="@dimen/dp_20"
                 android:layout_marginStart="@dimen/dp_20"
                 android:layout_marginTop="@dimen/dp_40"

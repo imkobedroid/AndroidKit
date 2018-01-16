@@ -67,5 +67,8 @@
     <string name="next">进一步完善资质</string>
     <string name="wan">万</string>
     <string name="month">月</string>
+    <string name="home_no_pay">按揭房</string>
+    <string name="fill_car">全款车</string>
+    <string name="car_no_pay">按揭车</string>
 
 </resources>
