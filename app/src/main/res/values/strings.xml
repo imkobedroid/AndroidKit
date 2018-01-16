@@ -61,9 +61,11 @@
     <string name="credit">信用卡授权额度</string>
     <string name="repayment_month">每月按揭或抵押还款</string>
     <string name="handle">最近办理过贷款或信用卡</string>
-    <string name="loan_0">0万</string>
-    <string name="loan_0_month">0月</string>
+    <string name="loan_0">0</string>
+    <string name="loan_0_month">0</string>
     <string name="loan_ok">是</string>
     <string name="next">进一步完善资质</string>
+    <string name="wan">万</string>
+    <string name="month">月</string>
 
 </resources>

@@ -22,8 +22,6 @@ public class QualificationsActivity extends RxActivity {
     TextView tvToolbar;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.recycleView)
-    RecyclerView recycleView;
 
     @Override
     protected int getLayout() {
