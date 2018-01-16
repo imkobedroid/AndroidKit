@@ -39,18 +39,21 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
+        android:layout_above="@+id/next"
         android:layout_height="match_parent"
         android:layout_below="@id/root_head">
 
     </android.support.v7.widget.RecyclerView>
 
     <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/default_blue"
         android:gravity="center"
-        android:padding="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_14"
+        android:paddingBottom="@dimen/dp_14"
         android:text="@string/quickly_matching"
         android:textColor="@color/default_white"
         android:textSize="@dimen/sp_16" />
