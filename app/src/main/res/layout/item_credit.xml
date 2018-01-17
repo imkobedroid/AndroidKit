@@ -20,7 +20,7 @@
             android:layout_toEndOf="@+id/view"
             android:drawableEnd="@drawable/shopping__highlight"
             android:drawablePadding="@dimen/dp_10"
-            android:text="@string/mortgage_car"
+            android:text="@string/policy_one"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_16" />
 
@@ -60,7 +60,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view_one"
-            android:text="@string/String_car"
+            android:text="@string/policy_year"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14" />
 

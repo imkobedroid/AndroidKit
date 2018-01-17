@@ -20,7 +20,7 @@
             android:layout_toEndOf="@+id/view"
             android:drawableEnd="@drawable/shopping__highlight"
             android:drawablePadding="@dimen/dp_10"
-            android:text="@string/mortgage_home"
+            android:text="@string/full_home"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_16" />
 
@@ -60,7 +60,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view_one"
-            android:text="@string/String_home"
+            android:text="@string/full_home_money"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14" />
 
@@ -113,7 +113,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view_five"
-            android:text="@string/String_home"
+            android:text="@string/hold_time"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14" />
 
