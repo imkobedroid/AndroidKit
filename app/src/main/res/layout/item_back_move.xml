@@ -87,37 +87,40 @@
                 android:id="@+id/root_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <com.amijiaoyu.babybus.android.weight.PieChart
                     android:id="@+id/myChatView"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <LinearLayout
-                    android:layout_centerInParent="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
                     android:orientation="vertical">
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:text="@string/_0_"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/sp_16"
-                        android:textColor="@color/default_black"
-                        android:layout_height="wrap_content" />
 
                     <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/_0_"
+                        android:textColor="@color/default_black"
+                        android:textSize="@dimen/sp_16" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_4"
-                        android:layout_width="wrap_content"
                         android:gravity="center"
-                        android:textColor="@color/default_gray"
-                        android:textSize="@dimen/sp_14"
                         android:text="@string/month_fate"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/default_gray"
+                        android:textSize="@dimen/sp_14" />
                 </LinearLayout>
             </RelativeLayout>
+
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/money"
                 android:layout_width="wrap_content"
@@ -292,25 +295,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/root_one"
+                android:layout_centerVertical="true"
                 android:drawablePadding="@dimen/dp_4"
                 android:drawableTop="@mipmap/shopping_normal"
-                android:text="@string/share"
-                android:textColor="@color/default_black"
+                android:text="@string/move"
+                android:textColor="@color/default_red"
                 android:textSize="@dimen/sp_12"
                 tools:ignore="RelativeOverlap" />
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/root_three"
-                android:layout_alignParentEnd="true"
-                android:drawablePadding="@dimen/dp_4"
-                android:drawableTop="@mipmap/blacklist_normal"
-                android:text="@string/move"
-                android:textColor="@color/default_black"
-                android:textSize="@dimen/sp_12"
-                tools:ignore="RelativeOverlap" />
 
         </RelativeLayout>
 

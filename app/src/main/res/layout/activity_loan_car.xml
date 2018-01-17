@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/include_toolbar_right" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line"
+        android:layout_below="@+id/include_toolbar">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:id="@+id/line"
+        style="@style/DividerHorizontal"
+        android:layout_above="@+id/bottom_view" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/default_white"
+        tools:ignore="UselessParent">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_4"
+            android:text="@string/default_total"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RelativeOverlap" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_marginStart="@dimen/sp_10"
+            android:text="@string/_0_0_0"
+            android:textColor="@color/default_black"
+            android:textSize="@dimen/sp_14" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="@color/default_blue"
+            android:gravity="center"
+            android:text="@string/_0"
+            android:textColor="@color/default_white"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -93,6 +93,7 @@
     <string name="all_select">全选</string>
     <string name="move">移除</string>
     <string name="share">分享</string>
+    <string name="manager">管理</string>
     <string name="finish">完成</string>
 
 </resources>
