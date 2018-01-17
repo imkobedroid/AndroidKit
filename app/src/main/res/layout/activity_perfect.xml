@@ -215,6 +215,44 @@
                     android:background="?android:attr/listDivider" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_72"
+                android:background="@color/default_white"
+                tools:ignore="UselessParent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/view_one"
+                    android:text="@string/no_have"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    android:id="@+id/view_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:background="@drawable/shape_number"
+                    android:gravity="center"
+                    android:text="@string/_1_"
+                    android:textColor="@color/default_blue"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycleView_home"
                 android:layout_width="match_parent"
@@ -270,6 +308,44 @@
                     android:background="?android:attr/listDivider" />
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_72"
+                android:background="@color/default_white"
+                tools:ignore="UselessParent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/view_one"
+                    android:text="@string/no_have"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_14" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    android:id="@+id/view_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:background="@drawable/shape_number"
+                    android:gravity="center"
+                    android:text="@string/_1_"
+                    android:textColor="@color/default_blue"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycleView_car"
                 android:layout_width="match_parent"
@@ -277,7 +353,8 @@
                 android:background="@color/default_white">
 
             </android.support.v7.widget.RecyclerView>
- <RelativeLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_72"
                 android:layout_marginTop="@dimen/dp_10"
@@ -331,9 +408,6 @@
                 android:background="@color/default_white">
 
             </android.support.v7.widget.RecyclerView>
-
-
-
 
 
             <android.support.v7.widget.AppCompatButton

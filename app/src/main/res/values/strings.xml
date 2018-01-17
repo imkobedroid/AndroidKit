@@ -120,5 +120,6 @@
     <string name="policy_one">保单1</string>
     <string name="policy_year">年缴保费</string>
     <string name="full_home_money">全款房估值</string>
+    <string name="no_have">无</string>
 
 </resources>
