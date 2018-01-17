@@ -17,98 +17,6 @@
             android:orientation="vertical"
             tools:ignore="UselessParent">
 
-
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/default_white"
-                android:gravity="left|center_vertical"
-                android:padding="@dimen/dp_14"
-                android:text="@string/quickly"
-                android:textColor="@color/default_black"
-                android:textSize="@dimen/sp_16"
-                tools:ignore="RtlHardcoded" />
-
-            <View
-                android:id="@+id/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="?android:attr/listDivider" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/default_white"
-                android:orientation="horizontal">
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/property"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:padding="@dimen/dp_10"
-                    android:text="@string/string_home"
-                    android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:id="@+id/car"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:padding="@dimen/dp_10"
-                    android:text="@string/home_no_pay"
-                    android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14" />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:clickable="true"
-                    android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
-                    android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    android:gravity="center"
-                    android:padding="@dimen/dp_10"
-                    android:text="@string/fill_car"
-                    android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14" />
-
-
-            </LinearLayout>
-
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_10"
-                android:background="@color/default_white"
-                android:gravity="left|center_vertical"
-                android:padding="@dimen/dp_14"
-                android:text="@string/quickly"
-                android:textColor="@color/default_black"
-                android:textSize="@dimen/sp_16"
-                tools:ignore="RtlHardcoded" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="?android:attr/listDivider" />
-
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_50"
@@ -164,11 +72,6 @@
                     android:textSize="@dimen/sp_14"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:layout_alignParentBottom="true"
-                    android:background="?android:attr/listDivider" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -432,7 +335,7 @@
                 android:background="@drawable/fillet_rect_blue"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:text="@string/next"
+                android:text="@string/quickly_matching"
                 android:textColor="@color/default_white"
                 android:textSize="@dimen/sp_14" />
         </LinearLayout>

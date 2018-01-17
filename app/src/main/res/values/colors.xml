@@ -25,6 +25,7 @@
     <color name="default_gray">#999999</color>
     <color name="default_gray_light">#eeeeee</color>
     <color name="default_white">#FFFFFF</color>
+    <color name="default_red">#F00</color>
     <color name="default_yellow">#FFc600</color>
     <color name="default_yellow_light">#FF9a00</color>
     <color name="default_yellow_light_height">#FF5900</color>

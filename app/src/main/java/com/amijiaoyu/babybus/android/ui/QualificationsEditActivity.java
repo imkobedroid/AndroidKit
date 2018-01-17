@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
@@ -19,20 +18,15 @@ import butterknife.BindView;
  */
 
 @SuppressLint("Registered")
-public class QualificationsActivity extends RxActivity {
+public class QualificationsEditActivity extends RxActivity {
     @BindView(R.id.tv_toolbar)
     TextView tvToolbar;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.property)
-    AppCompatTextView property;
-
-    @BindView(R.id.car)
-    AppCompatTextView car;
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_qualification;
+        return R.layout.activity_qualification_edit;
     }
 
     @Override
@@ -43,8 +37,6 @@ public class QualificationsActivity extends RxActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initToolBar(toolbar, tvToolbar, getString(R.string.match));
-        property.setOnClickListener(v -> startActivity(new Intent(this, QualificationsHomeActivity.class)));
-        car.setOnClickListener(v -> startActivity(new Intent(this, QualificationsCarActivity.class)));
+        initToolBar(toolbar, tvToolbar, getString(R.string.edit_need));
     }
 }

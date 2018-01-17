@@ -75,9 +75,24 @@
     <string name="House">房产</string>
     <string name="mortgage_home">按揭房</string>
     <string name="String_home">按揭房/抵押房估值</string>
+    <string name="String_car">按揭房/抵押车估值</string>
     <string name="defatult_money">0万</string>
     <string name="please_edit">请输入</string>
     <string name="please_select">请选择</string>
     <string name="full_home">全款房</string>
+    <string name="mortgage_car">按揭车</string>
+    <string name="string_one">按揭/抵押车贷款余额</string>
+    <string name="month_money">月供金额</string>
+    <string name="month_time">月供期数</string>
+    <string name="full_car">全款车</string>
+    <string name="full_car_money">全款车估值</string>
+    <string name="name_car">名下汽车</string>
+    <string name="car">按揭车</string>
+    <string name="no_card">没有信用卡</string>
+    <string name="edit_need">编辑需求</string>
+    <string name="all_select">全选</string>
+    <string name="move">移除</string>
+    <string name="share">分享</string>
+    <string name="finish">完成</string>
 
 </resources>

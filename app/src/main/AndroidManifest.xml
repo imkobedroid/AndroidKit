@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_blue"
         tools:replace="android:icon">
-        <activity android:name=".ui.QualificationsActivity">
+        <activity android:name=".ui.LoanFinishActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +26,10 @@
         <activity
             android:name=".ui.QualificationsHomeActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.QualificationsCarActivity"
+            tools:ignore="DuplicateActivity" />
+
     </application>
 
 </manifest>
