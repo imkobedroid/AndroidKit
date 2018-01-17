@@ -112,5 +112,13 @@
     <string name="_8">8</string>
     <string name="lately">最近办理过贷款或信用卡</string>
     <string name="_9">9</string>
+    <string name="month_income">月收入方式</string>
+    <string name="continuity_fund">连续两年本地公积金</string>
+    <string name="continuity">连续两年本地社保</string>
+    <string name="perfect">完善资质</string>
+    <string name="hold_time">房产证持有时间</string>
+    <string name="policy_one">保单1</string>
+    <string name="policy_year">年缴保费</string>
+    <string name="full_home_money">全款房估值</string>
 
 </resources>

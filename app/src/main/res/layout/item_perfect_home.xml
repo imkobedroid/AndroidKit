@@ -166,7 +166,7 @@
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view_three"
             android:layout_centerVertical="true"
-            android:text="@string/String_home"
+            android:text="@string/hold_time"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14" />
 
