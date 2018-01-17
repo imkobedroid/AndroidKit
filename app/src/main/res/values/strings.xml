@@ -95,5 +95,22 @@
     <string name="share">分享</string>
     <string name="manager">管理</string>
     <string name="finish">完成</string>
+    <string name="String_1">月供最大金额</string>
+    <string name="string_2">大于6期房月供</string>
+    <string name="string_3">缴纳大于2年3期传统保单</string>
+    <string name="_1_">1</string>
+    <string name="_3_">3</string>
+    <string name="_2_2">2</string>
+    <string name="social">社保</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="accumulation">公积金</string>
+    <string name="limit">信用卡授信额度</string>
+    <string name="_6">6</string>
+    <string name="month_mortgage">每月按揭或抵押贷款</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="lately">最近办理过贷款或信用卡</string>
+    <string name="_9">9</string>
 
 </resources>
