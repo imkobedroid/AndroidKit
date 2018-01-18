@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/default_blue"
+        android:layout_margin="@dimen/dp_10"
+        android:id="@+id/title_list"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:padding="3dp"
+        android:scrollingCache="false" />
+
+</LinearLayout>
