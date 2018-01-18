@@ -7,11 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
+import com.amijiaoyu.babybus.android.weight.ActionItem;
+import com.amijiaoyu.babybus.android.weight.TitlePopup;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
@@ -25,7 +27,7 @@ import butterknife.BindView;
  */
 
 @SuppressLint("Registered")
-public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickListener {
+public class LoanActivity extends RxActivity {
     @BindView(R.id.recycleView)
     RecyclerView recycleView;
     @BindView(R.id.total)
@@ -34,6 +36,8 @@ public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickL
     Toolbar toolbar;
     @BindView(R.id.tv_toolbar)
     TextView title;
+    @BindView(R.id.tv_toolbar_right)
+    TextView right;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +47,7 @@ public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickL
 
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.match));
-        toolbar.setOnMenuItemClickListener(this);
+        right.setText(R.string.more);
         initRecycleView();
     }
 
@@ -57,6 +61,16 @@ public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickL
         loanAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         loanAdapter.addHeaderView(getLayoutInflater().inflate(R.layout.head_loan, null));
         recycleView.setAdapter(loanAdapter);
+
+
+        right.setOnClickListener(v -> {
+            TitlePopup titlePopup = new TitlePopup(this, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            titlePopup.addAction(new ActionItem(this, "编辑需求", R.mipmap.black_name));
+            titlePopup.addAction(new ActionItem(this, "编辑资质", R.mipmap.black_name));
+            titlePopup.addAction(new ActionItem(this, "购物车(12)", R.mipmap.black_name));
+            titlePopup.addAction(new ActionItem(this, "黑名单(12)",R.mipmap.black_name));
+            titlePopup.show(v);
+        });
     }
 
     @Override
@@ -69,14 +83,5 @@ public class LoanActivity extends RxActivity implements Toolbar.OnMenuItemClickL
 
     }
 
-    @Override
-    public boolean onMenuItemClick(MenuItem menuItem) {
-        return false;
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_loan, menu);
-        return true;
-    }
 }
