@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 
+import io.reactivex.Flowable;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -22,35 +23,24 @@ import butterknife.BindView;
  */
 
 public class PerfectActivity extends RxActivity {
-    @BindView(R.id.tv_toolbar)
-    TextView tvToolbar;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.add_data_home)
-    AppCompatImageView addDataHome;
-    @BindView(R.id.recycleView_home)
-    RecyclerView recycleViewHome;
-    @BindView(R.id.add_data_car)
-    AppCompatImageView addDataCar;
-    @BindView(R.id.recycleView_car)
-    RecyclerView recycleViewCar;
-    @BindView(R.id.add_data_policy)
-    AppCompatImageView addDataPolicy;
-    @BindView(R.id.recycleView_policy)
-    RecyclerView recycleViewPolicy;
+    @BindView(R.id.tv_toolbar) TextView tvToolbar;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.add_data_home) AppCompatImageView addDataHome;
+    @BindView(R.id.recycleView_home) RecyclerView recycleViewHome;
+    @BindView(R.id.add_data_car) AppCompatImageView addDataCar;
+    @BindView(R.id.recycleView_car) RecyclerView recycleViewCar;
+    @BindView(R.id.add_data_policy) AppCompatImageView addDataPolicy;
+    @BindView(R.id.recycleView_policy) RecyclerView recycleViewPolicy;
 
-    @Override
-    protected int getLayout() {
+    @Override protected int getLayout() {
         return R.layout.activity_perfect;
     }
 
-    @Override
-    protected void initInject() {
+    @Override protected void initInject() {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
     }
@@ -67,9 +57,12 @@ public class PerfectActivity extends RxActivity {
         recycleViewHome.setAdapter(homeAdapter);
         addDataHome.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
-            @SuppressLint("InflateParams") View view = getLayoutInflater().inflate(R.layout.dialog_sheet, null);
-            @SuppressLint("InflateParams") View mortgage = getLayoutInflater().inflate(R.layout.item_perfect_home, null);
-            @SuppressLint("InflateParams") View full = getLayoutInflater().inflate(R.layout.item_perfect_full, null);
+            @SuppressLint("InflateParams") View view =
+                getLayoutInflater().inflate(R.layout.dialog_sheet, null);
+            @SuppressLint("InflateParams") View mortgage =
+                getLayoutInflater().inflate(R.layout.item_perfect_home, null);
+            @SuppressLint("InflateParams") View full =
+                getLayoutInflater().inflate(R.layout.item_perfect_full, null);
             sheetDialog.setContentView(view);
             view.findViewById(R.id.mortgage_home).setOnClickListener(v1 -> {
                 homeAdapter.addFooterView(mortgage);
@@ -80,9 +73,14 @@ public class PerfectActivity extends RxActivity {
                 sheetDialog.dismiss();
                 homeAdapter.addFooterView(full);
             });
+
+            mortgage.findViewById(R.id.delete)
+                .setOnClickListener(v1 -> homeAdapter.removeFooterView(mortgage));
+            full.findViewById(R.id.delete)
+                .setOnClickListener(v1 -> homeAdapter.removeFooterView(full));
+
             sheetDialog.show();
         });
-
 
         //车子
         HouseAdapter carAdapter = new HouseAdapter(new ArrayList<>());
@@ -93,9 +91,12 @@ public class PerfectActivity extends RxActivity {
         recycleViewCar.setAdapter(carAdapter);
         addDataCar.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
-            @SuppressLint("InflateParams") View view = getLayoutInflater().inflate(R.layout.dialog_car_sheet, null);
-            @SuppressLint("InflateParams") View mortgage = getLayoutInflater().inflate(R.layout.item_car, null);
-            @SuppressLint("InflateParams") View full = getLayoutInflater().inflate(R.layout.item_full_car, null);
+            @SuppressLint("InflateParams") View view =
+                getLayoutInflater().inflate(R.layout.dialog_car_sheet, null);
+            @SuppressLint("InflateParams") View mortgage =
+                getLayoutInflater().inflate(R.layout.item_car, null);
+            @SuppressLint("InflateParams") View full =
+                getLayoutInflater().inflate(R.layout.item_full_car, null);
             sheetDialog.setContentView(view);
             view.findViewById(R.id.mortgage_home).setOnClickListener(v1 -> {
                 carAdapter.addFooterView(mortgage);
@@ -109,7 +110,7 @@ public class PerfectActivity extends RxActivity {
             sheetDialog.show();
         });
 
-       //保单
+        //保单
         HouseAdapter policyAdapter = new HouseAdapter(new ArrayList<>());
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(this);
         recycleViewPolicy.setLayoutManager(layoutManager2);
@@ -117,7 +118,8 @@ public class PerfectActivity extends RxActivity {
         recycleViewPolicy.setNestedScrollingEnabled(false);
         recycleViewPolicy.setAdapter(policyAdapter);
         addDataPolicy.setOnClickListener(v -> {
-            @SuppressLint("InflateParams") View view = getLayoutInflater().inflate(R.layout.item_policy, null);
+            @SuppressLint("InflateParams") View view =
+                getLayoutInflater().inflate(R.layout.item_policy, null);
             policyAdapter.addHeaderView(view);
         });
     }

@@ -32,7 +32,7 @@
             <View
                 android:id="@+id/line"
                 android:layout_width="match_parent"
-                android:layout_height="0.5dp"
+                android:layout_height="0.8dp"
                 android:background="?android:attr/listDivider" />
 
             <LinearLayout
@@ -48,7 +48,7 @@
                     android:layout_weight="1"
                     android:clickable="true"
                     android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
+                    android:drawableTop="@mipmap/house"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
@@ -64,7 +64,7 @@
                     android:layout_weight="1"
                     android:clickable="true"
                     android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
+                    android:drawableTop="@mipmap/car"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
@@ -79,7 +79,7 @@
                     android:layout_weight="1"
                     android:clickable="true"
                     android:drawablePadding="@dimen/dp_10"
-                    android:drawableTop="@drawable/shopping_normal"
+                    android:drawableTop="@mipmap/credit"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     android:gravity="center"
@@ -126,7 +126,7 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/loan_size"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -161,7 +161,7 @@
                     android:paddingTop="@dimen/dp_10"
                     android:textColor="@color/default_blue"
                     android:textColorHint="@color/default_blue"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                 <View
@@ -188,7 +188,7 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/loan_time"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -224,7 +224,7 @@
                     android:paddingTop="@dimen/dp_10"
                     android:textColor="@color/default_blue"
                     android:textColorHint="@color/default_blue"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                 <View
@@ -252,7 +252,7 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/good_job"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -260,7 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
+                    android:layout_alignParentTop="true"
                     android:layout_gravity="right|center_vertical"
                     android:clickable="false"
                     android:drawablePadding="@dimen/dp_10"
@@ -272,8 +272,9 @@
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/loan_ok"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
-                    tools:ignore="RelativeOverlap,RtlHardcoded" />
+                    android:textSize="@dimen/sp_16"
+                    tools:ignore="RelativeOverlap,RtlHardcoded"
+                    />
 
                 <View
                     android:layout_width="match_parent"
@@ -300,7 +301,7 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/credit"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -321,7 +322,7 @@
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/no_card"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                 <View
@@ -349,13 +350,12 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/repayment_month"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/repayment_month"
                     android:layout_width="wrap_content"
-
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
@@ -370,7 +370,7 @@
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/loan_ok"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
 
                 <View
@@ -398,7 +398,7 @@
                     android:padding="@dimen/dp_10"
                     android:text="@string/handle"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RtlHardcoded" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -419,7 +419,7 @@
                     android:paddingTop="@dimen/dp_10"
                     android:text="@string/loan_ok"
                     android:textColor="@color/default_black"
-                    android:textSize="@dimen/sp_14"
+                    android:textSize="@dimen/sp_16"
                     tools:ignore="RelativeOverlap,RtlHardcoded" />
             </RelativeLayout>
 
@@ -428,7 +428,7 @@
                 android:layout_height="@dimen/dp_46"
                 android:layout_marginEnd="@dimen/dp_20"
                 android:layout_marginStart="@dimen/dp_20"
-                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_50"
                 android:background="@drawable/fillet_rect_blue"
                 android:focusable="true"
                 android:foreground="?android:attr/selectableItemBackground"

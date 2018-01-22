@@ -8,7 +8,9 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import java.util.List;
 
 /**
- * Created by moerlong on 2018/1/16.
+ *
+ * @author Dsh
+ * @date 2018/1/16
  */
 
 public class HouseAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
