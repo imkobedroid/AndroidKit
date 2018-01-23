@@ -13,7 +13,7 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
-            android:drawableEnd="@drawable/shopping__highlight"
+            android:drawableEnd="@mipmap/resources_delete"
             android:drawablePadding="@dimen/dp_10"
             android:id="@+id/delete"
             android:gravity="center"
@@ -67,6 +67,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/valuation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -120,6 +121,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/balance"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -173,10 +175,11 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
             android:drawableEnd="@mipmap/jt_down"
             android:drawablePadding="@dimen/dp_4"
             android:gravity="center"
@@ -185,7 +188,8 @@
             android:text="@string/please_select"
             android:textColor="@color/default_gray"
             android:textSize="@dimen/sp_14"
-            tools:ignore="RelativeOverlap" />
+            tools:ignore="RelativeOverlap"
+            />
 
         <View
             android:id="@+id/view_three"
@@ -229,6 +233,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/month_money"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -282,6 +287,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/repayment_month"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"

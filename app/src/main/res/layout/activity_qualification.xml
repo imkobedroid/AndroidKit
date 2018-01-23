@@ -75,6 +75,7 @@
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="0dp"
+                    android:id="@+id/root_credit"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:clickable="true"
@@ -307,7 +308,6 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/credit"
                     android:layout_width="wrap_content"
-
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"

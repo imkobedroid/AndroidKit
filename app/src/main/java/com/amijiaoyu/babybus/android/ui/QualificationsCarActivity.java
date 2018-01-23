@@ -3,6 +3,7 @@ package com.amijiaoyu.babybus.android.ui;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -32,7 +33,7 @@ public class QualificationsCarActivity extends RxActivity implements View.OnClic
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.recycleView) RecyclerView recycleView;
     @BindView(R.id.add_data) AppCompatImageView add_data;
-    @BindView(R.id.next) AppCompatTextView next;
+    @BindView(R.id.next) AppCompatButton next;
     private static final int HOME_NUMBER = 1;
     private static final int HOME_TIME = 2;
     private static final String TAG = "测试日志";
@@ -66,6 +67,7 @@ public class QualificationsCarActivity extends RxActivity implements View.OnClic
         HouseAdapter adapter = new HouseAdapter(new ArrayList<>());
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(adapter);
+        recycleView.setNestedScrollingEnabled(false);
         add_data.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =

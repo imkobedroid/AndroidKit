@@ -22,7 +22,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view"
-            android:drawableEnd="@drawable/shopping__highlight"
+            android:drawableEnd="@mipmap/resources_delete"
             android:drawablePadding="@dimen/dp_10"
             android:text="@string/full_home"
             android:textColor="@color/default_black"
@@ -73,6 +73,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/valuation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -126,6 +127,7 @@
             android:textSize="@dimen/sp_14" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/time"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"

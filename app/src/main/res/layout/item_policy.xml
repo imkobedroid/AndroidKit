@@ -14,11 +14,14 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/delete"
+            android:paddingEnd="@dimen/dp_20"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view"
-            android:drawableEnd="@drawable/shopping__highlight"
+            android:drawableEnd="@mipmap/resources_delete"
             android:drawablePadding="@dimen/dp_10"
             android:text="@string/policy_one"
             android:textColor="@color/default_black"
@@ -66,6 +69,7 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
+            android:id="@+id/balance"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"

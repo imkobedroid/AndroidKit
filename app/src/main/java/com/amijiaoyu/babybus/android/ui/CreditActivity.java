@@ -18,31 +18,25 @@ import java.util.ArrayList;
 import butterknife.BindView;
 
 /**
- * Created by moerlong on 2018/1/16.
+ * @author Dsh
+ * @date 2018/1/16
  */
 
 public class CreditActivity extends RxActivity {
-    @BindView(R.id.tv_toolbar)
-    TextView tvToolbar;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.recycleView)
-    RecyclerView recycleView;
-    @BindView(R.id.add_data)
-    AppCompatImageView add_data;
+    @BindView(R.id.tv_toolbar) TextView tvToolbar;
+    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.recycleView) RecyclerView recycleView;
+    @BindView(R.id.add_data) AppCompatImageView add_data;
 
-    @Override
-    protected int getLayout() {
+    @Override protected int getLayout() {
         return R.layout.activity_credit;
     }
 
-    @Override
-    protected void initInject() {
+    @Override protected void initInject() {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
     }
@@ -56,7 +50,8 @@ public class CreditActivity extends RxActivity {
         recycleView.setNestedScrollingEnabled(false);
         recycleView.setAdapter(adapter);
         add_data.setOnClickListener(v -> {
-            @SuppressLint("InflateParams") View view = getLayoutInflater().inflate(R.layout.item_credit, null);
+            @SuppressLint("InflateParams") View view =
+                getLayoutInflater().inflate(R.layout.item_credit, null);
             adapter.addHeaderView(view);
         });
     }

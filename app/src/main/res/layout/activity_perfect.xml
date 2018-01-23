@@ -33,6 +33,7 @@
                     android:textSize="@dimen/sp_16" />
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/select_one"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
@@ -84,6 +85,7 @@
                     android:textSize="@dimen/sp_16" />
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/select_two"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
@@ -135,6 +137,7 @@
                     android:textSize="@dimen/sp_16" />
 
                 <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/select_three"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
@@ -193,7 +196,7 @@
                     android:layout_centerVertical="true"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
-                    android:src="@mipmap/selected_highlight"
+                    android:src="@mipmap/resources_add"
                     tools:ignore="RelativeOverlap" />
 
 
@@ -216,6 +219,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/no_home"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_72"
                 android:background="@color/default_white"
@@ -286,7 +290,7 @@
                     android:layout_centerVertical="true"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
-                    android:src="@mipmap/selected_highlight"
+                    android:src="@mipmap/resources_add"
                     tools:ignore="RelativeOverlap" />
 
 
@@ -309,6 +313,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/no_car"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_72"
                 android:background="@color/default_white"
@@ -379,7 +384,7 @@
                     android:layout_centerVertical="true"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
-                    android:src="@mipmap/selected_highlight"
+                    android:src="@mipmap/resources_add"
                     tools:ignore="RelativeOverlap" />
 
 
@@ -413,6 +418,7 @@
             <android.support.v7.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_46"
+                android:id="@+id/next"
                 android:layout_marginBottom="@dimen/dp_20"
                 android:layout_marginEnd="@dimen/dp_20"
                 android:layout_marginStart="@dimen/dp_20"

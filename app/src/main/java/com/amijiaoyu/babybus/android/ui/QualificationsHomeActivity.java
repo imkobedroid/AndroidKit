@@ -3,6 +3,8 @@ package com.amijiaoyu.babybus.android.ui;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.v4.widget.NestedScrollView;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -29,7 +31,8 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.recycleView) RecyclerView recycleView;
     @BindView(R.id.add_data) AppCompatImageView addData;
-    @BindView(R.id.next) AppCompatTextView next;
+    @BindView(R.id.next) AppCompatButton next;
+    @BindView(R.id.scrollView) NestedScrollView scrollView;
 
     private static final int HOME_NUMBER = 1;
     private static final int HOME_TIME = 2;
@@ -65,6 +68,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
         adapter = new HouseAdapter(new ArrayList<>());
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(adapter);
+        recycleView.setNestedScrollingEnabled(false);
         addData.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =

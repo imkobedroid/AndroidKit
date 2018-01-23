@@ -27,6 +27,7 @@ import java.util.List;
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.property) AppCompatTextView property;
     @BindView(R.id.car) AppCompatTextView car;
+    @BindView(R.id.root_credit) AppCompatTextView credit_root;
     @BindView(R.id.good_job) AppCompatTextView good_job;
     @BindView(R.id.credit) AppCompatTextView credit;
     @BindView(R.id.repayment_month) AppCompatTextView repayment_month;
@@ -54,6 +55,8 @@ import java.util.List;
             v -> startActivity(new Intent(this, QualificationsHomeActivity.class)));
         car.setOnClickListener(
             v -> startActivity(new Intent(this, QualificationsCarActivity.class)));
+        credit_root.setOnClickListener(
+            v -> startActivity(new Intent(this, CreditActivity.class)));
         initListener();
     }
 
@@ -108,7 +111,6 @@ import java.util.List;
                     bottomSheetDialog.dismiss();
                     break;
                 default:
-
             }
         });
         recyclerView.setAdapter(sheetAdapter);

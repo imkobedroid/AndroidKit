@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_blue"
         tools:replace="android:icon">
-        <activity android:name=".ui.QualificationsActivity">
+        <activity android:name=".ui.PerfectActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +32,9 @@
             tools:ignore="DuplicateActivity" />
         <activity
             android:name=".ui.QualificationsCarActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.CreditActivity"
             tools:ignore="DuplicateActivity" />
 
     </application>
