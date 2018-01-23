@@ -3,29 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_72"
         android:background="@color/default_white"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        >
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/delete"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:paddingEnd="@dimen/dp_20"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view"
             android:drawableEnd="@mipmap/resources_delete"
             android:drawablePadding="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/dp_20"
             android:text="@string/full_home"
             android:textColor="@color/default_black"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_16"
+            />
 
         <View
             android:id="@+id/view"
@@ -33,7 +36,8 @@
             android:layout_height="@dimen/dp_16"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_20"
-            android:background="@drawable/shape_blue" />
+            android:background="@drawable/shape_blue"
+            />
 
         <View
             android:layout_width="@dimen/dp_1"
@@ -41,21 +45,24 @@
             android:layout_below="@+id/view"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_28"
-            android:background="@color/default_blue" />
+            android:background="@color/default_blue"
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/dp_50"
-            android:background="?android:attr/listDivider" />
+            android:background="?android:attr/listDivider"
+            />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_72"
         android:background="@color/default_white"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        >
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -65,20 +72,23 @@
             android:layout_toEndOf="@+id/view_one"
             android:text="@string/full_home_money"
             android:textColor="@color/default_black"
-            android:textSize="@dimen/sp_14" />
+            android:textSize="@dimen/sp_14"
+            />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/valuation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
             android:gravity="center"
             android:paddingLeft="@dimen/dp_20"
             android:paddingRight="@dimen/dp_20"
             android:text="@string/defatult_money"
             android:textColor="@color/default_blue"
             android:textSize="@dimen/sp_14"
-            tools:ignore="RelativeOverlap" />
+            tools:ignore="RelativeOverlap"
+            />
 
         <View
             android:id="@+id/view_one"
@@ -86,7 +96,8 @@
             android:layout_height="@dimen/dp_10"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_23"
-            android:background="@drawable/shape_blue" />
+            android:background="@drawable/shape_blue"
+            />
 
         <View
             android:layout_width="@dimen/dp_1"
@@ -94,21 +105,24 @@
             android:layout_centerVertical="true"
 
             android:layout_marginStart="@dimen/dp_28"
-            android:background="@color/default_blue" />
+            android:background="@color/default_blue"
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/dp_50"
-            android:background="?android:attr/listDivider" />
+            android:background="?android:attr/listDivider"
+            />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_72"
         android:background="@color/default_white"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        >
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -118,11 +132,12 @@
             android:layout_toEndOf="@+id/view_five"
             android:text="@string/hold_time"
             android:textColor="@color/default_black"
-            android:textSize="@dimen/sp_14" />
+            android:textSize="@dimen/sp_14"
+            />
 
         <android.support.v7.widget.AppCompatTextView
-            android:layout_width="wrap_content"
             android:id="@+id/time"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -134,7 +149,8 @@
             android:text="@string/please_select"
             android:textColor="@color/default_gray"
             android:textSize="@dimen/sp_14"
-            tools:ignore="RelativeOverlap" />
+            tools:ignore="RelativeOverlap"
+            />
 
         <View
             android:id="@+id/view_five"
@@ -142,7 +158,8 @@
             android:layout_height="@dimen/dp_10"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_23"
-            android:background="@drawable/shape_blue" />
+            android:background="@drawable/shape_blue"
+            />
 
         <View
             android:id="@+id/view3"
@@ -151,13 +168,15 @@
             android:layout_above="@+id/view_five"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_28"
-            android:background="@color/default_blue" />
+            android:background="@color/default_blue"
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="@dimen/dp_50"
-            android:background="?android:attr/listDivider" />
+            android:background="?android:attr/listDivider"
+            />
     </RelativeLayout>
 </LinearLayout>
