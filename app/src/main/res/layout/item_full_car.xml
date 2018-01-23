@@ -14,7 +14,10 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/delete"
+            android:paddingEnd="@dimen/dp_20"
             android:layout_centerVertical="true"
             android:layout_marginStart="@dimen/dp_10"
             android:layout_toEndOf="@+id/view"
@@ -66,6 +69,7 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
+            android:id="@+id/valuation"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"

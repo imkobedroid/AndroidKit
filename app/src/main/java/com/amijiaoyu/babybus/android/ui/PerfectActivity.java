@@ -13,7 +13,6 @@ import android.widget.TextView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 
-import io.reactivex.Flowable;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -58,7 +57,7 @@ public class PerfectActivity extends RxActivity {
         addDataHome.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =
-                getLayoutInflater().inflate(R.layout.dialog_sheet, null);
+                getLayoutInflater().inflate(R.layout.dialog_sheet_home, null);
             @SuppressLint("InflateParams") View mortgage =
                 getLayoutInflater().inflate(R.layout.item_perfect_home, null);
             @SuppressLint("InflateParams") View full =

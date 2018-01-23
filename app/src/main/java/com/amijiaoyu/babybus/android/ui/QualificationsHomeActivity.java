@@ -59,16 +59,16 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
     }
 
     private void initView() {
+        initToolBar(toolbar, tvToolbar, getString(R.string.House));
         mortgageList = new ArrayList<>();
         fullList = new ArrayList<>();
-        initToolBar(toolbar, tvToolbar, getString(R.string.House));
         adapter = new HouseAdapter(new ArrayList<>());
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(adapter);
         addData.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =
-                getLayoutInflater().inflate(R.layout.dialog_sheet, null);
+                getLayoutInflater().inflate(R.layout.dialog_sheet_home, null);
             @SuppressLint("InflateParams") View mortgage =
                 getLayoutInflater().inflate(R.layout.item_mortgage, null);
             @SuppressLint("InflateParams") View full =
@@ -88,6 +88,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
                 sheetDialog.dismiss();
             });
             sheetDialog.show();
+
             mortgage.findViewById(R.id.delete).setOnClickListener(v1 -> {
                 adapter.removeFooterView(mortgage);
                 removeView(mortgage);
@@ -165,7 +166,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
                     .toString();
             String time =
                 ((AppCompatTextView) fullList.get(a).findViewById(R.id.time)).getText().toString();
-            Log.v(TAG, "全款房" + valuation + "  " + time);
+            Log.v(TAG, "全款房 " + valuation + "  " + time);
         }
         for (int a = 0; a < mortgageList.size(); a++) {
             String valuation =
@@ -182,7 +183,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
                     .toString();
             String repayment_month = ((AppCompatTextView) mortgageList.get(a)
                 .findViewById(R.id.repayment_month)).getText().toString();
-            Log.v(TAG, "按揭房"
+            Log.v(TAG, "按揭房 "
                 + valuation
                 + "  "
                 + time
