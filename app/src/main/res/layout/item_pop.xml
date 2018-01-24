@@ -1,45 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:paddingStart="@dimen/dp_10"
-    android:paddingEnd="@dimen/dp_10"
-    android:paddingTop="@dimen/dp_10"
-    android:paddingBottom="@dimen/dp_10"
-    android:layout_height="@dimen/dp_50"
-    android:background="@color/default_blue"
+    android:layout_width="@dimen/dp_130"
+    android:paddingTop="@dimen/dp_14"
+    android:layout_height="wrap_content"
     android:orientation="horizontal">
-    <LinearLayout
-        android:id="@+id/root"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/icon"
+            android:layout_marginStart="@dimen/dp_16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/black_name" />
+            android:src="@mipmap/loan_aptitude" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/title"
+            android:layout_marginTop="@dimen/dp_1"
+            android:layout_alignTop="@+id/icon"
+            android:layout_toEndOf="@+id/icon"
             android:layout_width="wrap_content"
             android:text="@string/name_car"
-            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_6"
             android:layout_height="wrap_content"
             android:textColor="@color/default_white"
             android:textSize="@dimen/sp_16" />
 
-    </LinearLayout>
 
 
     <View
         android:layout_centerHorizontal="true"
         android:id="@+id/line"
-        android:layout_below="@+id/root"
-        android:layout_width="@dimen/dp_80"
-        android:layout_marginTop="@dimen/dp_8"
-        android:layout_height="0.3dp"
-        android:background="@color/default_gray"/>
+        android:layout_below="@+id/icon"
+        android:layout_width="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_14"
+        android:layout_height="0.5dp"
+        android:background="@color/default_white"/>
 
 </RelativeLayout>

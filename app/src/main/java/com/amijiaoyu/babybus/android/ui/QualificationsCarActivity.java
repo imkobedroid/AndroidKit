@@ -1,6 +1,7 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.AppCompatButton;
@@ -162,6 +163,8 @@ public class QualificationsCarActivity extends RxActivity implements View.OnClic
                 + "  "
                 + month_money);
         }
+        startActivity(new Intent(this,LoanActivity.class));
+
     }
 
     public void onClick(AppCompatTextView v, int type) {

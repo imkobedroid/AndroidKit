@@ -21,7 +21,6 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * @author dongshihong
  */
@@ -98,7 +97,6 @@ public class TitlePopup extends PopupWindow {
         display.getSize(size);
         mScreenWidth = size.x;
 
-
         //设置弹窗的宽度和高度
         setWidth(width);
         setHeight(height);
@@ -126,7 +124,8 @@ public class TitlePopup extends PopupWindow {
         view.getLocationOnScreen(mLocation);
 
         //设置矩形的大小
-        mRect.set(mLocation[0], mLocation[1], mLocation[0] + view.getWidth(), mLocation[1] + view.getHeight());
+        mRect.set(mLocation[0], mLocation[1], mLocation[0] + view.getWidth(),
+            mLocation[1] + view.getHeight());
 
         //判断是否需要添加或更新列表子类项
         if (mIsDirty) {
@@ -135,7 +134,8 @@ public class TitlePopup extends PopupWindow {
 
         setAnimationStyle(R.style.AnimationPreview);
         //显示弹窗的位置
-        showAtLocation(view, popupGravity, mScreenWidth - LIST_PADDING - (getWidth() / 2), mRect.bottom);
+        showAtLocation(view, popupGravity, mScreenWidth - LIST_PADDING - (getWidth() / 2),
+            mRect.bottom);
     }
 
     /**
@@ -143,7 +143,7 @@ public class TitlePopup extends PopupWindow {
      */
     private void populateActions() {
         mIsDirty = false;
-        adapter=new Adapter(mActionItems);
+        adapter = new Adapter(mActionItems);
         mListView.setLayoutManager(new LinearLayoutManager(mContext));
         mListView.setAdapter(adapter);
         adapter.setOnItemClickListener((baseQuickAdapter, view, i) -> {
@@ -175,25 +175,29 @@ public class TitlePopup extends PopupWindow {
         }
     }
 
-
-    /**
-     * 弹窗子类项按钮监听事件
-     */
     public interface OnItemOnClickListener {
+        /**
+         * 点击监听
+         * @param item
+         * @param position
+         */
         void onItemClick(ActionItem item, int position);
     }
 
-
     public static class Adapter extends BaseQuickAdapter<ActionItem, BaseViewHolder> {
+        private List<ActionItem> data;
+
         public Adapter(List<ActionItem> data) {
             super(R.layout.item_pop, data);
+            this.data = data;
         }
 
-        @Override
-        protected void convert(BaseViewHolder baseViewHolder, ActionItem s) {
+        @Override protected void convert(BaseViewHolder baseViewHolder, ActionItem s) {
             baseViewHolder.setImageDrawable(R.id.icon, s.mDrawable);
             baseViewHolder.setText(R.id.title, s.mTitle);
-
+            if (baseViewHolder.getLayoutPosition() == data.size() - 1) {
+                baseViewHolder.getView(R.id.line).setVisibility(View.INVISIBLE);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
     android:orientation="vertical" >
 
     <android.support.v7.widget.RecyclerView
-        android:background="@color/default_blue"
+        android:background="@color/default_blue_transparent"
         android:layout_margin="@dimen/dp_10"
         android:id="@+id/title_list"
         android:paddingStart="@dimen/dp_10"

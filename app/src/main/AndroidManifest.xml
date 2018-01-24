@@ -36,6 +36,9 @@
         <activity
             android:name=".ui.PerfectActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.LoanActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 

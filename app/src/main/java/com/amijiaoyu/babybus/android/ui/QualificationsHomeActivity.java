@@ -1,6 +1,7 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v4.widget.NestedScrollView;
@@ -198,6 +199,9 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
                 + "  "
                 + repayment_month);
         }
+
+
+        startActivity(new Intent(this,LoanActivity.class));
     }
 
     private void removeView(View view) {

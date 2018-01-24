@@ -1,6 +1,7 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.AppCompatButton;
@@ -395,5 +396,7 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                     .toString();
             Log.v(TAG, "保单 " + balance);
         }
+        startActivity(new Intent(this,LoanActivity.class));
+
     }
 }
