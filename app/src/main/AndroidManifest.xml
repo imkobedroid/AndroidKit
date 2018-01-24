@@ -39,6 +39,9 @@
         <activity
             android:name=".ui.LoanActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.BlackActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 

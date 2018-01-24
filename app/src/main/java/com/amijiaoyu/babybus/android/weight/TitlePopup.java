@@ -60,7 +60,7 @@ public class TitlePopup extends PopupWindow {
     /**
      * 弹窗子类项选中时的监听
      */
-    private OnItemOnClickListener mItemOnClickListener;
+    public static OnItemOnClickListener mItemOnClickListener;
 
     /**
      * 定义列表对象
@@ -77,13 +77,14 @@ public class TitlePopup extends PopupWindow {
      */
     private ArrayList<ActionItem> mActionItems = new ArrayList<>();
 
-    public TitlePopup(Context context) {
-        this(context, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+    public TitlePopup(Context context, OnItemOnClickListener mItemOnClickListener) {
+        this(context, LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, mItemOnClickListener);
     }
 
-    public TitlePopup(Context context, int width, int height) {
+    public TitlePopup(Context context, int width, int height,
+        OnItemOnClickListener mItemOnClickListener) {
         this.mContext = context;
-
+        TitlePopup.mItemOnClickListener = mItemOnClickListener;
         //设置可以获得焦点
         setFocusable(true);
         //设置弹窗内可点击
@@ -178,8 +179,6 @@ public class TitlePopup extends PopupWindow {
     public interface OnItemOnClickListener {
         /**
          * 点击监听
-         * @param item
-         * @param position
          */
         void onItemClick(ActionItem item, int position);
     }
