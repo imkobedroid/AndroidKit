@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.BottomSheetDialog;
+import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -32,6 +33,7 @@ import java.util.List;
     @BindView(R.id.credit) AppCompatTextView credit;
     @BindView(R.id.repayment_month) AppCompatTextView repayment_month;
     @BindView(R.id.handle) AppCompatTextView handle;
+    @BindView(R.id.next) AppCompatButton next;
 
     String[] strings = new String[] { "测试1", "测试2", "测试3", "测试4", "测试5" };
 
@@ -55,8 +57,8 @@ import java.util.List;
             v -> startActivity(new Intent(this, QualificationsHomeActivity.class)));
         car.setOnClickListener(
             v -> startActivity(new Intent(this, QualificationsCarActivity.class)));
-        credit_root.setOnClickListener(
-            v -> startActivity(new Intent(this, CreditActivity.class)));
+        credit_root.setOnClickListener(v -> startActivity(new Intent(this, CreditActivity.class)));
+        next.setOnClickListener(v -> startActivity(new Intent(this, PerfectActivity.class)));
         initListener();
     }
 

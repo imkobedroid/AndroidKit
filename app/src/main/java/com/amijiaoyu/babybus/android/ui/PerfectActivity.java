@@ -99,15 +99,14 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
         initToolBar(toolbar, tvToolbar, getString(R.string.perfect));
 
         //房产
-        HouseAdapter homeAdapter = new HouseAdapter(new ArrayList<>());
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recycleViewHome.setLayoutManager(layoutManager);
+        FootAdapter homeAdapter = new FootAdapter(new ArrayList<>());
+        recycleViewHome.setLayoutManager(new LinearLayoutManager(this));
         recycleViewHome.setNestedScrollingEnabled(false);
         recycleViewHome.setAdapter(homeAdapter);
         addDataHome.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =
-                getLayoutInflater().inflate(R.layout.dialog_sheet_home, null);
+                getLayoutInflater().inflate(R.layout.dialog_sheet_home_no, null);
             @SuppressLint("InflateParams") View mortgage =
                 getLayoutInflater().inflate(R.layout.item_perfect_home, null);
             @SuppressLint("InflateParams") View full =
@@ -126,6 +125,13 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                 fullList_home.add(full);
                 sheetDialog.dismiss();
             });
+
+            view.findViewById(R.id.no_have).setOnClickListener(v1 -> {
+                noHome.setVisibility(View.VISIBLE);
+                homeAdapter.removeAllFooterView();
+                sheetDialog.dismiss();
+            });
+
             sheetDialog.show();
 
             mortgage.findViewById(R.id.delete).setOnClickListener(v1 -> {
@@ -154,15 +160,14 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
         });
 
         //车子
-        HouseAdapter carAdapter = new HouseAdapter(new ArrayList<>());
-        LinearLayoutManager layoutManager1 = new LinearLayoutManager(this);
-        recycleViewCar.setLayoutManager(layoutManager1);
+        FootAdapter carAdapter = new FootAdapter(new ArrayList<>());
+        recycleViewCar.setLayoutManager(new LinearLayoutManager(this));
         recycleViewCar.setNestedScrollingEnabled(false);
         recycleViewCar.setAdapter(carAdapter);
         addDataCar.setOnClickListener(v -> {
             BottomSheetDialog sheetDialog = new BottomSheetDialog(this);
             @SuppressLint("InflateParams") View view =
-                getLayoutInflater().inflate(R.layout.dialog_car_sheet, null);
+                getLayoutInflater().inflate(R.layout.dialog_car_sheet_no, null);
             @SuppressLint("InflateParams") View mortgage =
                 getLayoutInflater().inflate(R.layout.item_car, null);
             @SuppressLint("InflateParams") View full =
@@ -179,6 +184,11 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                 carAdapter.addFooterView(full);
                 noCar.setVisibility(View.GONE);
                 fullList_car.add(full);
+                sheetDialog.dismiss();
+            });
+            view.findViewById(R.id.no_have).setOnClickListener(v1 -> {
+                noCar.setVisibility(View.VISIBLE);
+                carAdapter.removeAllFooterView();
                 sheetDialog.dismiss();
             });
             sheetDialog.show();
@@ -202,23 +212,20 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
         });
 
         //保单
-        HouseAdapter policyAdapter = new HouseAdapter(new ArrayList<>());
-        LinearLayoutManager layoutManager2 = new LinearLayoutManager(this);
-        recycleViewPolicy.setLayoutManager(layoutManager2);
+        FootAdapter policyAdapter = new FootAdapter(new ArrayList<>());
+        recycleViewPolicy.setLayoutManager(new LinearLayoutManager(this));
         recycleViewPolicy.setNestedScrollingEnabled(false);
         recycleViewPolicy.setAdapter(policyAdapter);
         addDataPolicy.setOnClickListener(v -> {
             @SuppressLint("InflateParams") View policyView =
                 getLayoutInflater().inflate(R.layout.item_policy, null);
-            policyAdapter.addHeaderView(policyView);
+            policyAdapter.addFooterView(policyView);
             policyList.add(policyView);
 
-            if (policyView.findViewById(R.id.delete) != null) {
-                policyView.findViewById(R.id.delete).setOnClickListener(v1 -> {
-                    carAdapter.removeFooterView(policyView);
-                    removePolicyView(policyView);
-                });
-            }
+            policyView.findViewById(R.id.delete).setOnClickListener(v1 -> {
+                policyAdapter.removeFooterView(policyView);
+                removePolicyView(policyView);
+            });
         });
     }
 
@@ -300,9 +307,6 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                 fullList_home.remove(a);
             }
         }
-        if (mortgageList_home.size() + fullList_home.size() == LIST_SIZE) {
-            noHome.setVisibility(View.VISIBLE);
-        }
     }
 
     private void removeCarView(View view) {
@@ -315,9 +319,6 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
             if (fullList_car.get(a) == view) {
                 fullList_car.remove(a);
             }
-        }
-        if (mortgageList_car.size() + fullList_car.size() == LIST_SIZE) {
-            noCar.setVisibility(View.VISIBLE);
         }
     }
 
@@ -373,8 +374,9 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
             Log.v(TAG, "全款车 " + valuation);
         }
         for (int a = 0; a < mortgageList_car.size(); a++) {
-            String valuation = ((AppCompatTextView) mortgageList_car.get(a)
-                .findViewById(R.id.valuation)).getText().toString();
+            String valuation =
+                ((AppCompatTextView) mortgageList_car.get(a).findViewById(R.id.valuation)).getText()
+                    .toString();
             String balance =
                 ((AppCompatEditText) mortgageList_car.get(a).findViewById(R.id.balance)).getText()
                     .toString();
@@ -383,17 +385,8 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                     .toString();
             String month_money = ((AppCompatEditText) mortgageList_car.get(a)
                 .findViewById(R.id.month_money)).getText().toString();
-            Log.v(TAG, "按揭车 "
-                + valuation
-                + "  "
-                + time
-                + "  "
-                + balance
-                + "  "
-                + month_money);
+            Log.v(TAG, "按揭车 " + valuation + "  " + time + "  " + balance + "  " + month_money);
         }
-
-
 
         //保单的最终数据
         for (int a = 0; a < policyList.size(); a++) {
@@ -402,6 +395,5 @@ public class PerfectActivity extends RxActivity implements View.OnClickListener 
                     .toString();
             Log.v(TAG, "保单 " + balance);
         }
-
     }
 }

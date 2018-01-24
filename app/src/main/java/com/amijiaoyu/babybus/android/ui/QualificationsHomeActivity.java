@@ -36,7 +36,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
 
     private static final int HOME_NUMBER = 1;
     private static final int HOME_TIME = 2;
-    private HouseAdapter adapter;
+    private FootAdapter adapter;
     private static final String TAG = "测试日志";
     String[] number = new String[] { "期数", "期数", "期数", "期数", "期数" };
     String[] time = new String[] { "持有时间", "持有时间", "持有时间", "持有时间", "持有时间" };
@@ -65,7 +65,7 @@ public class QualificationsHomeActivity extends RxActivity implements View.OnCli
         initToolBar(toolbar, tvToolbar, getString(R.string.House));
         mortgageList = new ArrayList<>();
         fullList = new ArrayList<>();
-        adapter = new HouseAdapter(new ArrayList<>());
+        adapter = new FootAdapter(new ArrayList<>());
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(adapter);
         recycleView.setNestedScrollingEnabled(false);

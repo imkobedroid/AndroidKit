@@ -64,7 +64,7 @@ public class QualificationsCarActivity extends RxActivity implements View.OnClic
         initToolBar(toolbar, tvToolbar, getString(R.string.home_no_pay));
         mortgageList = new ArrayList<>();
         fullList = new ArrayList<>();
-        HouseAdapter adapter = new HouseAdapter(new ArrayList<>());
+        FootAdapter adapter = new FootAdapter(new ArrayList<>());
         recycleView.setLayoutManager(new LinearLayoutManager(this));
         recycleView.setAdapter(adapter);
         recycleView.setNestedScrollingEnabled(false);

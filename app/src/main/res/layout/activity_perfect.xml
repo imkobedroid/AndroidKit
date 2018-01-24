@@ -219,6 +219,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:id="@+id/no_home"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_72"
@@ -313,6 +314,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:id="@+id/no_car"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_72"

@@ -2,7 +2,6 @@ package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -43,7 +42,7 @@ public class CreditActivity extends RxActivity {
 
     private void initView() {
         initToolBar(toolbar, tvToolbar, getString(R.string.fill_car));
-        HouseAdapter adapter = new HouseAdapter(new ArrayList<>());
+        FootAdapter adapter = new FootAdapter(new ArrayList<>());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recycleView.setLayoutManager(layoutManager);
         //解决嵌套的滑动问题

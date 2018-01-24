@@ -230,7 +230,7 @@
                     android:layout_centerVertical="true"
                     android:paddingEnd="@dimen/dp_20"
                     android:paddingStart="@dimen/dp_20"
-                    android:src="@mipmap/selected_highlight"
+                    android:src="@mipmap/resources_add"
                     tools:ignore="RelativeOverlap" />
 
 

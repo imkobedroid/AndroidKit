@@ -431,6 +431,7 @@
                 android:layout_marginTop="@dimen/dp_50"
                 android:background="@drawable/fillet_rect_blue"
                 android:focusable="true"
+                android:id="@+id/next"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:text="@string/next"
                 android:textColor="@color/default_white"
