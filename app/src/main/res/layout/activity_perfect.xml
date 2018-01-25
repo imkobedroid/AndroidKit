@@ -303,7 +303,7 @@
                     android:layout_marginStart="@dimen/dp_20"
                     android:background="@drawable/shape_number"
                     android:gravity="center"
-                    android:text="@string/_4"
+                    android:text="@string/_5"
                     android:textColor="@color/default_blue" />
 
                 <View
@@ -326,7 +326,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/dp_10"
-                    android:layout_toEndOf="@+id/view_one"
                     android:text="@string/no_have"
                     android:textColor="@color/default_black"
                     android:textSize="@dimen/sp_14" />
@@ -339,7 +338,6 @@
 
 
                 <TextView
-                    android:id="@+id/view_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -398,7 +396,7 @@
                     android:layout_marginStart="@dimen/dp_20"
                     android:background="@drawable/shape_number"
                     android:gravity="center"
-                    android:text="@string/_4"
+                    android:text="@string/_6"
                     android:textColor="@color/default_blue" />
 
                 <View

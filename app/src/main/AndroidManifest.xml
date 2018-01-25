@@ -48,6 +48,9 @@
         <activity
             android:name=".ui.QualificationsEditActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.EditQualificationsActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 

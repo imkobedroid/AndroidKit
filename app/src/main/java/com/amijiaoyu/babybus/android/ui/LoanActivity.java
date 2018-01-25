@@ -111,6 +111,7 @@ import java.util.List;
                 break;
             case ITEM_POSITION_TWO:
                 //编辑资质
+                startActivity(new Intent(this, EditQualificationsActivity.class));
                 break;
             case ITEM_POSITION_THREE:
                 //购物车

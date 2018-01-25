@@ -103,10 +103,8 @@
     <string name="_2_2">2</string>
     <string name="social">社保</string>
     <string name="_4">4</string>
-    <string name="_5">5</string>
     <string name="accumulation">公积金</string>
     <string name="limit">信用卡授信额度</string>
-    <string name="_6">6</string>
     <string name="month_mortgage">每月按揭或抵押贷款</string>
     <string name="_7">7</string>
     <string name="_8">8</string>
@@ -124,5 +122,8 @@
     <string name="more">更多</string>
     <string name="string_test">更多测试数据</string>
     <string name="cancel">取消</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="edit">编辑资质</string>
 
 </resources>
