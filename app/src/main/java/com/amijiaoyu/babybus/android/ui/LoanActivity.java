@@ -107,6 +107,7 @@ import java.util.List;
         switch (position) {
             case ITEM_POSITION_ONE:
                 //编辑需求
+                startActivity(new Intent(this, QualificationsEditActivity.class));
                 break;
             case ITEM_POSITION_TWO:
                 //编辑资质

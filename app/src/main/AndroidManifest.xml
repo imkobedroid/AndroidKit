@@ -45,6 +45,9 @@
         <activity
             android:name=".ui.ShoppingActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.QualificationsEditActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 

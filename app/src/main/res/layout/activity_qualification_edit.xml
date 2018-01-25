@@ -209,7 +209,6 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/credit"
                     android:layout_width="wrap_content"
-
                     android:layout_height="match_parent"
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
