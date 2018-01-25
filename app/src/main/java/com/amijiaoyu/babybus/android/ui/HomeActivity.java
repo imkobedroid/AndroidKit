@@ -87,7 +87,7 @@ public class HomeActivity extends RxActivity {
 
     @Override
     protected int getLayout() {
-        return R.layout.item_money;
+        return R.layout.item_loan;
     }
 
     @Override

@@ -2,26 +2,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <include
+        layout="@layout/include_toolbar_right"
         android:id="@+id/include_toolbar"
-        layout="@layout/include_toolbar_right" />
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycleView"
+        />
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/line"
-        android:layout_below="@+id/include_toolbar">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/head_loan" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycleView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
 
-    </android.support.v7.widget.RecyclerView>
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
 
     <View
         android:id="@+id/line"
+        android:layout_above="@+id/bottom_view"
         style="@style/DividerHorizontal"
-        android:layout_above="@+id/bottom_view" />
+        />
 
     <RelativeLayout
         android:id="@+id/bottom_view"
@@ -29,7 +44,8 @@
         android:layout_height="@dimen/dp_50"
         android:layout_alignParentBottom="true"
         android:background="@color/default_white"
-        tools:ignore="UselessParent">
+        tools:ignore="UselessParent"
+        >
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/total"
@@ -41,7 +57,8 @@
             android:text="@string/default_total"
             android:textColor="@color/default_black"
             android:textSize="@dimen/sp_14"
-            tools:ignore="RelativeOverlap" />
+            tools:ignore="RelativeOverlap"
+            />
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
@@ -51,9 +68,11 @@
             android:layout_marginStart="@dimen/sp_10"
             android:text="@string/_0_0_0"
             android:textColor="@color/default_black"
-            android:textSize="@dimen/sp_14" />
+            android:textSize="@dimen/sp_14"
+            />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/next"
             android:layout_width="@dimen/dp_130"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
@@ -61,6 +80,7 @@
             android:gravity="center"
             android:text="@string/_0"
             android:textColor="@color/default_white"
-            android:textSize="@dimen/sp_14" />
+            android:textSize="@dimen/sp_14"
+            />
     </RelativeLayout>
 </RelativeLayout>

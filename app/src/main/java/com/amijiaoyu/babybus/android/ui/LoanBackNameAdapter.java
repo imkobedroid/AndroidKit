@@ -13,7 +13,7 @@ import java.util.List;
 
 public class LoanBackNameAdapter extends BaseQuickAdapter<LoginBean, BaseViewHolder> {
     LoanBackNameAdapter(List data) {
-        super(R.layout.item_money, data);
+        super(R.layout.item_loan, data);
     }
 
     @Override

@@ -23,7 +23,7 @@ import java.util.List;
  * @author Dsh
  */
 
-public class BlackActivity extends RxActivity
+public class ShoppingActivity extends RxActivity
     implements BaseQuickAdapter.OnItemChildClickListener, View.OnClickListener {
     @BindView(R.id.tv_toolbar) TextView tvToolbar;
     @BindView(R.id.tv_toolbar_right) TextView tvToolbarRight;
@@ -34,11 +34,11 @@ public class BlackActivity extends RxActivity
     public static List<Integer> integers;
     private List<LoginBean> container;
     private List<LoginBean> loginBeans;
-    private BlackNameAdapter blackNameAdapter;
+    private ShoppingAdapter shoppingAdapter;
     private boolean isSelect = false;
 
     @Override protected int getLayout() {
-        return R.layout.activity_loan_black_name_move;
+        return R.layout.activity_loan_shopping;
     }
 
     @Override protected void initInject() {
@@ -47,7 +47,7 @@ public class BlackActivity extends RxActivity
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initToolBar(toolbar, tvToolbar, getString(R.string.back_name));
+        initToolBar(toolbar, tvToolbar, getString(R.string.CAR));
         tvToolbarRight.setText(getString(R.string.finish));
         initListener();
         initRecycleView();
@@ -66,10 +66,10 @@ public class BlackActivity extends RxActivity
         for (int a = 0; a < 10; a++) {
             loginBeans.add(new LoginBean());
         }
-        blackNameAdapter = new BlackNameAdapter(loginBeans);
-        blackNameAdapter.setOnItemChildClickListener(this);
-        blackNameAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
-        recycleView.setAdapter(blackNameAdapter);
+        shoppingAdapter = new ShoppingAdapter(loginBeans);
+        shoppingAdapter.setOnItemChildClickListener(this);
+        shoppingAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
+        recycleView.setAdapter(shoppingAdapter);
     }
 
     @Override
@@ -111,7 +111,7 @@ public class BlackActivity extends RxActivity
         }
 
         integers.clear();
-        blackNameAdapter.notifyDataSetChanged();
+        shoppingAdapter.notifyDataSetChanged();
     }
 
     private void setSelectData() {
@@ -122,11 +122,11 @@ public class BlackActivity extends RxActivity
             for (int a = 0; a < loginBeans.size(); a++) {
                 integers.add(a);
             }
-            blackNameAdapter.notifyDataSetChanged();
+            shoppingAdapter.notifyDataSetChanged();
         } else {
             allSelect.setImageResource(R.mipmap.selected_normal);
             integers.clear();
-            blackNameAdapter.notifyDataSetChanged();
+            shoppingAdapter.notifyDataSetChanged();
         }
     }
 }

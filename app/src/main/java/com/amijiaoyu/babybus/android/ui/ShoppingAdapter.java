@@ -12,9 +12,10 @@ import java.util.List;
  * @date 2018/1/12
  */
 
-public class LoanAdapter extends BaseQuickAdapter<LoginBean, BaseViewHolder> {
-    LoanAdapter(List data) {
-        super(R.layout.item_loan, data);
+public class ShoppingAdapter extends BaseQuickAdapter<LoginBean, BaseViewHolder> {
+
+    ShoppingAdapter(List data) {
+        super(R.layout.item_back_name, data);
     }
 
     @Override protected void convert(BaseViewHolder baseViewHolder, LoginBean loginBean) {
@@ -37,7 +38,7 @@ public class LoanAdapter extends BaseQuickAdapter<LoginBean, BaseViewHolder> {
 
     @Override public void onBindViewHolder(BaseViewHolder holder, int position) {
         super.onBindViewHolder(holder, position);
-        if (LoanActivity.integers.contains(holder.getView(R.id.image_select).getTag())) {
+        if (ShoppingActivity.integers.contains(holder.getView(R.id.image_select).getTag())) {
             ((ImageView)holder.getView(R.id.image_select)).setImageResource(R.mipmap.selected_highlight);
         } else {
             ((ImageView)holder.getView(R.id.image_select)).setImageResource(R.mipmap.selected_normal);

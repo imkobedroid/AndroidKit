@@ -25,7 +25,7 @@
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:contentDescription="@string/image_content"
-            android:src="@mipmap/selected_highlight" />
+            android:src="@mipmap/selected_normal" />
 
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -362,7 +362,6 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_2"
-                    android:layout_toEndOf="@+id/content_one"
                     android:background="@drawable/shape_2" />
 
                 <android.support.v7.widget.AppCompatTextView
@@ -389,14 +388,12 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/dp_10"
                     android:layout_marginTop="@dimen/dp_2"
-                    android:layout_toEndOf="@+id/content_two"
                     android:background="@drawable/shape_3" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/content_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/blue"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="@dimen/sp_10"
                     android:layout_toEndOf="@+id/blue_two"

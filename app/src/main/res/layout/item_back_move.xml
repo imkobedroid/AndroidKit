@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:background="@color/default_white"
             android:padding="@dimen/dp_10"
-
             tools:ignore="UselessParent">
 
             <ImageView

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:padding="@dimen/dp_10"
     android:background="@color/default_white"
-    android:layout_marginBottom="@dimen/dp_10"
     android:layout_height="wrap_content">
 
     <android.support.v7.widget.AppCompatTextView

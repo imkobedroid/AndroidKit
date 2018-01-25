@@ -42,6 +42,9 @@
         <activity
             android:name=".ui.BlackActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.ShoppingActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 
