@@ -296,6 +296,7 @@
             tools:ignore="RelativeOverlap" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/remove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/root_three"

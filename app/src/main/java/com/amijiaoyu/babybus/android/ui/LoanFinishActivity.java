@@ -6,18 +6,13 @@ import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.TextView;
-
+import butterknife.BindView;
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.BindView;
 
 
 /**
@@ -55,7 +50,7 @@ public class LoanFinishActivity extends RxActivity{
         for (int a = 0; a < 10; a++) {
             loginBeans.add(new LoginBean());
         }
-        LoanAdapter loanAdapter = new LoanAdapter(loginBeans);
+        LoanAdapter loanAdapter = new LoanAdapter(loginBeans,this);
         loanAdapter.openLoadAnimation(BaseQuickAdapter.ALPHAIN);
         recycleView.setAdapter(loanAdapter);
     }
