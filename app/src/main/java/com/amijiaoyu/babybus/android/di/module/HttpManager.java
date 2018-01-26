@@ -61,7 +61,7 @@ class HttpManager {
     }
     Headers.Builder defaultHeaderBuilder = defaultHeader();
     defaultHeaderBuilder.add("Accept", Constants.API_ACCEPT);
-    builder.addInterceptor(new DefaultHeaderInterceptor(defaultHeaderBuilder, context));
+    builder.addInterceptor(new DefaultHeaderInterceptor(context));
     builder.connectTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.readTimeout(TIME_OUT, TimeUnit.SECONDS);
     builder.writeTimeout(TIME_OUT, TimeUnit.SECONDS);
