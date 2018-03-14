@@ -28,7 +28,7 @@ public abstract class RxActivity<T extends BaseActivityPresenter>
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    InjectActivity();
+    injectActivity();
   }
 
   @Override public ActivityComponent getActivityComponent() {
@@ -38,7 +38,7 @@ public abstract class RxActivity<T extends BaseActivityPresenter>
         .build();
   }
 
-  @SuppressWarnings("unchecked") @Override public void InjectActivity() {
+  @SuppressWarnings("unchecked") @Override public void injectActivity() {
     initInject();
     if (mPresenter != null) {
       mPresenter.attachView(this);
