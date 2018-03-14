@@ -24,37 +24,25 @@ import com.amijiaoyu.babybus.android.blank.ReflectionContentPresenterFactory;
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    container = (FrameLayout) findViewById(R.id.container);
-    support_ui_content_view = (TextView) findViewById(R.id.support_ui_content_view);
-    kong = (TextView) findViewById(R.id.kong);
-    error = (TextView) findViewById(R.id.error);
-    load = (TextView) findViewById(R.id.load);
+    container = findViewById(R.id.container);
+    support_ui_content_view = findViewById(R.id.support_ui_content_view);
+    kong = findViewById(R.id.kong);
+    error = findViewById(R.id.error);
+    load = findViewById(R.id.load);
     init();
     click();
   }
 
   private void click() {
-    kong.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        contentPresenter.buildEmptyImageView(R.drawable.support_ui_empty)
-            .buildEmptyTitle(R.string.support_ui_empty_title_placeholder)
-            .buildEmptySubtitle(R.string.support_ui_empty_subtitle_placeholder)
-            .displayEmptyView();
-      }
-    });
-    error.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        contentPresenter.buildErrorImageView(R.drawable.support_ui_network_error)
-            .buildEmptyTitle(R.string.support_ui_error_title_placeholder)
-            .buildEmptySubtitle(R.string.support_ui_error_subtitle_placeholder)
-            .displayEmptyView();
-      }
-    });
-    load.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        contentPresenter.displayLoadView();
-      }
-    });
+    kong.setOnClickListener(view -> contentPresenter.buildEmptyImageView(R.drawable.support_ui_empty)
+        .buildEmptyTitle(R.string.support_ui_empty_title_placeholder)
+        .buildEmptySubtitle(R.string.support_ui_empty_subtitle_placeholder)
+        .displayEmptyView());
+    error.setOnClickListener(view -> contentPresenter.buildErrorImageView(R.drawable.support_ui_network_error)
+        .buildEmptyTitle(R.string.support_ui_error_title_placeholder)
+        .buildEmptySubtitle(R.string.support_ui_error_subtitle_placeholder)
+        .displayEmptyView());
+    load.setOnClickListener(view -> contentPresenter.displayLoadView());
   }
 
   private void init() {
