@@ -1,13 +1,10 @@
-package com.amijiaoyu.babybus.android.base.RxRoot
+package com.amijiaoyu.babybus.android.base.rootKotlin
 
 import android.os.Bundle
 import android.support.v7.widget.Toolbar
 import android.widget.TextView
 import com.amijiaoyu.babybus.android.R
 import com.amijiaoyu.babybus.android.app.App
-import com.amijiaoyu.babybus.android.base.root.BaseActivityView
-import com.amijiaoyu.babybus.android.base.rootKotlin.KotlinBaseActivity
-import com.amijiaoyu.babybus.android.base.rootKotlin.KotlinBaseActivityPresenter
 import com.amijiaoyu.babybus.android.di.component.ActivityComponent
 import com.amijiaoyu.babybus.android.di.component.DaggerActivityComponent
 import com.amijiaoyu.babybus.android.di.module.ActivityModule
@@ -18,7 +15,7 @@ import javax.inject.Inject
  */
 
 
-abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<BaseActivityView>> : KotlinBaseActivity(), BaseActivityView {
+abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<KotlinBaseActivityView>> : KotlinBaseActivity(), KotlinBaseActivityView {
 
     @Inject
     @JvmField
@@ -35,15 +32,15 @@ abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<BaseActivityView>>
         injectActivity()
     }
 
-    override fun initToolBar(toolbar: Toolbar?, mTvToolbar: TextView?, title: String?) {
-        toolbar?.title = KotlinRxActivity.TITLE
-        mTvToolbar?.text = title
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        toolbar?.setNavigationIcon(R.mipmap.ic_arrow_back_white_24dp)
-        toolbar?.setNavigationOnClickListener { finish() }
-    }
 
+    override fun initToolbar(toolBar: Toolbar?, content: TextView?, title: String?) {
+        toolBar?.title = TITLE
+        content?.text = title
+        setSupportActionBar(toolBar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolBar?.setNavigationIcon(R.mipmap.ic_arrow_back_white_24dp)
+        toolBar?.setNavigationOnClickListener { finish() }
+    }
 
     override fun injectActivity() {
         initInject()
