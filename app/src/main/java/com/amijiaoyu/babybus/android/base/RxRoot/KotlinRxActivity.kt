@@ -5,9 +5,9 @@ import android.support.v7.widget.Toolbar
 import android.widget.TextView
 import com.amijiaoyu.babybus.android.R
 import com.amijiaoyu.babybus.android.app.App
-import com.amijiaoyu.babybus.android.base.root.BaseActivityPresenter
 import com.amijiaoyu.babybus.android.base.root.BaseActivityView
 import com.amijiaoyu.babybus.android.base.rootKotlin.KotlinBaseActivity
+import com.amijiaoyu.babybus.android.base.rootKotlin.KotlinBaseActivityPresenter
 import com.amijiaoyu.babybus.android.di.component.ActivityComponent
 import com.amijiaoyu.babybus.android.di.component.DaggerActivityComponent
 import com.amijiaoyu.babybus.android.di.module.ActivityModule
@@ -18,15 +18,17 @@ import javax.inject.Inject
  */
 
 
-abstract class KotlinRxActivity<out T : BaseActivityPresenter<*>> : KotlinBaseActivity(), BaseActivityView {
+abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<BaseActivityView>> : KotlinBaseActivity(), BaseActivityView {
 
     @Inject
-    protected val mPresenter: T? = null
+    @JvmField
+    var mPresenter: T? = null
 
 
     companion object {
         private val TITLE = ""
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,4 +67,5 @@ abstract class KotlinRxActivity<out T : BaseActivityPresenter<*>> : KotlinBaseAc
      * 注册dagger界面
      */
     abstract fun initInject()
+
 }
