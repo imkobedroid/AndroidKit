@@ -89,4 +89,5 @@ ext {
                   "kotlin"                     : "org.jetbrains.kotlin:kotlin-stdlib:1.1.51",
                   "guava"                     : "com.google.guava:guava:24.1-android",
   ]
+
 }
