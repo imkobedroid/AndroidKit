@@ -1,6 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
-apply plugin: 'AndResGuard'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -35,6 +33,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    configurations.all {
+        //解决google依赖包冲突
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+
 }
 
 dependencies {
@@ -63,9 +67,10 @@ dependencies {
     compile rootProject.ext.dependencies["okhttp-logging-interceptor"]
     compile rootProject.ext.dependencies["glide"]
     compile rootProject.ext.dependencies["glide-okhttp3-integration"]
+    compile rootProject.ext.dependencies["guava"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
     compile rootProject.ext.dependencies["dagger"]
-    compile rootProject.ext.dependencies["dagger-compiler"]
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
@@ -82,4 +87,5 @@ dependencies {
     releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
     debugCompile rootProject.ext.dependencies["leakcanary-android"]
     releaseCompile rootProject.ext.dependencies["leakcanary-android-no-op"]
+
 }

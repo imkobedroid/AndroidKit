@@ -10,7 +10,6 @@ import com.amijiaoyu.babybus.android.R
 import com.amijiaoyu.babybus.android.base.RxActivity
 import com.amijiaoyu.babybus.android.di.module.UserBean
 import com.amijiaoyu.babybus.android.utils.SnackbarUtil
-import com.google.common.base.Strings
 
 /**
  *  Author:Dsh
@@ -58,11 +57,5 @@ class KotlinTest : Activity() {
     }
   }
 
-  private fun loginField(message: String?) {
-    if (Strings.isNullOrEmpty(message)) SnackbarUtil.show(root, message)
-  }
 
-  private fun loginSucceed(message: String?) {
-    if (Strings.isNullOrEmpty(message)) SnackbarUtil.show(root, message)
-  }
 }

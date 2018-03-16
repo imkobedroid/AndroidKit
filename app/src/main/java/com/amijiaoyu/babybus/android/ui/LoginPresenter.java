@@ -4,6 +4,7 @@ import android.app.Activity;
 import com.amijiaoyu.babybus.android.base.RxActivityPresenter;
 import com.amijiaoyu.babybus.android.di.helper.LoginHelper;
 import com.amijiaoyu.babybus.android.model.bean.LoginOkBean;
+import com.amijiaoyu.babybus.android.model.rx.ErrorHandlerSubscriber;
 import com.amijiaoyu.babybus.android.model.rx.ProgressDialogSubscriber;
 import com.amijiaoyu.babybus.android.utils.RxUtil;
 import javax.inject.Inject;

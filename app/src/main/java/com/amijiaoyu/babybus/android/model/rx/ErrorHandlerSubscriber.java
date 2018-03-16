@@ -17,7 +17,13 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
     errorHandler = new RxErrorHandler(Context);
   }
 
-  @Override public void onError(Throwable e) {
+
+    @Override
+    public void onComplete() {
+
+    }
+
+    @Override public void onError(Throwable e) {
     try {
       baseException = errorHandler.handleError(e);
     } catch (IOException e1) {
@@ -29,19 +35,6 @@ public abstract class ErrorHandlerSubscriber<T> extends DefaultSubscriber<T> {
       if (!Strings.isNullOrEmpty(baseException.getDisplayMessage())){
         errorHandler.showErrorMessage(baseException);
       }
-    } /*else {
-      if (mContext != null && (baseException.getCode() == 401 || baseException.getCode() == 402)) {
-        *//*if (mContext instanceof RxActivity) {
-          AccountManager.getInstance(mContext).loginOut();
-          ((RxActivity) mContext).showOfflineDialog();
-        } else {
-          AccountManager.getInstance(mContext).loginOut();
-          Intent intent = new Intent(mContext, LoginActivity.class);
-          intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-          mContext.startActivity(intent);
-        }*//*
-      }
-      errorHandler.showErrorMessage(baseException);
-    }*/
+    }
   }
 }
