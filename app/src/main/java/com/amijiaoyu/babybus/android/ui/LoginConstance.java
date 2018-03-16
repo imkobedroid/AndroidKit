@@ -26,5 +26,8 @@ public interface LoginConstance {
     void login(RequestBean requestBean);
 
     void getUserInfo();
+
+
+    void loginPhone(String phone,String password);
   }
 }

@@ -3,6 +3,7 @@ package com.amijiaoyu.babybus.android.ui;
 import android.app.Activity;
 import com.amijiaoyu.babybus.android.base.RxActivityPresenter;
 import com.amijiaoyu.babybus.android.di.helper.LoginHelper;
+import com.amijiaoyu.babybus.android.model.bean.LoginOkBean;
 import com.amijiaoyu.babybus.android.model.rx.ProgressDialogSubscriber;
 import com.amijiaoyu.babybus.android.utils.RxUtil;
 import javax.inject.Inject;
@@ -48,4 +49,23 @@ public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
           }
         }));
   }
+
+    @Override
+    public void loginPhone(String phone, String password) {
+        addSubscribe(loginHelper.loginApi.login(phone,password)
+            .compose(RxUtil.rxSchedulerHelper())
+            .subscribeWith(new ProgressDialogSubscriber<LoginOkBean>((Activity) mView) {
+                @Override public void onNext(LoginOkBean loginBean) {
+                    if (loginBean != null) {
+                        mView.loginSucceed(loginBean.getCity());
+                    }
+                }
+
+                @Override
+                public void onError(Throwable e) {
+                    super.onError(e);
+                    mView.loginField(e.toString());
+                }
+            }));
+    }
 }

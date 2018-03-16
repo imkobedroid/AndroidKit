@@ -1,11 +1,14 @@
 package com.amijiaoyu.babybus.android.di.module;
 
 import com.amijiaoyu.babybus.android.model.bean.BaseBean;
+import com.amijiaoyu.babybus.android.model.bean.LoginOkBean;
 import com.amijiaoyu.babybus.android.ui.LoginBean;
 import com.amijiaoyu.babybus.android.ui.RequestBean;
 import com.amijiaoyu.babybus.android.ui.UserInfoBean;
 import io.reactivex.Flowable;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
@@ -30,4 +33,9 @@ public interface LoginApi {
    * @return 返回用户的数据
    */
   @GET("/api/user") Flowable<BaseBean<UserInfoBean>> getUser();
+
+
+
+  @FormUrlEncoded
+    @POST("/api/login") Flowable<LoginOkBean> login(@Field("mobile")String mobile,@Field("password")String password);
 }

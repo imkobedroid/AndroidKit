@@ -53,7 +53,7 @@ class HttpManager {
     OkHttpClient.Builder builder = new OkHttpClient.Builder();
     if (BuildConfig.DEBUG) {
       HttpLoggingInterceptor loggingInterceptor =
-          new HttpLoggingInterceptor((message) -> Logger.i(message));
+          new HttpLoggingInterceptor((message) -> Logger.i("请求日志",message));
 
       loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 

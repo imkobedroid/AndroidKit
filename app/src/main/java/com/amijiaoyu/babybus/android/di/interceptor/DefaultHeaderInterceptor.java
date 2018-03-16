@@ -29,6 +29,6 @@ public class DefaultHeaderInterceptor implements HeaderInterceptor {
                 .header("Authorization", "Bearer " + token)
                 .build();
         }
-        return chain.proceed(authorised);
+        return chain.proceed(originalRequest);
     }
 }
