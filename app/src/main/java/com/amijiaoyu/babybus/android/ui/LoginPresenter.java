@@ -55,7 +55,7 @@ public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
     public void loginPhone(String phone, String password) {
         addSubscribe(loginHelper.loginApi.login(phone,password)
             .compose(RxUtil.rxSchedulerHelper())
-            .subscribeWith(new ProgressDialogSubscriber<LoginOkBean>((Activity) mView) {
+            .subscribeWith(new ErrorHandlerSubscriber<LoginOkBean>((Activity) mView) {
                 @Override public void onNext(LoginOkBean loginBean) {
                     if (loginBean != null) {
                         mView.loginSucceed(loginBean.getName());
