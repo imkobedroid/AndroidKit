@@ -57,7 +57,7 @@ public class LoginPresenter extends RxActivityPresenter<LoginConstance.View>
             .subscribeWith(new ProgressDialogSubscriber<LoginOkBean>((Activity) mView) {
                 @Override public void onNext(LoginOkBean loginBean) {
                     if (loginBean != null) {
-                        mView.loginSucceed(loginBean.getCity());
+                        mView.loginSucceed(loginBean.getName());
                     }
                 }
 
