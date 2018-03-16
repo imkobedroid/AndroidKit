@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-
 android {
     compileSdkVersion 26
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -29,10 +28,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-kapt {
-    generateStubs = true
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -63,7 +63,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide-okhttp3-integration"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
     compile rootProject.ext.dependencies["dagger"]
-    kapt rootProject.ext.dependencies["dagger-compiler"]
+    compile rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
