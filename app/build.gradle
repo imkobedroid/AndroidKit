@@ -37,6 +37,10 @@ android {
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -65,7 +69,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide-okhttp3-integration"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
     compile rootProject.ext.dependencies["dagger"]
-    compile rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]

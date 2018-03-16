@@ -5,12 +5,12 @@ package com.amijiaoyu.babybus.android.base.rootKotlin
  */
 
 
-interface KotlinBaseActivityPresenter< in T:KotlinBaseActivityView>{
+interface KotlinBaseActivityPresenter<out T : KotlinBaseActivityView> {
     /**
      * 界面与presenter的连接
      * @param view
      */
-     fun attachView(view: T)
+    fun attachView(view: @UnsafeVariance T)
 
     /**
      * 断开界面与presenter的连接

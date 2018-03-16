@@ -3,6 +3,7 @@ package com.amijiaoyu.babybus.android.di.component;
 import android.app.Activity;
 import com.amijiaoyu.babybus.android.di.assist.ActivityScope;
 import com.amijiaoyu.babybus.android.di.module.ActivityModule;
+import com.amijiaoyu.babybus.android.ui.KotlinLogin;
 
 import dagger.Component;
 
@@ -26,5 +27,7 @@ public interface ActivityComponent {
   /**
    * 注册的登录界面接口
    */
+
+  void inject(KotlinLogin kotlinLogin);
 
 }

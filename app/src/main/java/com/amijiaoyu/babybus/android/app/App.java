@@ -8,6 +8,9 @@ import com.amijiaoyu.babybus.android.di.module.AppModule;
 import com.amijiaoyu.babybus.android.di.module.HttpModule;
 import com.orhanobut.logger.Logger;
 
+/**
+ * @author toushihiroshi
+ */
 public class App extends MultiDexApplication {
 
   public static App instance;

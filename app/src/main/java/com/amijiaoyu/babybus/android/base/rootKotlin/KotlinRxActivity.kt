@@ -15,7 +15,7 @@ import javax.inject.Inject
  */
 
 
-abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<KotlinBaseActivityView>> : KotlinBaseActivity(), KotlinBaseActivityView {
+abstract class KotlinRxActivity<T : KotlinBaseActivityPresenter<KotlinBaseActivityView>> : KotlinBaseActivity(), KotlinBaseActivityView {
 
     @Inject
     @JvmField
@@ -64,5 +64,6 @@ abstract class KotlinRxActivity<T:KotlinBaseActivityPresenter<KotlinBaseActivity
      * 注册dagger界面
      */
     abstract fun initInject()
+
 
 }
