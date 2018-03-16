@@ -22,6 +22,11 @@ android {
     }
 
 
+    configurations.all {
+        //解决google依赖包冲突
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -74,6 +79,7 @@ dependencies {
     compile rootProject.ext.dependencies["sweetalert"]
     compile rootProject.ext.dependencies["alerter"]
     compile rootProject.ext.dependencies["luban"]
+    compile rootProject.ext.dependencies["guava"]
     annotationProcessor rootProject.ext.dependencies["glideCompiler"]
     compile rootProject.ext.dependencies["kotlin"]
     debugCompile rootProject.ext.dependencies["blockcanary-android"]

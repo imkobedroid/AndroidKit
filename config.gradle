@@ -84,6 +84,7 @@ ext {
                   "multidex"                   : "com.android.support:multidex:1.0.1",
                   "logger"                     : "com.orhanobut:logger:1.15",
                   "fragmentation"              : "me.yokeyword:fragmentation:0.7.9",
+                  "guava"                     : "com.google.guava:guava:24.1-android",
                   "BottomNavigationViewEx"     : "com.github.ittianyu:BottomNavigationViewEx:1.2.1",
                   "extensions"                 : "org.jetbrains.kotlin:kotlin-android-extensions:1.0.3",
                   "kotlin"                     : "org.jetbrains.kotlin:kotlin-stdlib:1.1.51"]
