@@ -1,7 +1,7 @@
 ext {
 
   android = [compileSdkVersion        : 26,
-             buildToolsVersion        : '26.0.1',
+             buildToolsVersion        : '26.0.2',
              applicationId            : "com.amijiaoyu.babybus.android",
              minSdkVersion            : 19,
              kotlin_version           : '1.1.51',
