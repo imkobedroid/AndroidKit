@@ -25,10 +25,10 @@ public class DefaultHeaderInterceptor implements HeaderInterceptor {
 
         final String token = AccountManager.getInstance(context).getToken();
         if (!Strings.isNullOrEmpty(token)) {
-            authorised = originalRequest.newBuilder()
-                .header("Authorization", "Bearer " + token)
-                .build();
+            authorised = originalRequest.newBuilder().header("Authorization", "Bearer " + token).build();
+            return chain.proceed(authorised);
+        } else {
+            return chain.proceed(originalRequest);
         }
-        return chain.proceed(originalRequest);
     }
 }
