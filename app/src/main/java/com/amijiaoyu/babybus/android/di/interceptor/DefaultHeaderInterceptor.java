@@ -1,9 +1,12 @@
 package com.amijiaoyu.babybus.android.di.interceptor;
 
 import android.content.Context;
+
 import com.amijiaoyu.babybus.android.model.account.AccountManager;
 import com.google.common.base.Strings;
+
 import java.io.IOException;
+
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -15,12 +18,14 @@ import okhttp3.Response;
 
 public class DefaultHeaderInterceptor implements HeaderInterceptor {
     private Context context;
-    private   Request authorised;
+    private Request authorised;
+
     public DefaultHeaderInterceptor(Context context) {
-        this.context=context;
+        this.context = context;
     }
 
-    @Override public Response intercept(Interceptor.Chain chain) throws IOException {
+    @Override
+    public Response intercept(Interceptor.Chain chain) throws IOException {
         Request originalRequest = chain.request();
 
         final String token = AccountManager.getInstance(context).getToken();
