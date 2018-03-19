@@ -1,12 +1,10 @@
 package com.amijiaoyu.babybus.android.model.rx;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.content.ContextCompat;
 
-import cn.pedant.SweetAlert.SweetAlertDialog;
 import com.amijiaoyu.babybus.android.R;
 import com.kaopiz.kprogresshud.KProgressHUD;
 

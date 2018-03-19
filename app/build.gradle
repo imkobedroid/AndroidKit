@@ -80,7 +80,6 @@ dependencies {
     compile rootProject.ext.dependencies["load"]
     compile rootProject.ext.dependencies["logger"]
     compile rootProject.ext.dependencies["fragmentation"]
-    compile rootProject.ext.dependencies["sweetalert"]
     compile rootProject.ext.dependencies["alerter"]
     compile rootProject.ext.dependencies["luban"]
     annotationProcessor rootProject.ext.dependencies["glideCompiler"]

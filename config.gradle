@@ -27,8 +27,6 @@ ext {
                          glideTransformations         : "3.0.1",
                          alerter                      : "2.0.1",
                          circleimageview              : "2.2.0",
-                         sweetalert                   : "1.3",
-                         MPChart                      : "v3.0.3",
     ]
     dependencies = [
         //base
@@ -38,15 +36,14 @@ ext {
         "design"                    : "com.android.support:design:${dependVersion.support}",
 
         //ui
+        "load"                     : "com.kaopiz:kprogresshud:1.1.0",
         "materialsearchview"        : "com.miguelcatalan:materialsearchview:${dependVersion.materialsearchview}",
         "glide-transformations"     : "jp.wasabeef:glide-transformations:${dependVersion.glideTransformations}",
         "materialDialogs"           : "com.github.afollestad.material-dialogs:core:${dependVersion.materialDialogsVersion}",
         "alerter"                   : "com.tapadoo.android:alerter:${dependVersion.alerter}",
         "circleimageview"           : "de.hdodenhof:circleimageview:${dependVersion.circleimageview}",
-        "sweetalert"                : "cn.pedant.sweetalert:library:${dependVersion.sweetalert}",
         "BaseRecyclerViewAdapter"   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependVersion.BaseRecyclerViewAdapterHelper}",
         "luban"                     : "top.zibin:Luban:1.1.3", //朋友圈图片压缩库
-        "MPChart"                   : "com.github.PhilJay:MPAndroidChart:${dependVersion.MPChart}",
 
         //rxJava
         "rxjava"                    : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}",
@@ -86,7 +83,6 @@ ext {
         "extensions"                : "org.jetbrains.kotlin:kotlin-android-extensions:1.0.3",
         "kotlin"                    : "org.jetbrains.kotlin:kotlin-stdlib:1.1.51",
         "guava"                     : "com.google.guava:guava:24.1-android",
-        "load"                     : "com.kaopiz:kprogresshud:1.1.0",
     ]
 
 }

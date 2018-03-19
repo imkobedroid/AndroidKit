@@ -1,6 +1,7 @@
 package com.amijiaoyu.babybus.android.model.rx;
 
 import android.accounts.NetworkErrorException;
+import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
@@ -8,6 +9,8 @@ import com.amijiaoyu.babybus.android.ui.NoUser;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
+import com.tapadoo.alerter.Alerter;
+
 import java.io.IOException;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
@@ -80,6 +83,10 @@ public class RxErrorHandler {
   }
 
   public void showErrorMessage(BaseException e) {
-    Toast.makeText(mContext, e.getDisplayMessage(), Toast.LENGTH_SHORT).show();
+      Alerter.create((Activity) mContext)
+          .setText(e.getDisplayMessage())
+          .show();
+
+    //Toast.makeText(mContext, e.getDisplayMessage(), Toast.LENGTH_SHORT).show();
   }
 }
