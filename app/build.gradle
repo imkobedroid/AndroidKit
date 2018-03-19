@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 26
@@ -68,7 +69,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide-okhttp3-integration"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapter"]
     compile rootProject.ext.dependencies["dagger"]
-    compile rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-compiler"]
     compile rootProject.ext.dependencies["circleimageview"]
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor  rootProject.ext.dependencies["butterknife-compiler"]
@@ -76,9 +77,9 @@ dependencies {
     compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["logger"]
     compile rootProject.ext.dependencies["fragmentation"]
-    compile rootProject.ext.dependencies["sweetalert"]
     compile rootProject.ext.dependencies["alerter"]
     compile rootProject.ext.dependencies["luban"]
+    compile rootProject.ext.dependencies["load"]
     compile rootProject.ext.dependencies["guava"]
     annotationProcessor rootProject.ext.dependencies["glideCompiler"]
     compile rootProject.ext.dependencies["kotlin"]

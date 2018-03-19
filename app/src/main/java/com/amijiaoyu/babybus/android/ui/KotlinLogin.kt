@@ -27,7 +27,7 @@ class KotlinLogin : KotlinRxActivity<KotlinPresenter>(), KotlinConstance.View {
     }
 
     override fun loginSucceed(loginBean: LoginOkBean) {
-        Toast.makeText(this, loginBean.city, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, loginBean.nickname, Toast.LENGTH_SHORT).show()
 
     }
 
