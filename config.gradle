@@ -86,6 +86,7 @@ ext {
         "extensions"                : "org.jetbrains.kotlin:kotlin-android-extensions:1.0.3",
         "kotlin"                    : "org.jetbrains.kotlin:kotlin-stdlib:1.1.51",
         "guava"                     : "com.google.guava:guava:24.1-android",
+        "load"                     : "com.kaopiz:kprogresshud:1.1.0",
     ]
 
 }

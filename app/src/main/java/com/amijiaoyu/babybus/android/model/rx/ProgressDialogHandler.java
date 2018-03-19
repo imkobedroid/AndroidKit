@@ -4,8 +4,11 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.ContextCompat;
+
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import com.amijiaoyu.babybus.android.R;
+import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
  *
@@ -18,7 +21,7 @@ public class ProgressDialogHandler extends Handler {
   public static final int SHOW_PROGRESS_DIALOG = 1;
   public static final int DISMISS_PROGRESS_DIALOG = 0;
 
-  private SweetAlertDialog mProgressDialog;
+  private KProgressHUD mProgressDialog;
 
   private Context context;
   private boolean cancelable;
@@ -39,17 +42,18 @@ public class ProgressDialogHandler extends Handler {
 
   private void initProgressDialog() {
     if (mProgressDialog == null) {
-      mProgressDialog = new SweetAlertDialog(context, SweetAlertDialog.PROGRESS_TYPE);
-      mProgressDialog.getProgressHelper().setBarColor(Color.parseColor("#ffc957"));
-      mProgressDialog.setTitleText(context.getResources().getString(R.string.loading));
+        mProgressDialog=KProgressHUD.create(context)
+            .setLabel("loading...")
+            .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
+            .setBackgroundColor(ContextCompat.getColor(context,R.color.default_gray))
+            .setAnimationSpeed(2);
+
       if (cancelable) {
-        mProgressDialog.setCancelText(context.getString(R.string.dialog_cancel));
-        mProgressDialog.setCancelClickListener(sweetAlertDialog -> {
-          sweetAlertDialog.cancel();
-          if (mProgressCancelListener != null) {
-            mProgressCancelListener.onCancelProgress();
-          }
-        });
+          // TODO: 2018/3/19 点击取消请求后的监听操作
+         /* if (mProgressCancelListener != null) {
+              mProgressCancelListener.onCancelProgress();
+          }*/
+
       }
     }
   }
