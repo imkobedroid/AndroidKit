@@ -43,8 +43,8 @@ public class ProgressDialogHandler extends Handler {
         mProgressDialog=KProgressHUD.create(context)
             .setLabel("loading...")
             .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-            .setBackgroundColor(ContextCompat.getColor(context,R.color.default_gray))
-            .setAnimationSpeed(2);
+            .setBackgroundColor(ContextCompat.getColor(context,R.color.default_black_s));
+
 
       if (cancelable) {
           // TODO: 2018/3/19 点击取消请求后的监听操作

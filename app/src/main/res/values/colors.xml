@@ -21,6 +21,7 @@
     </integer-array>
     <color name="colorGray">#ccc</color>
     <color name="default_black">#333333</color>
+    <color name="default_black_s">#CC000000</color>
     <color name="default_blue">#007AFF</color>
     <color name="default_blue_transparent">#E6007AFF</color>
     <color name="default_gray">#999999</color>
