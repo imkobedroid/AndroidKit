@@ -3,7 +3,9 @@ package com.amijiaoyu.babybus.android.model.rx;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.ContextCompat;
 
+import com.amijiaoyu.babybus.android.R;
 import com.kaopiz.kprogresshud.KProgressHUD;
 
 /**
@@ -39,7 +41,8 @@ public class ProgressDialogHandler extends Handler {
         if (mProgressDialog == null) {
             mProgressDialog = KProgressHUD.create(context)
                 .setStyle(KProgressHUD.Style.SPIN_INDETERMINATE)
-                .setLabel("Please wait")
+                .setBackgroundColor(ContextCompat.getColor(context, R.color.default_black_s))
+                .setLabel("loading...")
                 .setCancellable(true)
                 .setAnimationSpeed(2)
                 .setDimAmount(0.5f)
