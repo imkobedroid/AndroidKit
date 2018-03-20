@@ -19,7 +19,8 @@ import okhttp3.logging.HttpLoggingInterceptor;
 class HttpManager {
 
   private OkHttpClient mOkHttpClient;
-  @SuppressLint("StaticFieldLeak") private static HttpManager sHttpManager;
+  //使用volatile保证每次拿对象都是去主内存中拿最新的变量
+  @SuppressLint("StaticFieldLeak") private static volatile HttpManager sHttpManager;
   private Context context;
   private final static int TIME_OUT = 30;
 
@@ -32,6 +33,7 @@ class HttpManager {
     if (sHttpManager == null) {
       synchronized (HttpManager.class) {
         if (sHttpManager == null) {
+            //加锁保证主内存的变量最新并且保证new操作的原子性
           sHttpManager = new HttpManager(context);
         }
       }
