@@ -15,43 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme_blue"
         tools:replace="android:icon">
-        <activity android:name=".ui.KotlinLogin">
+
+
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity
-            android:name=".ui.QualificationsCarActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.QualificationsHomeActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.CreditActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.PerfectActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.LoanActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.BlackActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.ShoppingActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.QualificationsEditActivity"
-            tools:ignore="DuplicateActivity" />
-        <activity
-            android:name=".ui.EditQualificationsActivity"
-            tools:ignore="DuplicateActivity" />
-
     </application>
 
 </manifest>

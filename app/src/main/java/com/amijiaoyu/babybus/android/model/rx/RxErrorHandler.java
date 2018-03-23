@@ -4,9 +4,7 @@ import android.accounts.NetworkErrorException;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
-import com.amijiaoyu.babybus.android.ui.NoUser;
 import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;
@@ -18,7 +16,6 @@ import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
 import retrofit2.HttpException;
-import work.wanghao.rxbus2.RxBus;
 
 /**
  * @author Dsh

@@ -2,10 +2,6 @@ package com.amijiaoyu.babybus.android.di.module;
 
 import com.amijiaoyu.babybus.android.model.bean.BaseBean;
 import com.amijiaoyu.babybus.android.model.bean.LoginOkBean;
-import com.amijiaoyu.babybus.android.ui.LoginBean;
-import com.amijiaoyu.babybus.android.ui.LoginOk;
-import com.amijiaoyu.babybus.android.ui.RequestBean;
-import com.amijiaoyu.babybus.android.ui.UserInfoBean;
 
 import io.reactivex.Flowable;
 import retrofit2.http.Body;

@@ -1,7 +1,5 @@
 package com.amijiaoyu.babybus.android.di.module;
 
-import com.amijiaoyu.babybus.android.ui.Head;
-
 /**
  * Author:SHIHONG DONG
  * Date:2017/10/12 14:07
