@@ -44,6 +44,7 @@ ext {
         "BaseRecyclerViewAdapter"   : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${dependVersion.BaseRecyclerViewAdapterHelper}",
         "luban"                     : "top.zibin:Luban:1.1.3", //朋友圈图片压缩库
         "load"                      : "com.kaopiz:kprogresshud:1.1.0",
+        "switch"                      : "ch.ielse:switchbutton:1.0.1",
 
         //rxJava
         "rxjava"                    : "io.reactivex.rxjava2:rxjava:${dependVersion.rxjava}",

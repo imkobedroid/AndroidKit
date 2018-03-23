@@ -8,7 +8,6 @@ package com.amijiaoyu.babybus.android.di.module;
 
 public class UserBean {
 
-  private Head avatar;
 
   private String username;
 
@@ -32,13 +31,7 @@ public class UserBean {
 
   private String message_read_at;
 
-  public Head getAvatar() {
-    return avatar;
-  }
 
-  public void setAvatar(Head avatar) {
-    this.avatar = avatar;
-  }
 
   public String getUsername() {
     return username;

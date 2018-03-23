@@ -1,5 +1,6 @@
-package com.amijiaoyu.babybus.android.ui;
+package com.amijiaoyu.babybus.android.ui.home;
 
+import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 
 /**
@@ -9,7 +10,7 @@ import com.amijiaoyu.babybus.android.base.RxActivity;
 public class MainActivity extends RxActivity{
     @Override
     protected int getLayout() {
-        return 0;
+        return R.layout.head_home;
     }
 
     @Override

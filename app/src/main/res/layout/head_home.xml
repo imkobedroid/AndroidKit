@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/default_yellow"
+    android:layout_height="wrap_content">
+
+
+    <com.amijiaoyu.babybus.android.weight.ProLinearly
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iconTextHide="false"
+        app:rootBacColor="@color/default_white"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:lineRightPadding="@dimen/dp_10"
+        app:title="链接"
+        app:iconText="fdsfsfd"
+        app:iconSize="8sp"
+        app:iconColor="@color/default_gray"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp" />
+
+    <com.amijiaoyu.babybus.android.weight.ProLinearly
+        android:layout_width="match_parent"
+        app:rootBacColor="@color/default_white"
+        android:layout_height="wrap_content"
+        app:iconTextHide="true"
+        app:iconColor="@color/default_gray"
+        app:iconSize="8sp"
+        app:iconText="测试"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:lineRightPadding="@dimen/dp_10"
+        app:title="链接"
+        app:titleColor="@color/default_black"
+        app:titleSize="8sp" />
+
+</LinearLayout>

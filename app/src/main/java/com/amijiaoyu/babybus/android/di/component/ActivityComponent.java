@@ -27,6 +27,5 @@ public interface ActivityComponent {
    * 注册的登录界面接口
    */
 
-  void inject(KotlinLogin kotlinLogin);
 
 }

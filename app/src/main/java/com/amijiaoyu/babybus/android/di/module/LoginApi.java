@@ -18,23 +18,6 @@ import retrofit2.http.POST;
  */
 
 public interface LoginApi {
-    /**
-     * 得到支付的数据
-     *
-     * @param body 登录要使用的json数据
-     * @return 返回用户登录的数据
-     */
-    @POST("/oauth/token")
-    Flowable<BaseBean<LoginBean>> getPayData(@Body RequestBean body);
-
-    /**
-     * 得到用户的信息
-     *
-     * @return 返回用户的数据
-     */
-    @GET("/api/user")
-    Flowable<BaseBean<UserInfoBean>> getUser();
-
 
     @FormUrlEncoded
     @POST("/api/login")
