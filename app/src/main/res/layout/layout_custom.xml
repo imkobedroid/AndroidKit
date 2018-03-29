@@ -13,6 +13,7 @@
         android:textColor="@color/default_black"
         android:gravity="center"
         android:id="@+id/title"
+        tools:text="fdsfsdfsdfsd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:ignore="RelativeOverlap" />
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content" />
 
     <android.support.v7.widget.AppCompatTextView
+        tools:text="fdsfsdfsdfsd"
         android:id="@+id/icon_content"
         android:textSize="@dimen/sp_14"
         android:textColor="@color/default_gray"

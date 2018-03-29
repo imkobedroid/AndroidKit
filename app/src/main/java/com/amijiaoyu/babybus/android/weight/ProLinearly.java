@@ -18,7 +18,6 @@ import com.amijiaoyu.babybus.android.R;
 
 public class ProLinearly extends RelativeLayout {
 
-
     private String titleText;
     private int titleSize;
     private int titleColor;
@@ -44,6 +43,7 @@ public class ProLinearly extends RelativeLayout {
         AppCompatTextView title = myView.findViewById(R.id.title);
         AppCompatTextView iconTitle = myView.findViewById(R.id.icon_content);
         View line = myView.findViewById(R.id.line);
+
         TypedArray a = context.getTheme().
             obtainStyledAttributes(attrs, R.styleable.ProLinearly,
                 0, 0);
@@ -105,9 +105,10 @@ public class ProLinearly extends RelativeLayout {
         //Line的样式
         line.setBackgroundColor(lineColor);
         LayoutParams layoutParams = (LayoutParams) line.getLayoutParams();
-        layoutParams.leftMargin=lineLeftPadding;
-        layoutParams.rightMargin=lineRightPadding;
+        layoutParams.leftMargin = lineLeftPadding;
+        layoutParams.rightMargin = lineRightPadding;
         line.setLayoutParams(layoutParams);
+
     }
 
 }
