@@ -18,7 +18,7 @@ public interface BaseActivityView {
   /**
    * 注册界面的接口
    */
-  void InjectActivity();
+  void injectActivity();
 
   /**
    * 提供dagger2的中间连接桥梁

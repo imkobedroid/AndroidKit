@@ -13,7 +13,7 @@ public interface BaseFragmentView {
   /**
    * 注册界面
    */
-  void InjectFragment();
+  void injectFragment();
 
   /**
    * 得到dagger2的中间连接桥梁
