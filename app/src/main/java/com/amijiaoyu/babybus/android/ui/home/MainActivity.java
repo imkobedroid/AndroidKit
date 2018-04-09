@@ -5,9 +5,12 @@ import android.net.VpnService;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatButton;
+import android.widget.Toast;
 
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 
@@ -32,6 +35,12 @@ public class MainActivity extends RxActivity{
                 onActivityResult(0, RESULT_OK, null);
             }
         });
+
+
+        Toast.makeText(this,Status.Companion.getStatus(2),Toast.LENGTH_SHORT).show();
+
+
+
     }
 
     @Override
