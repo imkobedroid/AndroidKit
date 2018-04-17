@@ -9,195 +9,207 @@
     <include layout="@layout/include_toolbar" />
 
     <LinearLayout
-        android:background="@color/default_white"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dp_16"
+        android:background="@color/default_white"
+        android:orientation="horizontal"
         android:paddingBottom="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_10"
         android:paddingStart="@dimen/dp_10"
-        android:paddingEnd="@dimen/dp_10">
+        android:paddingTop="@dimen/dp_16"
+        android:baselineAligned="false">
 
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/view1"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@drawable/shape_number"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/view1"
-                android:textColor="@color/default_blue"
-                android:layout_height="wrap_content"
-                android:text="1"/>
+                android:text="1"
+                android:textColor="@color/default_blue" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/view1"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/default_blue"
                 android:paddingTop="@dimen/dp_4"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:text="基本需求"/>
+                android:text="基本需求"
+                android:textColor="@color/default_blue"
+                android:textSize="@dimen/sp_14" />
 
 
             <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_toRightOf="@+id/view1"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:background="@color/default_gray" />
+
             <View
-                android:visibility="gone"
-                android:layout_toLeftOf="@+id/view1"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/view1"
+                android:background="@color/default_gray"
+                android:visibility="gone" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/view2"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@drawable/shape_number_gray"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/view2"
-                android:textColor="@color/default_gray"
-                android:layout_height="wrap_content"
-                android:text="2"/>
+                android:text="2"
+                android:textColor="@color/default_gray" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/view2"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/default_gray"
                 android:paddingTop="@dimen/dp_4"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:text="基本信息"/>
+                android:text="基本信息"
+                android:textColor="@color/default_gray"
+                android:textSize="@dimen/sp_14" />
 
 
             <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_toRightOf="@+id/view2"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:background="@color/default_gray" />
+
             <View
-                android:layout_toLeftOf="@+id/view2"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/view2"
+                android:background="@color/default_gray" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/view3"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@drawable/shape_number_gray"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/view3"
-                android:textColor="@color/default_gray"
-                android:layout_height="wrap_content"
-                android:text="3"/>
+                android:text="3"
+                android:textColor="@color/default_gray" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/view3"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/default_gray"
                 android:paddingTop="@dimen/dp_4"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:text="资质信息"/>
+                android:text="资质信息"
+                android:textColor="@color/default_gray"
+                android:textSize="@dimen/sp_14" />
 
 
             <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_toRightOf="@+id/view3"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:background="@color/default_gray" />
+
             <View
-                android:layout_toLeftOf="@+id/view3"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/view3"
+                android:background="@color/default_gray" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/view4"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
                 android:background="@drawable/shape_number_gray"
                 android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/view4"
-                android:textColor="@color/default_gray"
-                android:layout_height="wrap_content"
-                android:text="4"/>
+                android:text="4"
+                android:textColor="@color/default_gray" />
 
             <android.support.v7.widget.AppCompatTextView
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/view4"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/default_gray"
                 android:paddingTop="@dimen/dp_4"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_14"
-                android:text="征信信息"/>
+                android:text="征信信息"
+                android:textColor="@color/default_gray"
+                android:textSize="@dimen/sp_14" />
 
 
             <View
-                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
                 android:layout_toRightOf="@+id/view4"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:background="@color/default_gray"
+                android:visibility="gone" />
+
             <View
-                android:layout_toLeftOf="@+id/view4"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dp_10"
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
-                android:background="@color/default_gray"/>
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/view4"
+                android:background="@color/default_gray" />
 
         </RelativeLayout>
 
@@ -213,15 +225,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:editHide="false"
-        app:iconTextHide="true"
-        app:editHintColor="@color/default_black"
         app:editHint="最小一万"
+        app:editHintColor="@color/default_black"
+        app:iconHide="true"
+        app:iconTextHide="true"
         app:lineColor="@color/default_gray_light"
         app:lineLeftPadding="@dimen/dp_10"
         app:title="贷款金额"
         app:titleColor="@color/default_black"
         app:titleSize="6sp"
-        app:iconHide="true"
         app:wanHide="false" />
 
     <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
@@ -230,16 +242,16 @@
         android:layout_height="wrap_content"
         app:contextColor="@color/default_black"
         app:contextSize="6sp"
-        app:wanHide="true"
-        app:editHide="true"
         app:contextText="系统推荐"
+        app:editHide="true"
         app:iconHide="false"
         app:iconTextHide="false"
         app:lineColor="@color/default_gray_light"
         app:lineLeftPadding="@dimen/dp_10"
         app:title="贷款期数"
         app:titleColor="@color/default_black"
-        app:titleSize="6sp" />
+        app:titleSize="6sp"
+        app:wanHide="true" />
 
     <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
         android:layout_width="match_parent"
@@ -247,47 +259,45 @@
         app:contextColor="@color/default_black"
         app:contextSize="6sp"
         app:contextText="系统推荐"
-        app:iconHide="false"
-        app:wanHide="true"
         app:editHide="true"
+        app:iconHide="false"
         app:iconTextHide="false"
         app:lineColor="@color/default_gray_light"
         app:lineLeftPadding="@dimen/dp_10"
         app:title="贷款期数"
         app:titleColor="@color/default_black"
-        app:titleSize="6sp" />
+        app:titleSize="6sp"
+        app:wanHide="true" />
 
     <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:contextColor="@color/default_black"
         app:contextSize="6sp"
-        app:editHide="true"
-        app:wanHide="true"
         app:contextText="系统推荐"
+        app:editHide="true"
         app:iconHide="false"
         app:iconTextHide="false"
         app:lineColor="@color/default_gray_light"
         app:lineLeftPadding="@dimen/dp_10"
         app:title="贷款期数"
         app:titleColor="@color/default_black"
-        app:titleSize="6sp" />
+        app:titleSize="6sp"
+        app:wanHide="true" />
 
     <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
         android:layout_width="match_parent"
-        app:wanHide="true"
-        app:editHide="true"
         android:layout_height="wrap_content"
         app:contextColor="@color/default_black"
         app:contextSize="6sp"
         app:contextText="系统推荐"
+        app:editHide="true"
         app:iconHide="false"
         app:iconTextHide="false"
         app:lineColor="@color/default_gray_light"
         app:lineLeftPadding="@dimen/dp_10"
         app:title="贷款期数"
         app:titleColor="@color/default_black"
-        app:titleSize="6sp" />
-
-
+        app:titleSize="6sp"
+        app:wanHide="true" />
 </LinearLayout>

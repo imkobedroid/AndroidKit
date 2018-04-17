@@ -4,19 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
 import com.amijiaoyu.babybus.android.ui.weight.ProLinearly;
-import com.chad.library.adapter.base.BaseQuickAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 
@@ -26,16 +19,16 @@ import butterknife.BindView;
  */
 
 @SuppressLint("Registered")
-public class BaseNeedActivity extends RxActivity {
+public class BaseInfoActivity extends RxActivity {
 
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.tv_toolbar)
     TextView title;
+    @BindView(R.id.into)
+    ProLinearly into;
 
-    @BindView(R.id.test)
-    ProLinearly proLinearly;
 
 
     @Override
@@ -47,19 +40,18 @@ public class BaseNeedActivity extends RxActivity {
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.base_need));
 
-       proLinearly.setRootClickListener(v -> startActivity(new Intent(this,BaseInfoActivity.class)));
 
     }
 
 
     @Override
     protected int getLayout() {
-        return R.layout.activity_base_need;
+        return R.layout.activity_base_info;
     }
 
     @Override
     protected void initInject() {
-
+        into.setRootClickListener(v -> startActivity(new Intent(this,BaseQualificationsActivity.class)));
     }
 
 
