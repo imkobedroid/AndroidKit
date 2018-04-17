@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/default_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/default_gray_light" />
+
+    <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editHide="false"
+        app:iconTextHide="true"
+        app:editHintColor="@color/default_black"
+        app:editHint="最小一万"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:title="贷款金额"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp"
+        app:iconHide="true"
+        app:wanHide="false" />
+
+    <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contextColor="@color/default_black"
+        app:contextSize="6sp"
+        app:wanHide="true"
+        app:editHide="true"
+        app:contextText="系统推荐"
+        app:iconHide="false"
+        app:iconTextHide="false"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:title="贷款期数"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp" />
+
+    <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contextColor="@color/default_black"
+        app:contextSize="6sp"
+        app:contextText="系统推荐"
+        app:iconHide="false"
+        app:wanHide="true"
+        app:editHide="true"
+        app:iconTextHide="false"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:title="贷款期数"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp" />
+
+    <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contextColor="@color/default_black"
+        app:contextSize="6sp"
+        app:editHide="true"
+        app:wanHide="true"
+        app:contextText="系统推荐"
+        app:iconHide="false"
+        app:iconTextHide="false"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:title="贷款期数"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp" />
+
+    <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+        android:layout_width="match_parent"
+        app:wanHide="true"
+        app:editHide="true"
+        android:layout_height="wrap_content"
+        app:contextColor="@color/default_black"
+        app:contextSize="6sp"
+        app:contextText="系统推荐"
+        app:iconHide="false"
+        app:iconTextHide="false"
+        app:lineColor="@color/default_gray_light"
+        app:lineLeftPadding="@dimen/dp_10"
+        app:title="贷款期数"
+        app:titleColor="@color/default_black"
+        app:titleSize="6sp" />
+
+
+</LinearLayout>

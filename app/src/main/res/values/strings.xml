@@ -125,5 +125,6 @@
     <string name="_5">5</string>
     <string name="_6">6</string>
     <string name="edit">编辑资质</string>
+    <string name="base_need">基本需求</string>
 
 </resources>

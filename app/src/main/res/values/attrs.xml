@@ -222,4 +222,60 @@
         <!-- 圆角矩形宽高相等,取较宽高中大值-->
         <attr name="mv_isWidthHeightEqual" format="boolean"/>
     </declare-styleable>
+
+
+
+
+
+
+    <!--贷款经纪人的属性-->
+    <attr name="title" format="string" />
+    <attr name="titleColor" format="color" />
+    <attr name="titleSize" format="dimension" />
+
+    <attr name="lineColor" format="color" />
+    <attr name="rootBacColor" format="color" />
+
+    <attr name="contextText" format="string" />
+    <attr name="editHint" format="string" />
+    <attr name="contextSize" format="dimension" />
+    <attr name="contextColor" format="color" />
+
+
+    <attr name="lineLeftPadding" format="dimension" />
+    <attr name="lineRightPadding" format="dimension" />
+
+
+    <attr name="iconTextHide" format="boolean" />
+    <attr name="editHide" format="boolean" />
+    <attr name="wanHide" format="boolean" />
+    <attr name="iconHide" format="boolean" />
+    <attr name="editHintColor" format="color" />
+
+
+
+
+    <declare-styleable name="ProLinearly">
+        <attr name="title" />
+        <attr name="titleColor" />
+        <attr name="rootBacColor" />
+        <attr name="titleSize" />
+        <attr name="lineColor" />
+        <attr name="contextText" />
+        <attr name="contextSize" />
+        <attr name="contextColor" />
+        <attr name="lineLeftPadding" />
+        <attr name="lineRightPadding" />
+
+        <attr name="iconTextHide" />
+        <attr name="editHide" />
+        <attr name="wanHide" />
+        <attr name="iconHide" />
+        <attr name="editHint"/>
+        <attr name="editHintColor"/>
+
+
+
+
+    </declare-styleable>
 </resources>
