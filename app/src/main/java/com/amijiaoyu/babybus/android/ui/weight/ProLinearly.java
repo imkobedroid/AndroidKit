@@ -35,10 +35,10 @@ public class ProLinearly extends RelativeLayout {
     private int lineLeftPadding;
     private int lineRightPadding;
 
-    private boolean contextHide;
-    private boolean iconHide;
-    private boolean editHide;
-    private boolean wanHide;
+    private boolean contextHide=true;
+    private boolean iconHide=true;
+    private boolean editHide=true;
+    private boolean wanHide=true;
     private String editHint;
     public RootClickListener rootClickListener;
 
@@ -156,7 +156,7 @@ public class ProLinearly extends RelativeLayout {
         line.setLayoutParams(layoutParams);
         root.setOnClickListener(v -> {
             if (rootClickListener != null) {
-                rootClickListener.click(v);
+                rootClickListener.click(content);
             }
         });
     }

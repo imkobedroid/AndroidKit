@@ -46,7 +46,7 @@ public class BaseNeedActivity extends RxActivity {
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.base_need));
 
-       proLinearly.setRootClickListener(v -> Toast.makeText(this,"点击了",Toast.LENGTH_SHORT).show());
+       proLinearly.setRootClickListener(v -> ((AppCompatTextView)v).setText("点击了"));
 
     }
 
