@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amijiaoyu.babybus.android.R;
 import com.amijiaoyu.babybus.android.base.RxActivity;
@@ -45,7 +46,7 @@ public class BaseNeedActivity extends RxActivity {
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.base_need));
 
-        proLinearly.rootClickListener.click();
+       proLinearly.setRootClickListener(v -> Toast.makeText(this,"点击了",Toast.LENGTH_SHORT).show());
 
     }
 

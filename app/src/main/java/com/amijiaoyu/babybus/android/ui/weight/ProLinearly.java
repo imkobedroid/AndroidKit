@@ -154,17 +154,22 @@ public class ProLinearly extends RelativeLayout {
         layoutParams.leftMargin = lineLeftPadding;
         layoutParams.rightMargin = lineRightPadding;
         line.setLayoutParams(layoutParams);
+        root.setOnClickListener(v -> {
+            if (rootClickListener != null) {
+                rootClickListener.click(v);
+            }
+        });
+    }
 
-
-        root.setOnClickListener(v -> rootClickListener.click(v));
-
-
+    public void setRootClickListener(RootClickListener rootClickListener) {
+        this.rootClickListener = rootClickListener;
     }
 
 
-   public interface RootClickListener {
+    public interface RootClickListener {
         /**
          * 父布局的点击事件
+         *
          * @param v 组件
          */
         void click(View v);
