@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_black"
+                app:contextSize="6sp"
+                app:contextText="上班族"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
+                app:iconTextHide="true"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="每月还款金额"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="false" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_gray"
+                app:contextSize="6sp"
+                app:contextText="请选择"
+                app:editHide="true"
+                app:iconHide="false"
+                app:iconTextHide="false"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="还款期数"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="true" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_black"
+                app:contextSize="6sp"
+                app:contextText="上班族"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
+                app:iconTextHide="true"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="每月还款金额"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="false" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_black"
+                app:contextSize="6sp"
+                app:contextText="上班族"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
+                app:iconTextHide="true"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="每月还款金额"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="false" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_gray"
+                app:contextSize="6sp"
+                app:contextText="请选择"
+                app:editHide="true"
+                app:iconHide="false"
+                app:iconTextHide="false"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="还款期数"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="true" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/default_gray_light" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="转为全款房"
+                    android:layout_margin="@dimen/dp_10"
+                    android:textColor="@color/default_black"
+                    android:textSize="@dimen/sp_16" />
+
+                <ch.ielse.view.SwitchView
+                    android:id="@+id/select_full_house"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_height="0.8dp"
+                    android:background="@color/default_gray_light"/>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/full_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+                <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contextColor="@color/default_black"
+                    app:contextSize="6sp"
+                    app:contextText="请选择"
+                    app:editHide="true"
+                    app:iconHide="false"
+                    app:iconTextHide="false"
+                    app:lineColor="@color/default_gray_light"
+                    app:lineLeftPadding="@dimen/dp_10"
+                    app:title="还款期数"
+                    app:titleColor="@color/default_black"
+                    app:titleSize="6sp"
+                    app:wanHide="true" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/default_blue"
+                android:text="保存" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

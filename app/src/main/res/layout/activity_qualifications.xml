@@ -174,6 +174,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/view_four"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -237,7 +238,6 @@
                 app:iconHide="true"
                 app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
                 app:title="全款房"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
@@ -261,7 +261,6 @@
                 app:iconHide="true"
                 app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
                 app:title="按揭房"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
@@ -285,7 +284,6 @@
                 app:iconHide="true"
                 app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
                 app:title="全款车"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
@@ -309,7 +307,6 @@
                 app:iconHide="true"
                 app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
                 app:title="按揭车"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"

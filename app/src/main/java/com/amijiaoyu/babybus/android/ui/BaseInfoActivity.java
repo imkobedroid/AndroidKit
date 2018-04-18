@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.Toolbar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amijiaoyu.babybus.android.R;
@@ -26,8 +27,8 @@ public class BaseInfoActivity extends RxActivity {
     Toolbar toolbar;
     @BindView(R.id.tv_toolbar)
     TextView title;
-    @BindView(R.id.into)
-    ProLinearly into;
+    @BindView(R.id.view_two)
+    RelativeLayout viewTwo;
 
 
 
@@ -51,7 +52,7 @@ public class BaseInfoActivity extends RxActivity {
 
     @Override
     protected void initInject() {
-        into.setRootClickListener(v -> startActivity(new Intent(this,BaseQualificationsActivity.class)));
+        viewTwo.setOnClickListener(v -> startActivity(new Intent(this,BaseQualificationsActivity.class)));
     }
 
 

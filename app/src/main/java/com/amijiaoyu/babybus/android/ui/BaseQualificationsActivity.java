@@ -1,11 +1,14 @@
 package com.amijiaoyu.babybus.android.ui;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amijiaoyu.babybus.android.R;
@@ -45,11 +48,19 @@ public class BaseQualificationsActivity extends RxActivity {
     @BindView(R.id.policy)
     RecyclerView policy;
 
+    @BindView(R.id.view_four)
+    RelativeLayout viewFour;
+
     private FullHouseAdapter fullHouseAdapter;
     private MortgageHouseAdapter mortgageHouseAdapter;
     private FullCarAdapter fullCarAdapter;
     private MortgageCarAdapter mortgageCarAdapter;
     private PolicyAdapter policyAdapter;
+    private View fullHouseFoot;
+    private View mortgageHouseFoot;
+    private View fullCarFoot;
+    private View mortgageCarFoot;
+    private View policyFoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +70,7 @@ public class BaseQualificationsActivity extends RxActivity {
 
     private void initView() {
         initToolBar(toolbar, title, getString(R.string.info));
-
+        viewFour.setOnClickListener(v -> startActivity(new Intent(this,BaseCreditActivity.class)));
         initRecyclerView();
     }
 
@@ -67,16 +78,22 @@ public class BaseQualificationsActivity extends RxActivity {
     private void initRecyclerView() {
         List<String> data = new ArrayList<>();
         fullHouseAdapter = new FullHouseAdapter(data);
-        mortgageHouseAdapter=new MortgageHouseAdapter(data);
-        fullCarAdapter=new FullCarAdapter(data);
-        mortgageCarAdapter=new MortgageCarAdapter(data);
-        policyAdapter=new PolicyAdapter(data);
+        mortgageHouseAdapter = new MortgageHouseAdapter(data);
+        fullCarAdapter = new FullCarAdapter(data);
+        mortgageCarAdapter = new MortgageCarAdapter(data);
+        policyAdapter = new PolicyAdapter(data);
 
-        fullHouseAdapter.setFooterView(this.getLayoutInflater().inflate(R.layout.item_foot, null));
-        mortgageHouseAdapter.setFooterView(this.getLayoutInflater().inflate(R.layout.item_foot, null));
-        fullCarAdapter.setFooterView(this.getLayoutInflater().inflate(R.layout.item_foot, null));
-        mortgageCarAdapter.setFooterView(this.getLayoutInflater().inflate(R.layout.item_foot, null));
-        policyAdapter.setFooterView(this.getLayoutInflater().inflate(R.layout.item_foot, null));
+        fullHouseFoot = this.getLayoutInflater().inflate(R.layout.item_foot, null);
+        mortgageHouseFoot = this.getLayoutInflater().inflate(R.layout.item_foot, null);
+        fullCarFoot = this.getLayoutInflater().inflate(R.layout.item_foot, null);
+        mortgageCarFoot = this.getLayoutInflater().inflate(R.layout.item_foot, null);
+        policyFoot = this.getLayoutInflater().inflate(R.layout.item_foot, null);
+
+        fullHouseAdapter.setFooterView(fullHouseFoot);
+        mortgageHouseAdapter.setFooterView(mortgageHouseFoot);
+        fullCarAdapter.setFooterView(fullCarFoot);
+        mortgageCarAdapter.setFooterView(mortgageCarFoot);
+        policyAdapter.setFooterView(policyFoot);
 
 
         fullHouse.setLayoutManager(new LinearLayoutManager(this));
@@ -90,6 +107,28 @@ public class BaseQualificationsActivity extends RxActivity {
         fullCar.setAdapter(fullCarAdapter);
         mortgageCar.setAdapter(mortgageCarAdapter);
         policy.setAdapter(policyAdapter);
+
+        initFootClick();
+
+    }
+
+    private void initFootClick() {
+        fullHouseFoot.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddInfoActivity.class));
+        });
+        mortgageHouseFoot.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddInfoActivity.class));
+        });
+        fullCarFoot.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddInfoActivity.class));
+        });
+        mortgageCarFoot.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddInfoActivity.class));
+        });
+        policyFoot.setOnClickListener(v -> {
+            startActivity(new Intent(this, AddInfoActivity.class));
+        });
+
 
     }
 

@@ -77,7 +77,6 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -113,7 +112,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_toRightOf="@+id/view2"
-                        android:background="@color/default_gray" />
+                        android:background="@color/default_blue" />
 
                     <View
                         android:layout_width="match_parent"
@@ -126,7 +125,6 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/view_two"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -138,10 +136,10 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center"
-                        android:background="@drawable/shape_number_gray"
+                        android:background="@drawable/shape_number"
                         android:gravity="center"
                         android:text="3"
-                        android:textColor="@color/default_gray" />
+                        android:textColor="@color/default_blue" />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:layout_width="wrap_content"
@@ -152,7 +150,7 @@
                         android:gravity="center"
                         android:paddingTop="@dimen/dp_4"
                         android:text="资质信息"
-                        android:textColor="@color/default_gray"
+                        android:textColor="@color/default_blue"
                         android:textSize="@dimen/sp_14" />
 
 
@@ -162,7 +160,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_toRightOf="@+id/view3"
-                        android:background="@color/default_gray" />
+                        android:background="@color/default_blue" />
 
                     <View
                         android:layout_width="match_parent"
@@ -170,7 +168,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_toLeftOf="@+id/view3"
-                        android:background="@color/default_gray" />
+                        android:background="@color/default_blue" />
 
                 </RelativeLayout>
 
@@ -186,10 +184,10 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_gravity="center"
-                        android:background="@drawable/shape_number_gray"
+                        android:background="@drawable/shape_number"
                         android:gravity="center"
                         android:text="4"
-                        android:textColor="@color/default_gray" />
+                        android:textColor="@color/default_blue" />
 
                     <android.support.v7.widget.AppCompatTextView
                         android:layout_width="wrap_content"
@@ -200,7 +198,7 @@
                         android:gravity="center"
                         android:paddingTop="@dimen/dp_4"
                         android:text="征信信息"
-                        android:textColor="@color/default_gray"
+                        android:textColor="@color/default_blue"
                         android:textSize="@dimen/sp_14" />
 
 
@@ -210,7 +208,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_toRightOf="@+id/view4"
-                        android:background="@color/default_gray"
+                        android:background="@color/default_blue"
                         android:visibility="gone" />
 
                     <View
@@ -219,12 +217,17 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="@dimen/dp_10"
                         android:layout_toLeftOf="@+id/view4"
-                        android:background="@color/default_gray" />
+                        android:background="@color/default_blue" />
 
                 </RelativeLayout>
 
 
             </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/default_gray_light" />
 
             <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
                 android:layout_width="match_parent"
@@ -232,69 +235,18 @@
                 app:contextColor="@color/default_black"
                 app:contextSize="6sp"
                 app:contextText="上班族"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
+                app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
                 app:lineLeftPadding="@dimen/dp_10"
-                app:title="职业身份"
+                app:title="每月还款金额"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
-                app:wanHide="true" />
+                app:wanHide="false" />
 
             <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
-                app:contextColor="@color/default_black"
-                app:contextSize="5sp"
-                app:contextText="上班族"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="打卡工资"
-                app:titleColor="@color/default_black"
-                app:titleSize="5sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
-                app:contextColor="@color/default_black"
-                app:contextSize="5sp"
-                app:contextText="上班族"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="打卡工资连续期数"
-                app:titleColor="@color/default_black"
-                app:titleSize="5sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
-                app:contextColor="@color/default_black"
-                app:contextSize="5sp"
-                app:contextText="上班族"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="所属行业"
-                app:titleColor="@color/default_black"
-                app:titleSize="5sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:id="@+id/into"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:contextColor="@color/default_gray"
@@ -305,7 +257,7 @@
                 app:iconTextHide="false"
                 app:lineColor="@color/default_gray_light"
                 app:lineLeftPadding="@dimen/dp_10"
-                app:title="经营主体"
+                app:title="还款期数"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
                 app:wanHide="true" />
@@ -315,61 +267,47 @@
                 android:layout_height="wrap_content"
                 app:contextColor="@color/default_black"
                 app:contextSize="6sp"
-                app:contextText="无"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="名下房产"
-                app:titleColor="@color/default_black"
-                app:titleSize="6sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:contextColor="@color/default_black"
-                app:contextSize="6sp"
-                app:contextText="无"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="名下汽车"
-                app:titleColor="@color/default_black"
-                app:titleSize="6sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:contextColor="@color/default_black"
-                app:contextSize="6sp"
-                app:contextText="无"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="性别"
-                app:titleColor="@color/default_black"
-                app:titleSize="6sp"
-                app:wanHide="true" />
-
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:contextColor="@color/default_black"
-                app:contextSize="6sp"
-                app:contextText="无"
-                app:editHide="true"
-                app:iconHide="false"
+                app:contextText="上班族"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
                 app:iconTextHide="true"
                 app:lineColor="@color/default_gray_light"
                 app:lineLeftPadding="@dimen/dp_10"
-                app:title="【已婚】年龄：【18～45】"
+                app:title="每月还款金额"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="false" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_black"
+                app:contextSize="6sp"
+                app:contextText="上班族"
+                app:editHide="false"
+                app:editHint="请输入"
+                app:iconHide="true"
+                app:iconTextHide="true"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="每月还款金额"
+                app:titleColor="@color/default_black"
+                app:titleSize="6sp"
+                app:wanHide="false" />
+
+            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contextColor="@color/default_gray"
+                app:contextSize="6sp"
+                app:contextText="请选择"
+                app:editHide="true"
+                app:iconHide="false"
+                app:iconTextHide="false"
+                app:lineColor="@color/default_gray_light"
+                app:lineLeftPadding="@dimen/dp_10"
+                app:title="还款期数"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
                 app:wanHide="true" />
@@ -379,76 +317,147 @@
                 android:layout_height="@dimen/dp_10"
                 android:background="@color/default_gray_light" />
 
+
             <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:id="@+id/credit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:contextColor="@color/default_black"
+                app:contextColor="@color/default_blue"
                 app:contextSize="6sp"
-                app:contextText="无"
+                app:contextText="编辑"
                 app:editHide="true"
-                app:iconHide="false"
+                app:iconHide="true"
                 app:iconTextHide="false"
                 app:lineColor="@color/default_gray_light"
                 app:lineLeftPadding="@dimen/dp_10"
-                app:title="连续缴纳6个月上的社保"
+                app:title="征信查询"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
                 app:wanHide="true" />
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近1个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近2个月2次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近3个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近6个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_10"
                 android:background="@color/default_gray_light" />
 
+
             <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+                android:id="@+id/overdue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:contextColor="@color/default_black"
+                app:contextColor="@color/default_blue"
                 app:contextSize="6sp"
-                app:contextText="无"
+                app:contextText="添加"
                 app:editHide="true"
-                app:iconHide="false"
+                app:iconHide="true"
                 app:iconTextHide="false"
                 app:lineColor="@color/default_gray_light"
                 app:lineLeftPadding="@dimen/dp_10"
-                app:title="连续缴纳6个月上的公积金"
+                app:title="逾期记录"
                 app:titleColor="@color/default_black"
                 app:titleSize="6sp"
                 app:wanHide="true" />
 
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
-                app:contextColor="@color/default_black"
-                app:contextSize="5sp"
-                app:contextText="3000"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="公积金缴纳基数"
-                app:titleColor="@color/default_black"
-                app:titleSize="5sp"
-                app:wanHide="true" />
 
-            <com.amijiaoyu.babybus.android.ui.weight.ProLinearly
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_10"
-                app:contextColor="@color/default_black"
-                app:contextSize="5sp"
-                app:contextText="是"
-                app:editHide="true"
-                app:iconHide="false"
-                app:iconTextHide="false"
-                app:lineColor="@color/default_gray_light"
-                app:lineLeftPadding="@dimen/dp_10"
-                app:title="单位缴纳公积金"
-                app:titleColor="@color/default_black"
-                app:titleSize="5sp"
-                app:wanHide="true" />
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近1个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近2个月2次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近3个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="近6个月1次"
+                    android:textColor="@color/default_gray"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+
+
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@color/default_blue"
+                android:text="保存" />
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

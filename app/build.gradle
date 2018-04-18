@@ -78,6 +78,7 @@ dependencies {
     provided rootProject.ext.dependencies["annotation"]
     compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["load"]
+    compile rootProject.ext.dependencies["switchbutton"]
     compile rootProject.ext.dependencies["logger"]
     compile rootProject.ext.dependencies["fragmentation"]
     compile rootProject.ext.dependencies["alerter"]

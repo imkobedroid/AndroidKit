@@ -57,6 +57,12 @@
         <activity
             android:name=".ui.BaseQualificationsActivity"
             tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.AddInfoActivity"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".ui.BaseCreditActivity"
+            tools:ignore="DuplicateActivity" />
 
     </application>
 

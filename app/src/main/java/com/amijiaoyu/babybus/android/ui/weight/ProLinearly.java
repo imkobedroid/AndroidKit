@@ -35,12 +35,13 @@ public class ProLinearly extends RelativeLayout {
     private int lineLeftPadding;
     private int lineRightPadding;
 
-    private boolean contextHide=true;
-    private boolean iconHide=true;
-    private boolean editHide=true;
-    private boolean wanHide=true;
+    private boolean contextHide = true;
+    private boolean iconHide = true;
+    private boolean editHide = true;
+    private boolean wanHide = true;
     private String editHint;
     public RootClickListener rootClickListener;
+    public ContentClickListener contentClickListener;
 
 
     public ProLinearly(Context context, @Nullable AttributeSet attrs) {
@@ -159,16 +160,35 @@ public class ProLinearly extends RelativeLayout {
                 rootClickListener.click(content);
             }
         });
+
+        content.setOnClickListener(v -> {
+            if (contentClickListener!=null){
+                contentClickListener.click(v);
+            }
+        });
     }
 
     public void setRootClickListener(RootClickListener rootClickListener) {
         this.rootClickListener = rootClickListener;
     }
 
+    public void setContentClickListener(ContentClickListener contentClickListener) {
+        this.contentClickListener = contentClickListener;
+    }
+
 
     public interface RootClickListener {
         /**
          * 父布局的点击事件
+         *
+         * @param v 组件
+         */
+        void click(View v);
+    }
+
+    public interface ContentClickListener {
+        /**
+         * content点击事件
          *
          * @param v 组件
          */
